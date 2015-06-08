@@ -24,6 +24,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php edit_post_link( esc_html__( 'Edit', 'gruene' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( esc_html__( 'Edit', 'gruene' ), '<span class="edit-link button">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

@@ -1,6 +1,6 @@
 <?php
 // Exit if accessed directly
-if ( !defined( 'ABSPATH' ) ) exit;
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 
 /**
@@ -59,6 +59,17 @@ function gruene_register_required_plugins() {
 		array(
 			'name'      => 'Disable Comments',
 			'slug'      => 'disable-comments',
+			'required'  => false,
+		),
+		// RECOMMENDED PLUGINS from the WordPress Plugin Repository.
+		array(
+			'name'      => 'Wordpress Jetpack',
+			'slug'      => 'jetpack',
+			'required'  => false,
+		),
+		array(
+			'name'      => 'The Events Calendar',
+			'slug'      => 'the-events-calendar',
 			'required'  => false,
 		),
 	);

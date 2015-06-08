@@ -29,9 +29,11 @@
 				<?php endif; // End header image check. ?>
 			</div><!-- .site-branding -->
 			
+			<?php if ( has_nav_menu( 'language-menu' ) ) : ?>
 			<nav id="language-switch" class="language-navigation navigation" role="navigation">
 				<?php gruene_language_nav(); ?>
 			</nav><!-- #language-switch -->
+			<?php endif; ?>
 			
 			<nav id="meta-navigation" class="meta-navigation navigation" role="navigation">
 				<?php wp_nav_menu( array( 
