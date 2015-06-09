@@ -21,14 +21,18 @@
 			<div id="copy-info">
 				© <?php echo date( 'Y' ); ?> <?php echo get_bloginfo( 'name' ); ?>
 			</div><!-- #copy-info -->
-			<nav id="footer-meta-navigation" class="meta-navigation navigation" role="navigation">
-				<?php wp_nav_menu( array( 
-					'theme_location' => 'footer-meta',
-					'menu_id'        => 'footer-meta-menu',
-					'after'          => '<span class="meta-navigation-separator">|</span>',
-					'depth'          => -1,
-				) ); ?>
-			</nav>
+			
+			<?php if ( has_nav_menu( 'footer-meta' ) ) : ?>
+				<nav id="footer-meta-navigation" class="meta-navigation navigation" role="navigation">
+					<?php wp_nav_menu( array( 
+						'theme_location' => 'footer-meta',
+						'menu_id'        => 'footer-meta-menu',
+						'after'          => '<span class="meta-navigation-separator">|</span>',
+						'depth'          => -1,
+					) ); ?>
+				</nav>
+			<?php endif; // End if has_nav_menu( 'footer-meta' ) ?>
+			
 			<div class="clear"></div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
