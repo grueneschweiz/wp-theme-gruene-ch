@@ -7,7 +7,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	
 	<header class="entry-header">
-		<?php gruene_the_post_thumbnail(); ?>
+		<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+			<?php gruene_the_post_thumbnail(); ?>
+		</a>
 		
 		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 		

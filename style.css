@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Cyrill Bolliger
 Author URI: http://underscores.me/
 Description: Theme for the green parties and politicians of Switzerland. Responsive, retina compatible, parent theme, pluggable
-Version: 1.0.5
+Version: 1.1.0
 GitHub Theme URI: cyrillbolliger/wp-theme-gruene-ch
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -84,10 +84,14 @@ dfn
 	{ font-style: italic; }
 	
 h1
-	{ font-size: 2em; margin: 0.67em 0; text-transform: uppercase; color: #e10078; }
+	{ font-size: 1.5em; }
 
-h1 a { color: #e10078; }
-	
+h2
+	{ font-size: 1.25em; }
+
+h3
+	{ font-size: 1em; }
+
 mark
 	{ background: #ff0; color: #000; }
 	
@@ -178,47 +182,50 @@ td, th
 body, button, input, select, textarea 
 	{ color: #404040; font-size: 16px; font-size: 1rem; line-height: 1.5; }
 	
- h1, h2, h3, h4, h5, h6 
+h1, h2, h3, h4, h5, h6 
 	{ clear: both; }
+
+h1, h2, h3, h1 a, h2 a, h3 a
+	{ text-transform: uppercase; line-height: 1.5em; color: #e10078; margin: 0.67em 0; text-decoration: none; }
 	
- p 
+p 
 	{ margin-bottom: 1.5em; }
 	
- dfn, cite, em, i 
+dfn, cite, em, i 
 	{ font-style: italic; }
 	
- blockquote 
+blockquote 
 	{ margin: 0 1.5em; }
 	
- address 
+address 
 	{ margin: 0 0 1.5em; }
 	
- pre 
+pre 
 	{ background: #eee; font-family: "Courier 10 Pitch", Courier, monospace; font-size: 15px; font-size: 0.9375rem; line-height: 1.6; margin-bottom: 1.6em; max-width: 100%; overflow: auto; padding: 1.6em; }
 	
- code, kbd, tt, var 
+code, kbd, tt, var 
 	{ font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace; font-size: 15px; font-size: 0.9375rem; }
 	
- abbr, acronym 
+abbr, acronym 
 	{ border-bottom: 1px dotted #666; cursor: help; }
 	
  mark, ins 
 	{ background: #fff9c0; text-decoration: none; }
 	
- big 
+big 
 	{ font-size: 125%; }
 
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
 a
-	{ color: #3a7a01; text-decoration: none; }
+	{ color: #3a7a01; text-decoration: underline; }
 	
 a:visited
 	{ color: #305f05; }
 	
 a:hover, a:focus, a:active
-	{ color: #e10078; text-decoration: underline; }
+	{ color: #e10078; text-decoration: none; }
 
 a:focus
 	{ outline: thin dotted; }
@@ -245,18 +252,28 @@ div#page
 	div#page
 		{ max-width: 970px; }
 }
+
+blockquote
+	{ background-color: #84b414; border-radius: 5px; color: #ffffff; padding: 10px 10px 10px 60px; display: block; }
 	
-blockquote:before, blockquote:after, q:before, q:after 
-	{ content: ""; }
-	
-blockquote, q 
-	{ quotes: "" ""; }
+blockquote p:first-of-type
+	{ margin-top: 0; }
+
+blockquote p:last-of-type
+	{ margin-bottom: 0; }
+
+blockquote:after, q:after, blockquote:before, q:before
+	{ color: #e10078; font-size: 2em; width: 26px; height: 24px; display: block; }
+
+blockquote:before, q:before
+	{ content: ""; background: transparent url( 'img/quoteLeftIcon.png' ) no-repeat scroll center top; float: left;
+	  background-size: 26px 24px; margin-left: -40px; }
 	
 hr 
 	{ background-color: #ccc; border: 0; height: 1px; margin-bottom: 1.5em; }
 	
 ul, ol 
-	{ margin: 0 0 1.5em 3em; }
+	{ margin: 0; }
 	
 ul 
 	{ list-style: disc; }
@@ -650,6 +667,9 @@ nav#side-menu ul#language-menu li a
 .single .byline, .group-blog .byline 
 	{ display: inline; }
 
+.page-title
+	{ margin-top: 10px; font-size: 32px; font-size: 2rem; }
+
 .page-content, .entry-content, .entry-summary 
 	{ margin: 0; }
 
@@ -686,7 +706,7 @@ article div.featured-image .image-caption
 	{ background-color: #777777; color: #f3f3f3; font-size: 0.85em; padding: 4px; }
 
 article header.entry-header h1.entry-title
-	{ clear: none; font-size: 1.25em; margin-top: 0; }
+	{ clear: none; font-size: 1.5em; margin-top: 0; }
 
 article header.entry-header h1.entry-title a:visited
 	{ color: #e10078; }

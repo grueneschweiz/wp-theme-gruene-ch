@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Version number of theme. Dont forget to change it also in the style.css file
  */
-define( 'GRUENE_VERSION', '1.0.5' );
+define( 'GRUENE_VERSION', '1.1.0' );
 
 if ( ! function_exists( 'gruene_content_width' ) ) :
 /**
@@ -203,6 +203,97 @@ function gruene_add_fake_slider() {
 }
 endif;
 add_action( 'gruene_slider', 'gruene_add_fake_slider' );
+
+
+if ( ! function_exists( 'gruene_add_editor_style_sheet' ) ) :
+/**
+ * load custom tiny mce editor styles
+ */
+function gruene_add_editor_style_sheet() {
+	add_editor_style( 'gruene-editor-stlyes.css' );
+}
+endif;
+if ( is_admin() ) {
+	add_action( 'after_setup_theme', 'gruene_add_editor_style_sheet' );
+}
+
+
+if ( ! function_exists( 'gruene_config_mce_buttons_1' ) ) :
+/**
+ * customize first line of editor buttons
+ */
+function gruene_config_mce_buttons_1( $buttons ) {
+	
+	// foreget the given buttons
+	// show the following ones
+	$buttons = array(
+		'bold',
+		'italic',
+		'underline',
+		'strikethrough',
+		'superscript',
+		'subscript',
+		'bullist',
+		'numlist',
+		'blockquote',
+		'link',
+		'unlink',
+		'wp_more',
+		'spellchecker',
+		'dfw',
+		'wp_adv',
+	);
+	
+	return $buttons;
+}
+endif;
+if ( is_admin() ) {
+	add_filter( 'mce_buttons', 'gruene_config_mce_buttons_1' );
+}
+
+
+if ( ! function_exists( 'gruene_config_mce_buttons_2' ) ) :
+/**
+ * customize second line of editor buttons
+ */
+function gruene_config_mce_buttons_2( $buttons ) {	
+	//remove buttons
+	$remove = array(
+		'alignjustify',
+		'forecolor',
+		'underline',
+	);
+	
+	foreach( $remove as $del_val ){
+		if ( ( $key = array_search( $del_val, $buttons ) ) !== false ) {
+			unset( $buttons[ $key ] );
+		}
+	}
+	
+	return $buttons;
+}
+endif;
+if ( is_admin() ) {
+	add_filter( 'mce_buttons_2', 'gruene_config_mce_buttons_2' );
+}
+
+
+if ( ! function_exists( 'gruene_mce_block_formats' ) ) :
+/**
+ * customize editor blockformats
+ */
+function gruene_mce_block_formats( $settings ) {
+	
+	$settings['block_formats'] = "Heading 1=h1; Heading 2=h2; Heading 3=h3; Paragraph=p";
+	
+	return $settings;
+}
+endif;
+// tweak WYSIWYG-editor
+if ( is_admin() ) {
+	add_filter( 'tiny_mce_before_init', 'gruene_mce_block_formats');
+}
+
 
 /**
  * Custom template tags for this theme.
