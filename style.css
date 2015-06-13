@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Cyrill Bolliger
 Author URI: http://underscores.me/
 Description: Theme for the green parties and politicians of Switzerland. Responsive, retina compatible, parent theme, pluggable
-Version: 1.1.0
+Version: 1.1.1
 GitHub Theme URI: cyrillbolliger/wp-theme-gruene-ch
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -254,7 +254,8 @@ div#page
 }
 
 blockquote
-	{ background-color: #84b414; border-radius: 5px; color: #ffffff; padding: 10px 10px 10px 60px; display: block; }
+	{ background-color: #aec504; border-radius: 5px; color: #ffffff; padding: 10px 10px 10px 60px; display: block; 
+	  box-shadow: 0 0 30px #709e2e inset; }
 	
 blockquote p:first-of-type
 	{ margin-top: 0; }

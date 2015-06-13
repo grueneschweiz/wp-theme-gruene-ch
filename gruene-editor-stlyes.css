@@ -33,7 +33,8 @@ body#tinymce.wp-editor h3
 	{ font-size: 1em; }
 
 body#tinymce.wp-editor blockquote
-	{ background-color: #84b414; border-radius: 5px; color: #ffffff; padding: 10px 10px 10px 60px; display: block; }
+	{ background-color: #aec504; border-radius: 5px; color: #ffffff; padding: 10px 10px 10px 60px; display: block; 
+	  box-shadow: 0 0 30px #709e2e inset; }
 	
 body#tinymce.wp-editor blockquote p:first-of-type
 	{ margin-top: 0; }
