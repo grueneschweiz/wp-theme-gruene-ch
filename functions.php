@@ -280,18 +280,23 @@ if ( is_admin() ) {
 
 if ( ! function_exists( 'gruene_mce_block_formats' ) ) :
 /**
- * customize editor blockformats
+ * customize editor blockformats and presettings of buttons
  */
-function gruene_mce_block_formats( $settings ) {
+function gruene_mce_advanced_customizations( $settings ) {
 	
 	$settings['block_formats'] = "Heading 1=h1; Heading 2=h2; Heading 3=h3; Paragraph=p";
+	 
+	/**
+	 * turns on paste as plain text by default
+	 * @since 1.1.1
+	 */
+	$settings['paste_as_text'] = true;
 	
 	return $settings;
 }
 endif;
-// tweak WYSIWYG-editor
 if ( is_admin() ) {
-	add_filter( 'tiny_mce_before_init', 'gruene_mce_block_formats');
+	add_filter( 'tiny_mce_before_init', 'gruene_mce_advanced_customizations');
 }
 
 
