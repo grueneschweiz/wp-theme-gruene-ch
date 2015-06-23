@@ -288,7 +288,7 @@ function gruene_mce_advanced_customizations( $settings ) {
 	 
 	/**
 	 * turns on paste as plain text by default
-	 * @since 1.1.1
+	 * @since 1.2.0
 	 */
 	$settings['paste_as_text'] = true;
 	
@@ -301,14 +301,53 @@ if ( is_admin() ) {
 
 
 /**
+ * Custom functions that act independently of the theme templates
+ *
+ * Eventually, some of the functionality here could be replaced by core features
+ *
+ * @package Gruene Theme
+ */
+
+if ( ! function_exists( 'gruene_body_classes' ) ) :
+/**
+ * Adds custom classes to the array of body classes.
+ *
+ * @param array $classes Classes for the body element.
+ * @return array
+ */
+function gruene_body_classes( $classes ) {
+	// Adds a class of group-blog to blogs with more than 1 published author.
+	if ( is_multi_author() ) {
+		$classes[] = 'group-blog';
+	}
+
+	return $classes;
+}
+endif;
+add_filter( 'body_class', 'gruene_body_classes' );
+
+
+if ( ! function_exists( 'gruene_custom_excerpt_more' ) ) :
+/**
+ * Adds a pretty "Continue Reading" link to custom post excerpts.
+ *
+ * To override this link in a child theme, remove the filter and add your own
+ * function tied to the get_the_excerpt filter hook.
+ */
+function gruene_custom_excerpt_more( $output ) {
+	if ( ! is_attachment() ) {
+		$output .= ' ' . gruene_get_read_more_link();
+	}
+	return $output;
+}
+endif;
+add_filter( 'get_the_excerpt', 'gruene_custom_excerpt_more' );
+
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/inc/extras.php';
 
 /**
  * Customizer additions.
@@ -319,7 +358,6 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
-
 
 /**
  * Load TGM Plugin (only for single site blogs)
