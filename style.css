@@ -3,7 +3,7 @@ Theme Name: Gruene Theme
 Theme URI: https://github.com/cyrillbolliger/wp-theme-gruene-ch
 Author: Cyrill Bolliger
 Description: Theme for the green parties and politicians of Switzerland. Based on _s. Responsive, retina compatible, parent theme, pluggable
-Version: 1.2.0
+Version: 1.2.1
 GitHub Theme URI: cyrillbolliger/wp-theme-gruene-ch
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -179,13 +179,13 @@ td, th
 # Typography
 --------------------------------------------------------------*/
 body, button, input, select, textarea 
-	{ color: #404040; font-size: 16px; font-size: 1rem; line-height: 1.5; }
+	{ color: #404040; font-size: 15px; font-size: 0.9375rem; line-height: 1.5; }
 	
 h1, h2, h3, h4, h5, h6 
 	{ clear: both; }
 
 h1, h2, h3, h1 a, h2 a, h3 a
-	{ text-transform: uppercase; line-height: 1.5em; color: #e10078; margin: 0.67em 0; text-decoration: none; }
+	{ line-height: 1.5em; color: #e10078; margin: 0.67em 0; text-decoration: none; }
 	
 p 
 	{ margin-bottom: 1.5em; }
@@ -615,7 +615,7 @@ nav#side-menu ul#language-menu li a
 	{ margin: 0 0 10px; font-size: 13px; font-size: 0.8125rem; }
 
 .widget h1, .widget h2, .widget h3, .widget h4, .widget h5, .widget h6
-	{ font-size: 16px; font-size: 1rem; margin: 0 0 5px; }
+	{ font-size: 15px; font-size: 0.9375rem; margin: 0 0 5px; }
 
 .widget ul, .widget ol
 	{ margin: 0; }
@@ -668,7 +668,7 @@ nav#side-menu ul#language-menu li a
 	{ display: inline; }
 
 .page-title
-	{ margin-top: 10px; font-size: 32px; font-size: 2rem; }
+	{ margin-top: 10px; font-size: 32px; font-size: 2em; }
 
 .page-content, .entry-content, .entry-summary 
 	{ margin: 0; }
@@ -712,14 +712,14 @@ article header.entry-header h1.entry-title a:visited
 	{ color: #e10078; }
 
 article header.entry-header div.entry-meta
-	{ font-size: 0.85em; color: #666666; }
+	{ font-size: 0.9em; color: #666666; }
 
 .edit-link.button a
 	{ border-radius: 5px; background: #e10078; color: #ffffff; font-size: 13px; font-size: 0.8125rem;
 	  padding: 0.5em 1em; border: none; font-weight: bold; box-shadow: 0 0 7px 1px #cc006d inset; }
 
 .posts-nav
-	{ font-size: 0.85em; }
+	{ font-size: 0.9em; }
 
 .posts-nav .nav-links > div
 	{ background-color: #f3f3f3; padding: 10px; border-radius: 5px; }
