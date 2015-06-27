@@ -338,14 +338,14 @@ textarea
 	{ }
 
 .site-header .site-branding
-	{ float: left; margin: 15px 20px 15px 0; }
+	{ float: left; margin: 15px 40px 15px 0; }
 
 .site-header .site-branding a
 	{ display: block; background-repeat: no-repeat; background-position; center center; background-size: contain; }
 
 @media screen and (max-width: 479px) {
-	.site-header .site-branding img
-		{ width: auto; height: 100px; }
+	.site-header .site-branding a
+		{ width: 170px; height: 100px; }
 }
 
 #header-search-form
