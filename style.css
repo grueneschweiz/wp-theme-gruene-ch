@@ -338,7 +338,7 @@ textarea
 	{ }
 
 .site-header .site-branding
-	{ float: left; margin-top: 10px; }
+	{ float: left; margin: 15px 20px 15px 0; }
 
 .site-header .site-branding a
 	{ display: block; background-repeat: no-repeat; background-position; center center; background-size: contain; }
