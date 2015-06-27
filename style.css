@@ -764,7 +764,7 @@ div.footer-content h1
 	{ color: #ffffff; }
 
 .footer-widget-area
-	{ background: #84b414; background: linear-gradient(#3f7410, #83b314); }
+	{ background: #84b414; background: #3f7410; }
 
 .footer-widget-area .widget
 	{ width: auto; }
