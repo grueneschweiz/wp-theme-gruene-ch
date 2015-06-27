@@ -35,6 +35,10 @@
 				</nav><!-- #language-switch -->
 			<?php endif; // End if has_nav_menu( 'language' ) ?>
 			
+			<div id="header-search-form">
+				<?php get_search_form(); ?>
+			</div><!-- #header-search-form -->
+			
 			<?php if ( has_nav_menu( 'meta' ) ) : ?>
 				<nav id="meta-navigation" class="meta-navigation navigation" role="navigation">
 					<?php wp_nav_menu( array( 
@@ -45,10 +49,6 @@
 					) ); ?>
 				</nav><!-- #meta-navigation -->
 			<?php endif; // End if has_nav_menu( 'meta' ) ?>
-			
-			<div id="header-search-form">
-				<?php get_search_form(); ?>
-			</div><!-- #header-search-form -->
 			
 			<?php if ( has_nav_menu( 'primary' ) ) : ?>
 				<div id="mobile-nav-toggle">

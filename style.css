@@ -396,7 +396,7 @@ textarea
 
 /* meta navigation */
 .meta-navigation
-	{ margin-left: 40px; }
+	{ margin: 0 40px; float: right; }
 
 .meta-navigation ul li
 	{ padding: 20px 3px 0; text-transform: uppercase; color: #fff; font-size: 13px; font-size: 0.8125rem; }
