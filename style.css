@@ -690,8 +690,9 @@ article header.entry-header .attachment-post-thumbnail
 		{ display: block; }
 }
 
-article header.entry-header .attachment-default-post-thumbnail-wrapper
-	{ background-color: #84b414; width: 150px; height: 150px; }
+article header.entry-header .attachment-default-post-thumbnail
+	{ background-color: #aec504; width: 150px; height: 150px; background-position: center center; background-repeat: no-repeat; 
+	  box-shadow: 0 0 30px #709e2e inset; }
 
 article header.entry-header .attachment-default-post-thumbnail-wrapper .attachment-default-post-thumbnail
 	{ position: relative; top: 50%; transform: translateY(-50%); }

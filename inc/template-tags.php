@@ -112,20 +112,15 @@ function gruene_the_post_thumbnail() {
 	} else {
 		// if thumbnail is missing
 		
-		// get attachment_id if header image
-		$data = get_theme_mod( 'header_image_data' );
-		$attachment_id = is_object( $data ) && isset( $data->attachment_id ) ? $data->attachment_id : false;
-		
 		// get header image
-		$img = wp_get_attachment_image( 
-			$attachment_id, 
-			'gruene_default_post_thumbnail', 
-			false, 
-			array( 'class' => 'attachment-post-thumbnail attachment-default-post-thumbnail wp-post-image' ) 
-		);
+		$url = get_header_image();
+		$width = esc_attr( get_custom_header()->width ) / 4; // divide by 2 to make it retina compatible
+		$height = esc_attr( get_custom_header()->height ) / 4; // divide by 2 to make it retina compatible
+	
+		$style = "background-image: url('$url'); background-size: {$width}px {$height}px;";
 		
 		// echo the wrapped image
-		echo '<div class="attachment-post-thumbnail attachment-default-post-thumbnail-wrapper">'.$img.'</div>';
+		echo '<div class="attachment-post-thumbnail attachment-default-post-thumbnail" style="'.$style.'"></div>';
 	}
 }
 endif;
