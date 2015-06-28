@@ -171,10 +171,10 @@ function gruene_posted_on() {
 		//esc_html( get_the_modified_date() )
 	);
 
-	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'gruene' ),
-		$time_string
-	);
+	$posted_on = /*sprintf(
+		esc_html_x( 'Posted on %s', 'post date', 'gruene' ),*/
+		$time_string;
+	//);
 
 	$byline = sprintf(
 		esc_html_x( 'by %s', 'post author', 'gruene' ),

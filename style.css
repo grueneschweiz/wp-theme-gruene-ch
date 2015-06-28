@@ -687,7 +687,7 @@ article header.entry-header
 	{  }
 
 article header.entry-header .attachment-post-thumbnail
-	{ border-radius: 5px; float: left; margin: 0 10px 10px 0; display: none; }
+	{ border-radius: 5px; float: left; margin: 0 10px 0 0; display: none; }
 
 @media screen and (min-width: 480px) {
 	article header.entry-header .attachment-post-thumbnail
@@ -711,13 +711,19 @@ article div.featured-image .image-caption
 	{ background-color: #777777; color: #f3f3f3; font-size: 0.85em; padding: 4px; }
 
 article header.entry-header h1.entry-title
-	{ clear: none; font-size: 1.5em; margin-top: 0; }
+	{ clear: none; font-size: 1.5em; margin-top: 0.2em; margin-bottom: 0; }
 
 article header.entry-header h1.entry-title a:visited
 	{ color: #e10078; }
 
 article header.entry-header div.entry-meta
 	{ font-size: 0.9em; color: #666666; }
+
+article div.entry-summary
+	{ margin-top: -5px; }
+
+article footer.entry-footer
+	{ margin-top: -15px; }
 
 .edit-link.button a
 	{ border-radius: 5px; background: #e10078; color: #ffffff; font-size: 13px; font-size: 0.8125rem;
