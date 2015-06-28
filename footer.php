@@ -11,12 +11,12 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-			<?php if ( is_active_sidebar( 'footer-widget-area' ) ): ?>
-				<div class="footer-widget-area footer-content">
-					<?php dynamic_sidebar( 'footer-widget-area' ); ?>
-					<div class="clear"></div>
-				</div><!-- .footer-widget-area -->
-			<?php endif; ?>
+		<?php if ( is_active_sidebar( 'footer-widget-area' ) ): ?>
+			<div class="footer-widget-area footer-content">
+				<?php dynamic_sidebar( 'footer-widget-area' ); ?>
+				<div class="clear"></div>
+			</div><!-- .footer-widget-area -->
+		<?php endif; ?>
 		<div class="site-info footer-content">
 			<div id="copy-info">
 				© <?php echo date( 'Y' ); ?> <?php echo get_bloginfo( 'name' ); ?>

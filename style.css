@@ -548,6 +548,9 @@ nav#side-menu ul#language-menu li a
 .footer-widget-area .widget_nav_menu ul.menu li
 	{ width: 120px; margin-right: 10px; float: left; }
 
+#footer-meta-navigation
+	{ margin-right: 0; }
+
 #footer-meta-navigation.meta-navigation ul li
 	{ padding-top: 0; }
 
@@ -743,11 +746,11 @@ article header.entry-header div.entry-meta
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
-.site-footer
-	{ width:100%; position: absolute; left: 0; background: #5c7d0d;}
+footer#colophon
+	{ box-shadow: 0 0 10px 0 #777777; }
 
 div.footer-content
-	{ width: 100%; max-width: 669px; margin-left: auto; margin-right: auto; padding: 10px; color: #ffffff; 
+	{ width: 100%; max-width: 669px; margin-left: auto; margin-right: auto; padding: 10px 20px; color: #ffffff; 
 	  font-size: 13px; font-size: 0.8125rem; }
 
 @media screen and (min-width: 970px) {
