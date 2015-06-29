@@ -13,7 +13,13 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
+		
 		<main id="main" class="site-main" role="main">
+			
+			<header class="page-header">
+				<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+			</header><!-- .page-header -->
+			
 			
 			<?php while ( have_posts() ) : the_post(); ?>
 
