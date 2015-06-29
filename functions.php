@@ -196,13 +196,13 @@ endif;
 
 if ( ! function_exists( 'gruene_add_fake_slider' ) ) :
 /**
- * Add fake slider
+ * Add slider
  */
-function gruene_add_fake_slider() {
-	echo '<img src="'.get_stylesheet_directory_uri().'/img/fakeslider.jpg" style="width: 100%; height: auto;"/>';
+function gruene_add_slider() {
+	the_cyboslider();
 }
 endif;
-add_action( 'gruene_slider', 'gruene_add_fake_slider' );
+add_action( 'gruene_slider', 'gruene_add_slider' );
 
 
 if ( ! function_exists( 'gruene_add_editor_style_sheet' ) ) :
