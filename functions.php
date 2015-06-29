@@ -185,25 +185,6 @@ function gruene_add_custom_header_branding() {
 endif;
 add_action( 'wp_enqueue_scripts', 'gruene_add_custom_header_branding' );
 
-if ( ! function_exists( 'gruene_slider' ) ) :
-/**
- * Set up the slider action hook.
- */
-function gruene_slider() {
-	do_action( 'gruene_slider' );
-}
-endif;
-
-if ( ! function_exists( 'gruene_add_fake_slider' ) ) :
-/**
- * Add slider
- */
-function gruene_add_slider() {
-	the_cyboslider();
-}
-endif;
-add_action( 'gruene_slider', 'gruene_add_slider' );
-
 
 if ( ! function_exists( 'gruene_add_editor_style_sheet' ) ) :
 /**

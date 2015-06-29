@@ -63,7 +63,7 @@
 		
 		<?php if( is_home() ) : ?>
 			<div id="gruene-slider" class="image-slider">
-				<?php gruene_slider(); ?>
+				<?php the_cyboslider(); ?>
 			</div><!-- #slider -->
 		<?php endif; // End if is_home() ?>
 		
