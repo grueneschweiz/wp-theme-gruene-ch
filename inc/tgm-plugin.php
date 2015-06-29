@@ -82,6 +82,16 @@ function gruene_register_required_plugins() {
 			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
 			'external_url'       => 'https://github.com/cyrillbolliger/politch', // If set, overrides default API URL and points to an external URL.
 		),
+		array(
+			'name'               => 'Cyboslider', // The plugin name.
+			'slug'               => 'cyboslider', // The plugin slug (typically the folder name).
+			'source'             => 'https://github.com/cyrillbolliger/cyboslider/archive/master.zip', // The plugin source.
+			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher.
+			'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+			'external_url'       => 'https://github.com/cyrillbolliger/cyboslider', // If set, overrides default API URL and points to an external URL.
+		),
 	);
 	
 	/**
