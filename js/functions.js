@@ -50,6 +50,21 @@
 		this.isTouchDevice = function isTouchDevice() {
 			return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
 		};
+		
+		
+		/**
+		 * adds hide and show functionality
+		 */
+		this.hide_n_show = function hide_n_show() {
+			jQuery.each( jQuery( 'div.gruene_hide_n_show' ), function( index, element ) {
+				jQuery( element ).find( 'div.gruene_hide_n_show_display' ).click( function( event ) {
+					event.preventDefault();
+					jQuery( element ).find( 'div.gruene_hide_n_show_content' ).slideToggle( 'fast' );
+				} );
+			} );
+			
+			jQuery( 'div.gruene_hide_n_show_content' ).hide();
+		};
 	}
 	
 	/**
@@ -194,6 +209,7 @@
 		Nav.showMobileIfNedded();
 		Nav.initiateMobileEvents();
 		Nav.showCurrentTree();
+		Misc.hide_n_show();
 	});
 	
 	/**
