@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Version number of theme. Dont forget to change it also in the style.css file
  */
-define( 'GRUENE_VERSION', '1.3.0' );
+define( 'GRUENE_VERSION', '1.4.0' );
 
 if ( ! function_exists( 'gruene_content_width' ) ) :
 /**
