@@ -415,11 +415,16 @@ textarea
 .main-navigation ul#primary-menu
 	{ font-size: 15px; font-size: 0.9375rem; }
 
+.main-navigation ul#primary-menu a,
+.main-navigation ul#primary-menu a:visited
+	{ color: #305f05; }
+
 .main-navigation ul#primary-menu > li > a
 	{ display: block; padding: 6px 10px; font-weight: bold; background-color: #ffffff; color: #305f05; border-radius: 5px 5px 5px 5px;
 	  margin-right: 3px; text-transform: uppercase; box-shadow: 0 0 7px 1px #e2e3dc inset; margin-bottom: 3px; }
 
-.main-navigation ul#primary-menu > li > a:hover, .main-navigation ul#primary-menu > li.current-menu-item > a,
+.main-navigation ul#primary-menu > li > a:hover,
+.main-navigation ul#primary-menu > li.current-menu-item > a,
 .main-navigation ul#primary-menu > li.current-menu-ancestor > a
 	{ background: #e00078; color: #ffffff; box-shadow: 0 0 7px 1px #cc006d inset; }
 
