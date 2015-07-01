@@ -607,7 +607,7 @@ nav.pagination div.nav-links a.next
 # Slider
 --------------------------------------------------------------*/
 #gruene-slider
-	{ margin: 10px 0; box-shadow: 0 0 10px 0 #777777; border-radius: 5px; max-height: 340px; }
+	{ margin: 10px 0; box-shadow: 0 0 10px 0 #777777; border-radius: 5px; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -654,7 +654,7 @@ nav.pagination div.nav-links a.next
 .widget h1, .widget h2, .widget h3, .widget h4, .widget h5, .widget h6
 	{ font-size: 15px; font-size: 0.9375rem; margin: 0 0 5px; }
 
-.widget h1 a, .widget h2 a, .widget h3 a, .widget h4 a, .widget h5 a, .widget h6 a
+.widget h1 a, .widget h2 a, .widget h3 a,
 	{ color: #e10078; text-decoration: none; }
 
 .widget ul, .widget ol
@@ -911,7 +911,13 @@ aside.widget_rss ul
 	{ padding: 0; list-style-type: none; }
 
 aside.widget_rss ul li
-	{ margin-bottom: 10px; }
+	{ margin-bottom: 10px; display: flex; flex-flow: column nowrap; }
+
+aside.widget_rss ul li a
+	{ order: 2; }
+
+aside.widget_rss ul li span
+	{ order: 1; }
 
 aside.widget_rss ul li:not(:first-of-type):before
 	{ background:-moz-linear-gradient( left, #F3F3F3 0%,#DDDDDD 50%,#F3F3F3 100% ); 
