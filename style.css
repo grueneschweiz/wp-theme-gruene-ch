@@ -52,7 +52,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Normalize
 --------------------------------------------------------------*/
 html
-	{ font-family: Tahoma, ​Verdana, ​Segoe, ​sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+	{ font-family: 'Tahoma', 'Verdana', 'Segoe', 'sans-serif';-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 	
 body
 	{ margin: 0; }
@@ -342,7 +342,7 @@ textarea
 	{ float: left; margin: 15px 40px 15px 0; }
 
 .site-header .site-branding a
-	{ display: block; background-repeat: no-repeat; background-position; center center; background-size: contain; }
+	{ display: block; background-repeat: no-repeat; background-position: center; background-size: contain; }
 
 @media screen and (max-width: 479px) {
 	.site-header .site-branding a
@@ -359,7 +359,7 @@ textarea
 	{ border-radius: 5px 0 0 5px; width: 140px; }
 	
 #header-search-form form input.search-submit
-	{ padding-left: 0 padding-right: 0; width: 37px; border-radius: 0 5px 5px 0; }
+	{ padding-left: 0; padding-right: 0; width: 37px; border-radius: 0 5px 5px 0; }
 
 @media screen and (min-width: 970px) {
 	#header-search-form
