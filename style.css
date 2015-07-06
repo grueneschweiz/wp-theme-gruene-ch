@@ -681,6 +681,18 @@ nav.pagination div.nav-links a.next
 
 .footer-widget-area aside
 	{ float: left; min-width: 230px; }
+
+.widget-icon
+	{ height: 30px; padding-left: 35px; padding-top: 5px; margin-bottom: 5px; }
+
+.participate-icon
+	{ background: url( 'img/participate-icon.svg' ) no-repeat; }
+
+.contact-icon
+	{ background: url( 'img/contact-icon.svg' ) no-repeat; }
+	
+.donation-icon
+	{ background: url( 'img/donation-icon.svg' ) no-repeat; }
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
