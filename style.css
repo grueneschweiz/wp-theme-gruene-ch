@@ -350,16 +350,19 @@ textarea
 }
 
 #header-search-form
-	{ float: right; margin-top: 15px; width: 204px; display: none; }
+	{ float: right; margin-top: 15px; width: 204px; height: 2.2em; display: none; }
+
+#header-search-form form
+	{ height: 100%; }
 
 #header-search-form form label
-	{ display: block; width: 166px; float: left; }
+	{ display: block; width: 166px; float: left; height: 100%; }
 
 #header-search-form form input.search-field
-	{ border-radius: 5px 0 0 5px; width: 140px; }
+	{ border-radius: 5px 0 0 5px; width: 140px; height: calc( 100% - 1em ); }
 	
 #header-search-form form input.search-submit
-	{ padding-left: 0; padding-right: 0; width: 37px; border-radius: 0 5px 5px 0; }
+	{ padding-left: 0; padding-right: 0; width: 37px; border-radius: 0 5px 5px 0; calc( 100% - 1em ); }
 
 @media screen and (min-width: 970px) {
 	#header-search-form
