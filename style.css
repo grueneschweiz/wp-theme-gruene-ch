@@ -46,6 +46,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 # Widgets Content
+# Hide'n'show
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -943,6 +944,8 @@ aside.widget_rss ul li:not(:first-of-type):before
 aside.widget_rss ul li span.rss-date
 	{ display: block; color: #666666; margin-left: 15px; }
 
-/* ---------------------------- hide n show ---------------------- */
+/*--------------------------------------------------------------
+# Hide'n'show
+--------------------------------------------------------------*/
 div.gruene_hide_n_show div.gruene_hide_n_show_display a::before
 	{ content: "→ "; }
