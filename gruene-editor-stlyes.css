@@ -50,11 +50,23 @@ body#tinymce.wp-editor blockquote:before, body#tinymce.wp-editor q:before
 	{ content: ""; background: transparent url( 'img/quoteLeftIcon.png' ) no-repeat scroll center top; float: left;
 	  background-size: 26px 24px; margin-left: -40px; }
 
-body#tinymce .alignleft 
+body#tinymce.wp-editor .alignleft 
 	{ display: inline; float: left; margin-right: 1.5em; }
 	
-body#tinymce .alignright 
+body#tinymce.wp-editor .alignright 
 	{ display: inline; float: right; margin-left: 1.5em; }
 	
-body#tinymce .aligncenter 
+body#tinymce.wp-editor .aligncenter 
 	{ clear: both; display: block; margin-left: auto; margin-right: auto; }
+
+body#tinymce.wp-editor .wp-caption
+	{ text-align: left; }
+
+body#tinymce.wp-editor .wp-caption-dt
+	{ line-height: 0.85em; }
+
+body#tinymce.wp-editor .wp-caption-dd
+	{ margin: 0; font-size: 0.85em; color: #666666; background-color: #f3f3f3; line-height: 1.375em; padding-bottom: 2px; }
+
+body#tinymce.wp-editor .wp-caption-dd::before
+	{ content: "›"; display: inline-block; margin: 0 5px 0 2px; }
