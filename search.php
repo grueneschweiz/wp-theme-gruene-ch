@@ -30,7 +30,13 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+			<?php 
+				the_posts_pagination( array( 
+					'prev_text'   => __( '&larr; Previous page', 'gruene' ),
+					'next_text'   => __( '&rarr; Next page', 'gruene' ),
+					'format'      => '/page/%#%',
+				) );
+			?>
 
 		<?php else : ?>
 
