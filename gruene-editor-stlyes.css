@@ -49,3 +49,12 @@ body#tinymce.wp-editor blockquote:before, body#tinymce.wp-editor q:before
 body#tinymce.wp-editor blockquote:before, body#tinymce.wp-editor q:before
 	{ content: ""; background: transparent url( 'img/quoteLeftIcon.png' ) no-repeat scroll center top; float: left;
 	  background-size: 26px 24px; margin-left: -40px; }
+
+body#tinymce img.alignleft 
+	{ display: inline; float: left; margin-right: 1.5em; }
+	
+body#tinymce img.alignright 
+	{ display: inline; float: right; margin-left: 1.5em; }
+	
+body#tinymce img.aligncenter 
+	{ clear: both; display: block; margin-left: auto; margin-right: auto; }
