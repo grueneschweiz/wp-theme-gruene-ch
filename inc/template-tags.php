@@ -137,19 +137,24 @@ function gruene_the_featured_image() {
 	}
 	
 	// get the image caption
-	$caption = get_post(get_post_thumbnail_id())->post_excerpt;
+	$caption = get_post( get_post_thumbnail_id() )->post_excerpt;
 	
-	// if a caption is provided wrap itin div container, else leave it blank
+	// if a caption is provided wrap it in div container, else leave it blank
 	if ( ! empty( $caption ) ) {
-		$caption_html = '<div class="image-caption">'.$caption.'</div>';
+		$caption_html  = '<figcaption class="wp-caption-text">'.$caption.'</figcaption>';
+		$caption_class = ' wp-caption';
 	} else {
-		$caption_html = '';
+		$caption_html  = '';
+		$caption_class = '';
 	}
+	
+	// get the image properties
+	$image_props = wp_get_attachment_image_src( get_post_thumbnail_id(), 'gruene_large_post_thumbnail' );
 	
 	// get the image
 	$image_html = get_the_post_thumbnail( get_the_ID(), 'gruene_large_post_thumbnail' );
 	
-	echo '<div class="featured-image">'.$image_html.$caption_html.'</div>';
+	echo '<figure class="featured-image'.$caption_class.'" style="width:'.$image_props[1].'px;">'.$image_html.$caption_html.'</figure>';
 }
 endif;
 

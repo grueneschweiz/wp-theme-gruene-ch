@@ -116,7 +116,7 @@ svg:not(:root)
 	{ overflow: hidden; }
 	
 figure
-	{ margin: 1em 40px; }
+	{  }
 	
 hr
 	{ box-sizing: content-box; height: 0; }
@@ -632,10 +632,10 @@ nav.pagination div.nav-links a.next
 # Alignments
 --------------------------------------------------------------*/
 .alignleft 
-	{ display: inline; float: left; margin-right: 1.5em; }
+	{ display: inline; float: left; margin-right: 1.5em; margin-left: 0; }
 	
 .alignright 
-	{ display: inline; float: right; margin-left: 1.5em; }
+	{ display: inline; float: right; margin-left: 1.5em; margin-right: 0; }
 	
 .aligncenter 
 	{ clear: both; display: block; margin-left: auto; margin-right: auto; }
@@ -754,14 +754,8 @@ article header.entry-header .attachment-default-post-thumbnail
 article header.entry-header .attachment-default-post-thumbnail-wrapper .attachment-default-post-thumbnail
 	{ position: relative; top: 50%; transform: translateY(-50%); }
 
-article div.featured-image
-	{ line-height: 0.85em; margin-top: 15px; background-color: #777777; }
-
-article div.featured-image img
-	{ display: block; margin: 0 auto; }
-
-article div.featured-image .image-caption
-	{ background-color: #777777; color: #f3f3f3; font-size: 0.85em; padding: 4px; }
+article header.entry-header .featured-image
+	{ margin: 1em auto 0 auto; line-height: 0.85em; }
 
 article header.entry-header h1.entry-title
 	{ clear: none; font-size: 1.5em; margin-top: 0.2em; margin-bottom: 0; }
@@ -867,16 +861,20 @@ embed, iframe, object
 ## Captions
 --------------------------------------------------------------*/
 .wp-caption
-	{ margin-bottom: 1.5em; max-width: 100%; }
+	{ margin-bottom: 0.8075em; max-width: 100%; }
 
 .wp-caption img[class*="wp-image-"]
 	{ display: block; margin: 0 auto; }
 
 .wp-caption-text
-	{ text-align: center; }
+	{ text-align: left; }
 
 .wp-caption .wp-caption-text 
-	{ margin: 0.8075em 0; }
+	{ margin: 0; font-size: 0.85em; color: #666666; background-color: #ffffff; line-height: 1.375em; padding-bottom: 2px; }
+
+.wp-caption .wp-caption-text::before 
+	{ content: "›"; display: inline-block; margin: 0 5px 0 2px; }
+
 
 /*--------------------------------------------------------------
 ## Galleries
