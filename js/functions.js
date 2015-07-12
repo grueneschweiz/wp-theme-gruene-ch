@@ -56,14 +56,17 @@
 		 * adds hide and show functionality
 		 */
 		this.hide_n_show = function hide_n_show() {
-			jQuery.each( jQuery( 'div.gruene_hide_n_show' ), function( index, element ) {
-				jQuery( element ).find( 'div.gruene_hide_n_show_display' ).click( function( event ) {
+			$.each( $( 'div.gruene_hide_n_show' ), function( index, element ) {
+				$( element ).find( 'div.gruene_hide_n_show_display' ).click( function( event ) {
 					event.preventDefault();
-					jQuery( element ).find( 'div.gruene_hide_n_show_content' ).slideToggle( 'fast' );
+					$( this ).toggleClass( 'gruene_hide_n_show_closed' )
+					         .toggleClass( 'gruene_hide_n_show_open' );
+					$( element ).find( 'div.gruene_hide_n_show_content' ).slideToggle( 'fast' );
 				} );
 			} );
 			
-			jQuery( 'div.gruene_hide_n_show_content' ).hide();
+			$( 'div.gruene_hide_n_show_content' ).hide();
+			$( 'div.gruene_hide_n_show_display' ).addClass( 'gruene_hide_n_show_closed' );
 		};
 	}
 	

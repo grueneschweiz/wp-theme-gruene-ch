@@ -345,26 +345,7 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 require get_template_directory() . '/inc/tgm-plugin.php';
 
-
-// hide_n_show
-// =============================================================
-add_shortcode( 'hide_n_show', 'gruene_hide_n_show' );
-
-function gruene_hide_n_show( $atts, $content = '' ) {
-	extract( 
-		shortcode_atts( 
-			array( 
-				'display' 			=> 'hide_n_show display="[Enter your display text here]"',
-				'css'				=> '',
-				'class'				=> 'gruene_hide_n_show',
-				'add_class'			=> '',
-			),
-			$atts
-		)
-	);
-	
-	return 	'<div class="'.$class.' '.$add_class.'" style="'.$css.'">'
-				.'<div class="gruene_hide_n_show_display"><h2><a href="#">'.$display.'</a><h2></div>'
-				.'<div class="gruene_hide_n_show_content">'.$content.'</div>'
-			.'</div>';
-}
+/**
+ * Load TGM Plugin (only for single site blogs)
+ */
+require get_template_directory() . '/inc/extras.php';

@@ -947,4 +947,12 @@ aside.widget_rss ul li span.rss-date
 # Hide'n'show
 --------------------------------------------------------------*/
 div.gruene_hide_n_show div.gruene_hide_n_show_display a::before
-	{ content: "→ "; }
+	{ border: 0.125em solid #e10078; border-radius: 0.7em; content: "+ "; display: inline-block;
+	  line-height: 1em; margin-right: 0.5em; width: 1.45em; height: 1.45em;
+	  text-align: center; transition: transform 0.2s; }
+
+div.gruene_hide_n_show div.gruene_hide_n_show_display.gruene_hide_n_show_closed a::before
+	{ content: "+"; transform: rotate( -180deg ); }
+
+div.gruene_hide_n_show div.gruene_hide_n_show_display.gruene_hide_n_show_open a::before
+	{ content: "-"; }
