@@ -18,21 +18,20 @@ get_header(); ?>
 		
 		<h1 class="page-title front-page-title"><?php echo get_theme_mod( 'front_page_title' ); ?></h1>
 		
+		<?php query_posts( array('category_name' => gruene_get_front_page_category() ) ); ?>
+		
 		<?php if ( have_posts() ) : ?>
 		
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				
-				<?php // only show selected category ?>
-				<?php if ( in_category( gruene_get_front_page_category() ) ) : ?>
-					<?php
-						/* Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'template-parts/content', get_post_format() );
-					?>
-				<?php endif; ?>
+				<?php
+					/* Include the Post-Format-specific template for the content.
+					 * If you want to override this in a child theme, then include a file
+					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+					 */
+					get_template_part( 'template-parts/content', get_post_format() );
+				?>
 
 			<?php endwhile; ?>
 
