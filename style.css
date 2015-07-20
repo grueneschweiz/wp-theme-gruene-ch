@@ -556,7 +556,7 @@ nav#side-menu ul#language-menu li a
 	{ display: block; list-style: none; padding: 0; width: auto; }
 
 .footer-widget-area .widget_nav_menu ul.menu li
-	{ width: 120px; margin-right: 10px; float: left; }
+	{ width: 160px; margin-right: 10px; float: left; }
 
 #footer-meta-navigation
 	{ margin-right: 0; }
