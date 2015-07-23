@@ -77,7 +77,7 @@ function gruene_setup() {
 	 * 
 	 * @see add_image_size()
 	 */
-	add_image_size( 'gruene_large_post_thumbnail', $GLOBALS['content_width'] );
+	add_image_size( 'gruene_large_post_thumbnail', 629 );
 	
 	// This theme uses wp_nav_menu() in several locations.
 	register_nav_menus( array(
