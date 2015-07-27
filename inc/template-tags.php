@@ -235,6 +235,23 @@ function gruene_entry_footer() {
 }
 endif;
 
+
+if ( ! function_exists( 'gruene_the_back_button' ) ) :
+/**
+ * echos a back-button if the referer is internal
+ */
+function gruene_the_back_button() {
+	// the referer url
+	$referer = wp_get_referer();
+	
+	// if the referer url contains the home url --> if internal
+	if ( false !== strpos( $referer, home_url() ) ) {
+		echo '<div><a class="back-button" href="' . esc_attr( $referer ) . '">&larr;&nbsp;' . __( 'Back', 'gruene' ) . '</a></div>';
+	}
+}
+endif;
+
+
 if ( ! function_exists( 'the_archive_title' ) ) :
 /**
  * Shim for `the_archive_title()`.

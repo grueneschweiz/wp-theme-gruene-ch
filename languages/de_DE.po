@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gruene Theme\n"
-"POT-Creation-Date: 2015-07-12 22:50+0100\n"
-"PO-Revision-Date: 2015-07-17 14:00+0100\n"
+"POT-Creation-Date: 2015-07-27 15:02+0100\n"
+"PO-Revision-Date: 2015-07-27 15:02+0100\n"
 "Last-Translator: Cyrill Bolliger <bolliger@gmx.ch>\n"
 "Language-Team: Cyrill Bolliger <bolliger@gmx.ch>\n"
 "Language: DE\n"
@@ -30,11 +30,11 @@ msgstr ""
 "Leider wurde kein Inhalt gefunden. Versuchen Sie es doch mit den Links unten "
 "oder mit einer Suche?"
 
-#: ../archive.php:43 ../home.php:41 ../index.php:36 ../search.php:35
+#: ../archive.php:43 ../home.php:38 ../index.php:36 ../search.php:35
 msgid "&larr; Previous page"
 msgstr "&larr; Vorherige Seite"
 
-#: ../archive.php:44 ../home.php:42 ../index.php:37 ../search.php:36
+#: ../archive.php:44 ../home.php:39 ../index.php:37 ../search.php:36
 msgid "&rarr; Next page"
 msgstr "&rarr; Nächste Seite"
 
@@ -193,107 +193,111 @@ msgstr "% Kommentare"
 msgid "Edit"
 msgstr "Bearbeiten"
 
-#: ../inc/template-tags.php:251
+#: ../inc/template-tags.php:249
+msgid "Back"
+msgstr "Zurück"
+
+#: ../inc/template-tags.php:268
 #, php-format
 msgid "Category: %s"
 msgstr "Kategorie: %s"
 
-#: ../inc/template-tags.php:253
+#: ../inc/template-tags.php:270
 #, php-format
 msgid "Tag: %s"
 msgstr "Tag: %s"
 
-#: ../inc/template-tags.php:255
+#: ../inc/template-tags.php:272
 #, php-format
 msgid "Author: %s"
 msgstr "Author: %s"
 
-#: ../inc/template-tags.php:257
+#: ../inc/template-tags.php:274
 #, php-format
 msgid "Year: %s"
 msgstr "Jahr: %s"
 
-#: ../inc/template-tags.php:257
+#: ../inc/template-tags.php:274
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
-#: ../inc/template-tags.php:259
+#: ../inc/template-tags.php:276
 #, php-format
 msgid "Month: %s"
 msgstr "Monat: %s"
 
-#: ../inc/template-tags.php:259
+#: ../inc/template-tags.php:276
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr "F Y"
 
-#: ../inc/template-tags.php:261
+#: ../inc/template-tags.php:278
 #, php-format
 msgid "Day: %s"
 msgstr "Tag: %s"
 
-#: ../inc/template-tags.php:261
+#: ../inc/template-tags.php:278
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr "j. F Y"
 
-#: ../inc/template-tags.php:264
+#: ../inc/template-tags.php:281
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr "Randnotitz"
 
-#: ../inc/template-tags.php:266
+#: ../inc/template-tags.php:283
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr "Gallerie"
 
-#: ../inc/template-tags.php:268
+#: ../inc/template-tags.php:285
 msgctxt "post format archive title"
 msgid "Images"
 msgstr "Bilder"
 
-#: ../inc/template-tags.php:270
+#: ../inc/template-tags.php:287
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr "Videos"
 
-#: ../inc/template-tags.php:272
+#: ../inc/template-tags.php:289
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr "Zitate"
 
-#: ../inc/template-tags.php:274
+#: ../inc/template-tags.php:291
 msgctxt "post format archive title"
 msgid "Links"
 msgstr "Links"
 
-#: ../inc/template-tags.php:276
+#: ../inc/template-tags.php:293
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr "Statusangaben"
 
-#: ../inc/template-tags.php:278
+#: ../inc/template-tags.php:295
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr "Audio"
 
-#: ../inc/template-tags.php:280
+#: ../inc/template-tags.php:297
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr "Chats"
 
-#: ../inc/template-tags.php:283
+#: ../inc/template-tags.php:300
 #, php-format
 msgid "Archives: %s"
 msgstr "Archive: %s"
 
-#: ../inc/template-tags.php:287
+#: ../inc/template-tags.php:304
 #, php-format
 msgid "%1$s: %2$s"
 msgstr "%1$s: %2$s"
 
-#: ../inc/template-tags.php:289
+#: ../inc/template-tags.php:306
 msgid "Archives"
 msgstr "Archive"
 

@@ -27,6 +27,7 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
+		<?php gruene_the_back_button(); ?>
 		<?php gruene_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
