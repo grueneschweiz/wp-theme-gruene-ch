@@ -1,3 +1,7 @@
+/*--------------------------------------------------------------
+# Widget
+--------------------------------------------------------------*/
+
 aside.widget.tribe-events-list-widget ol.hfeed.vcalendar
 	{ padding: 0; }
 	
@@ -32,4 +36,42 @@ aside.tribe-events-list-widget p.tribe-events-widget-link:before
 	{ color: #e10078; }
 
 .tribe-events-read-more
+	{ display: none; }
+
+/*--------------------------------------------------------------
+# Overview List
+--------------------------------------------------------------*/
+
+.tribe-bar-disabled
+	{ display: none; }
+
+.tribe-events-list a.tribe-events-gmap
+	{ display: none; }
+
+.tribe-events-list h2.tribe-events-list-event-title
+	{ font-size: 1.25em; }
+
+.tribe-events-list-title-meta-wrapper
+	{ float: left; width: calc( 100% - 160px ); }
+
+.tribe-events-event-meta address.tribe-events-address
+	{ line-height: 1.375em; }
+
+.tribe-events-loop
+	{ margin-top: 40px; }
+
+#tribe-events .attachment-post-thumbnail
+	{ border-radius: 5px; float: left; margin: 0 10px 0 0; }
+
+#tribe-events .attachment-default-post-thumbnail
+	{ background-color: #aec504; background-position: center center; background-repeat: no-repeat; box-shadow: 0 0 30px #709e2e inset;
+	  height: 150px; width: 150px; }
+
+.tribe-events-list-event-description.tribe-events-content.description.entry-summary
+	{ margin-top: 10px; }
+/*--------------------------------------------------------------
+# Single Event
+--------------------------------------------------------------*/
+
+div.tribe-events-single div#tribe-events-header ul.tribe-events-sub-nav
 	{ display: none; }
