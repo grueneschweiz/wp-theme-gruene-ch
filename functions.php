@@ -325,6 +325,58 @@ endif;
 add_filter( 'get_the_excerpt', 'gruene_custom_excerpt_more' );
 
 
+if ( ! function_exists( 'gruene_custom_home_category' ) ) :
+/**
+ * Sets the category chosen in the theme customizer for the home page
+ * 
+ * If the theme is set to blogs on the home page and a specific category
+ * was choosen, then this functions filtes the WP_Query to output only
+ * the chose category. If no spezific category was choosen, all categories
+ * are shown
+ * 
+ * @since 1.6.0
+ */
+function gruene_custom_home_category( $query ) {
+	if ( $query->is_home() && $query->is_main_query() ) {
+			// get the chosen category
+			$cat = gruene_get_front_page_category();
+			
+			// if a category was choosen
+			if ( is_string( $cat ) ) {
+				// filter the QP_Query
+				$query->set( 'category_name', $cat );
+			}
+		}
+	}
+endif;
+add_action( 'pre_get_posts', 'gruene_custom_home_category' );
+
+
+if ( ! function_exists( 'gruene_get_front_page_category' ) ) :
+/**
+ * get the slug of the category choosen for the front page
+ * if nothing was choosen return all post category slugs
+ * 
+ * @return string|array slug or array of slugs of the categories to display on the front page 
+ */
+function gruene_get_front_page_category() {
+	$category = get_theme_mod( 'front_page_category' );
+	
+	// return all categories if set so or by default
+	if ( 'all_categories' == $category || false == $category ) {
+		$categories = get_categories();
+		foreach ( $categories as $category ) {
+			$return[] = $category->slug;
+		}
+		return $return;
+	} else {
+		// return given category
+		return $category;
+	}
+}
+endif;
+
+
 /**
  * Custom template tags for this theme.
  */

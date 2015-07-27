@@ -102,35 +102,10 @@ function gruene_get_possible_front_page_gategories() {
 endif;
 
 
-if ( ! function_exists( 'gruene_get_front_page_category' ) ) :
-/**
- * get the slug of the category choosen for the front page
- * if nothing was choosen return all post category slugs
- * 
- * @return string|array slug or array of slugs of the categories to display on the front page 
- */
-function gruene_get_front_page_category() {
-	$category = get_theme_mod( 'front_page_category' );
-	
-	// return all categories if set so or by default
-	if ( 'all_categories' == $category || false == $category ) {
-		$categories = get_categories();
-		foreach ( $categories as $category ) {
-			$return[] = $category->slug;
-		}
-		return $return;
-	} else {
-		// return given category
-		return $category;
-	}
-}
-endif;
-
-
 if ( ! function_exists( 'gruene_sanitize_front_page_category' ) ) :
 /**
- * check if the given value is a categorie
- * of not return false
+ * check if the given value is a category
+ * if not return false
  * 
  * @param string $data the choosen category
  * 
