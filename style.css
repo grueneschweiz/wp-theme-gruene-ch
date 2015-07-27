@@ -269,7 +269,7 @@ blockquote:after, q:after, blockquote:before, q:before
 	{ color: #e10078; font-size: 2em; width: 26px; height: 24px; display: block; }
 
 blockquote:before, q:before
-	{ content: ""; background: transparent url( 'img/quoteLeftIcon.png' ) no-repeat scroll center top; float: left;
+	{ content: ""; background: transparent url( 'img/quoteLeftIcon.svg' ) no-repeat scroll center top; float: left;
 	  background-size: 26px 24px; margin-left: -40px; }
 	
 hr 
@@ -326,7 +326,8 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
 	{ padding: 0.5em 1em; }
 	
 input.lookup-glass
-	{ background-image: url('img/lookup.png'); background-repeat: no-repeat; background-position: center center; }
+	{ background-image: url('img/search.svg'); background-repeat: no-repeat; background-position: center center;
+	  background-size: 65% auto; }
 	
 textarea 
 	{ padding-left: 14px; width: 100%; }
@@ -364,7 +365,7 @@ textarea
 	{ border-radius: 5px 0 0 5px; width: 140px; height: calc( 100% - 1em ); }
 	
 #header-search-form form input.search-submit
-	{ padding-left: 0; padding-right: 0; width: 37px; border-radius: 0 5px 5px 0; calc( 100% - 1em ); }
+	{ padding-left: 0; padding-right: 0; width: 37px; border-radius: 0 5px 5px 0; height: 100% ; }
 
 @media screen and (min-width: 970px) {
 	#header-search-form
@@ -484,7 +485,7 @@ div#mobile-nav-toggle
 	  box-shadow: 0 0 7px 1px #cc006d inset; margin-top: 20px; margin-left: 18px; }
 
 div#mobile-nav-toggle .mobile-nav-symbol
-	{ background: transparent url('img/menu-button.png') no-repeat center; background-size: 23px 23px; width: 23px; float: left;
+	{ background: transparent url('img/menu-button.svg') no-repeat center; background-size: 23px 23px; width: 23px; float: left;
 	  height: 23px; display: block; margin-right: 8px; }
 	
 @media screen and (max-width: 479px) {
@@ -505,7 +506,7 @@ nav#side-menu
 	
 div#close-side-menu
 	{ float: right; font-weight: 700; margin: 20px 20px 0 0; width: 32px; height: 32px;
-	  background: transparent url('img/close.png') no-repeat center; }
+	  background: transparent url('img/close.svg') no-repeat center; background-size: 100%; }
 	
 div#side-menu-title
 	{ color: #bbbbbb; font-weight: 700; font-size: 2em; margin: 30px 10px 40px 20px; }
