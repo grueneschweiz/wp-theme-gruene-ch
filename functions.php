@@ -338,13 +338,33 @@ if ( ! function_exists( 'gruene_custom_home_category' ) ) :
  */
 function gruene_custom_home_category( $query ) {
 	if ( $query->is_home() && $query->is_main_query() ) {
-			// get the chosen category
-			$cat = gruene_get_front_page_category();
+			// get the chosen category slug
+			$cat_name = gruene_get_front_page_category();
 			
 			// if a category was choosen
-			if ( is_string( $cat ) ) {
+			if ( is_string( $cat_name ) ) {
+				$cat_ID = get_category_by_slug( $cat_name )->cat_ID;
+				
 				// filter the QP_Query
-				$query->set( 'category_name', $cat );
+				$query->set( 'cat', $cat_ID );
+				
+				/**
+				 * Hide sticky posts, which are not in the given categroy
+				 * 
+				 * @since 1.6.1
+				 */
+				$args = array(
+					'category__not_in'    => array( $cat_ID ),
+				);
+				$forbidden_posts = get_posts( $args ); // Maybe ressource consuming. If you find a better alternative....
+				
+				$forbidden_post_ids = array();
+				foreach( $forbidden_posts as $forbidden_post ) {
+					$forbidden_post_ids[] = $forbidden_post->ID;
+				}
+				
+				// filter out sticky posts of wrong category
+				$query->set( 'post__not_in', $forbidden_post_ids );
 			}
 		}
 	}

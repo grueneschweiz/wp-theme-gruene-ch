@@ -16,7 +16,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		
-		<h1 class="page-title front-page-title"><?php echo  get_theme_mod( 'front_page_title' ); ?></h1>
+		<h1 class="page-title front-page-title"><?php echo get_theme_mod( 'front_page_title' ); ?></h1>
 		
 		<?php if ( have_posts() ) : ?>
 		
