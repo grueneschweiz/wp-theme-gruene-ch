@@ -673,13 +673,14 @@ nav.pagination div.nav-links a.next
 /* Search widget. */
 .widget_search .search-submit 
 	{ display: none; }
+
 /* Sidebar */
 #secondary
-	{ float: left; width: 100%; min-width: 286px; }
+	{ float: left; width: 100%; min-width: 286px; margin-top: 24px; }
 
 @media screen and (min-width: 970px) {
 	#secondary
-		{ margin-left: 15px; width: 286px; }
+		{ margin-left: 15px; width: 286px; margin-top: 0; }
 }
 
 #secondary aside

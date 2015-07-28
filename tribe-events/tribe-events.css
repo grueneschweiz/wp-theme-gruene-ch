@@ -52,7 +52,7 @@ aside.tribe-events-list-widget p.tribe-events-widget-link:before
 	{ font-size: 1.25em; }
 
 .tribe-events-list-title-meta-wrapper
-	{ float: left; width: calc( 100% - 160px ); }
+	{ float: left; width: 100%; }
 
 .tribe-events-event-meta address.tribe-events-address
 	{ line-height: 1.375em; }
@@ -61,14 +61,28 @@ aside.tribe-events-list-widget p.tribe-events-widget-link:before
 	{ margin-top: 40px; }
 
 #tribe-events .attachment-post-thumbnail
-	{ border-radius: 5px; float: left; margin: 0 10px 0 0; }
+	{ border-radius: 5px; float: left; margin: 0 10px 0 0; display: none; }
 
 #tribe-events .attachment-default-post-thumbnail
 	{ background-color: #aec504; background-position: center center; background-repeat: no-repeat; box-shadow: 0 0 30px #709e2e inset;
 	  height: 150px; width: 150px; }
 
+@media screen and (min-width: 480px) {
+	#tribe-events .attachment-post-thumbnail
+		{ display: block; }
+	.tribe-events-list-title-meta-wrapper
+		{ width: calc( 100% - 160px ); }
+}
+
 .tribe-events-list-event-description.tribe-events-content.description.entry-summary
 	{ margin-top: 10px; }
+
+.tribe-events-event-meta.vcard, .tribe-events-event-meta.vcard *
+	{ border: none; background:transparent; margin: 5px 0 0 0; padding: 0; }
+
+.tribe-events-event-meta.vcard
+	{ margin: 15px 0 0 0; }
+
 /*--------------------------------------------------------------
 # Single Event
 --------------------------------------------------------------*/
