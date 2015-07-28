@@ -463,7 +463,7 @@ textarea
 	  display: block; height: 0; left: -5px; position: relative; top: 0.7em; width: 0; }
 
 .main-navigation ul#primary-menu > li > ul > li > ul > li
-	{ line-height: 0.9em; }
+	{ line-height: 0.9em; float: none; }
 
 .main-navigation ul#primary-menu > li > ul > li > ul > li > a
 	{ margin-left: 5px; font-weight: normal; }
