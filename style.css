@@ -772,7 +772,7 @@ article div.entry-summary
 	{ margin-top: -5px; }
 
 article footer.entry-footer
-	{ margin-top: -15px; }
+	{  }
 
 .edit-link.button a
 	{ border-radius: 5px; background: #e10078; color: #ffffff; font-size: 13px; font-size: 0.8125rem;
@@ -948,13 +948,20 @@ aside.widget_rss ul li span.rss-date
 /*--------------------------------------------------------------
 # Hide'n'show
 --------------------------------------------------------------*/
+div.gruene_hide_n_show div.gruene_hide_n_show_display
+	{ margin-left: 2.5em; }
+
 div.gruene_hide_n_show div.gruene_hide_n_show_display a::before
 	{ border: 0.125em solid #e10078; border-radius: 0.7em; content: "+ "; display: inline-block;
-	  line-height: 1em; margin-right: 0.5em; width: 1.45em; height: 1.45em;
-	  text-align: center; transition: transform 0.2s; }
+	  line-height: 1em; margin-right: 0.5em; width: 1.4em; height: 1.4em;
+	  text-align: center; transition: transform 0.2s; margin-left: -2em; }
+
 
 div.gruene_hide_n_show div.gruene_hide_n_show_display.gruene_hide_n_show_closed a::before
 	{ content: "+"; transform: rotate( -180deg ); }
 
 div.gruene_hide_n_show div.gruene_hide_n_show_display.gruene_hide_n_show_open a::before
 	{ content: "-"; }
+
+div.gruene_hide_n_show div.gruene_hide_n_show_display a
+	{ color: #e10078; }
