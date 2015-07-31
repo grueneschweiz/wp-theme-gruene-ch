@@ -34,7 +34,7 @@ body#tinymce.wp-editor h3
 
 body#tinymce.wp-editor blockquote
 	{ background-color: #aec504; border-radius: 5px; color: #ffffff; padding: 10px 10px 10px 60px; display: block; 
-	  box-shadow: 0 0 30px #709e2e inset; }
+	  box-shadow: 0 0 30px #709e2e inset; margin: 1.5em; }
 	
 body#tinymce.wp-editor blockquote p:first-of-type
 	{ margin-top: 0; }
@@ -47,7 +47,7 @@ body#tinymce.wp-editor blockquote:before, body#tinymce.wp-editor q:before
 	{ color: #e10078; font-size: 2em; width: 26px; height: 24px; display: block; }
 
 body#tinymce.wp-editor blockquote:before, body#tinymce.wp-editor q:before
-	{ content: ""; background: transparent url( 'img/quoteLeftIcon.png' ) no-repeat scroll center top; float: left;
+	{ content: ""; background: transparent url( 'img/quoteLeftIcon.svg' ) no-repeat scroll center top; float: left;
 	  background-size: 26px 24px; margin-left: -40px; }
 
 body#tinymce.wp-editor .alignleft 
