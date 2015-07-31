@@ -93,14 +93,14 @@
 			
 			//menu item with children
 			$( 'nav#side-menu ul.menu li.menu-item-has-children > a' ).click(function( event ) {
-				self.handleMobileItemsWithChildren( this, event );
+				self.handleHideNshowItemsWithChildren( this, event );
 			} );
 		};
 		
 		/*
 		 * open submenu on first click, go to link on second click
 		 */
-		this.handleMobileItemsWithChildren = function handleMobileItemsWithChildren( el, event ) {
+		this.handleHideNshowItemsWithChildren = function handleHideNshowItemsWithChildren( el, event ) {
 			var $sub_menu = $( el ).parent().children( 'ul.sub-menu' );
 			
 			// if the child menu items are visible
@@ -203,6 +203,19 @@
 					.show()
 					.addClass( 'show-children' );
 		};
+		
+		/*
+		 * make footer menu extendable (hide'n'show)
+		 */
+		this.initiateFooterHideNshow = function initiateFooterHideNshow() {
+			// hide children
+			$( 'div.footer-widget-area ul.menu li.menu-item-has-children > ul' ).hide();
+			
+			//menu item with children
+			$( 'div.footer-widget-area ul.menu li.menu-item-has-children > a' ).click(function( event ) {
+				self.handleHideNshowItemsWithChildren( this, event );
+			} );
+		};
 	}
 	/**
 	 * fires after DOM is loaded
@@ -212,6 +225,7 @@
 		Nav.showMobileIfNedded();
 		Nav.initiateMobileEvents();
 		Nav.showCurrentTree();
+		Nav.initiateFooterHideNshow();
 		Misc.hide_n_show();
 	});
 	

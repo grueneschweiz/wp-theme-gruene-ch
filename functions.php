@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Version number of theme. Dont forget to change it also in the style.css file
  */
-define( 'GRUENE_VERSION', '1.6.1' );
+define( 'GRUENE_VERSION', '1.6.2' );
 
 if ( ! function_exists( 'gruene_content_width' ) ) :
 /**
@@ -395,7 +395,6 @@ function gruene_get_front_page_category() {
 	}
 }
 endif;
-
 
 /**
  * Custom template tags for this theme.
