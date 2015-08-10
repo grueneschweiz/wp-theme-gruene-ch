@@ -918,6 +918,9 @@ embed, iframe, object
 /*--------------------------------------------------------------
 # Widgets Content
 --------------------------------------------------------------*/
+aside.widget h1.widget-title, aside.widget h1.widget-title a
+	{ color: #e10078; line-height: 1.5em; text-decoration: none; }
+
 aside.widget_rss h1.widget-title a.rsswidget:first-of-type
 	{ display: none; }
 	
