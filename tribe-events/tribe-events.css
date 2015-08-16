@@ -24,7 +24,7 @@ aside.tribe-events-list-widget p.tribe-events-widget-link
 	{ margin-bottom: 0; }
 
 aside.tribe-events-list-widget p.tribe-events-widget-link:before
-	{ content:'→'; }
+	{ content: "\2192"; }
 	
 .tribe-events-loop .tribe-events-event-meta
 	{ font-weight: normal; }
