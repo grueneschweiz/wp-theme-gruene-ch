@@ -281,14 +281,6 @@ if ( is_admin() ) {
 }
 
 
-/**
- * Custom functions that act independently of the theme templates
- *
- * Eventually, some of the functionality here could be replaced by core features
- *
- * @package Gruene Theme
- */
-
 if ( ! function_exists( 'gruene_body_classes' ) ) :
 /**
  * Adds custom classes to the array of body classes.
@@ -396,6 +388,42 @@ function gruene_get_front_page_category() {
 }
 endif;
 
+
+if ( ! function_exists( 'gruene_add_sticky_functionality_for_category_pages' ) ) :
+/**
+  * Places the sticky posts at the top of the list of posts for the category that is being displayed.
+  *
+  * @param	    array   $posts   The lists of posts to be displayed for the given category
+  * @return	    array            The updated list of posts with the sticky posts moved to the beginning of the array
+  *
+  * @since      1.7.0
+  */
+function gruene_add_sticky_functionality_for_category_pages( $posts, $query ) {
+	
+	$sticky_posts = array();
+	
+	// we only consider the main query of category pages
+	if ( $query->is_main_query() && is_category() ) {
+		
+		// loop through the posts and move the sticky ones into an other array
+		foreach( $posts as $post_index => $post ) {
+			// if the post is sticky
+			if ( is_sticky( $post->ID ) ) {
+				// store it in the array $sticky_posts
+				$sticky_posts[] = $post;
+				// remove it from $posts so we don't duplicate its display
+				unset( $posts[ $post_index ] );
+			}
+		}
+		
+	}
+	// return an array with the sicky posts moved to the beginning
+	return array_merge( $sticky_posts, $posts );
+}
+endif;
+add_filter( 'the_posts', 'gruene_add_sticky_functionality_for_category_pages', 10, 2 );
+
+
 /**
  * Custom template tags for this theme.
  */
@@ -412,11 +440,11 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
- * Load TGM Plugin (only for single site blogs)
+ * Load TGM Plugin (only for single site blogs – MU isn't supportet yet).
  */
 require get_template_directory() . '/inc/tgm-plugin.php';
 
 /**
- * Load TGM Plugin (only for single site blogs)
+ * Additional functionality, which basically also works theme independently.
  */
 require get_template_directory() . '/inc/extras.php';
