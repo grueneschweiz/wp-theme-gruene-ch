@@ -918,14 +918,13 @@ embed, iframe, object
 /*--------------------------------------------------------------
 # Widgets Content
 --------------------------------------------------------------*/
-aside.widget h1.widget-title, aside.widget h1.widget-title a
+#secondary aside.widget h1.widget-title, 
+#secondary aside.widget h1.widget-title a, 
+#secondary aside.widget h1.widget-title a:visited
 	{ color: #e10078; line-height: 1.5em; text-decoration: none; }
 
 aside.widget_rss h1.widget-title a.rsswidget:first-of-type
 	{ display: none; }
-	
-aside.widget_rss h1.widget-title a.rsswidget:visited
-	{ color: #e10078; }
 
 aside.widget_rss ul
 	{ padding: 0; list-style-type: none; }
