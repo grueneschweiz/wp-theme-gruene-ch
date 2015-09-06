@@ -20,7 +20,7 @@ if ( !defined( 'ABSPATH' ) ) exit;
 function gruene_customize_register( $wp_customize ) {
 	$wp_customize->remove_control( 'header_textcolor' );
 	$wp_customize->remove_control( 'display_header_text' );
-	$wp_customize->remove_section( 'nav' );
+	//$wp_customize->remove_section( 'nav' );
 	
 	/**
 	 * Add category selection for the front page
