@@ -13,7 +13,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#84b414">
 
 <?php gruene_the_site_icon_fallback(); // echo the default fav-icon if none was defined in the theme customizer ?>
 
