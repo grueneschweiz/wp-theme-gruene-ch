@@ -20,7 +20,32 @@ if ( !defined( 'ABSPATH' ) ) exit;
 function gruene_customize_register( $wp_customize ) {
 	$wp_customize->remove_control( 'header_textcolor' );
 	$wp_customize->remove_control( 'display_header_text' );
-	//$wp_customize->remove_section( 'nav' );
+	
+	/**
+	 * Add additional header image
+	 */
+	 // add section
+	$wp_customize->add_section( 'gruene_additional_header_image', array(
+		'title'          => __( 'Additional header image', 'gruene' ),
+		'description'    => __( "You might only use an additional header image, if you don't use the language switcher menu." .
+		                        " Deactivate tha language switcher menu, if the image doesn't appear.", 'gruene' ),
+		'priority'       => 75,
+	) );
+	
+	// add setting
+	$wp_customize->add_setting( 'additional_header_image', array(
+		'default'        => false,
+	) );
+	
+	// add control
+	$wp_customize->add_control( new WP_Customize_Cropped_Image_Control( $wp_customize, 'additional_header_image', array(
+		'label'      => __( 'Choose or upload your additional header image.', 'gruene' ),
+		'description'=> __( "Its minimal resolution should be 500 x 308 px.", 'gruene' ),
+		'section'    => 'gruene_additional_header_image',
+		'settings'   => 'additional_header_image',
+		'width'      => 500,
+		'height'     => 308,
+	) ) );
 	
 	/**
 	 * Add category selection for the front page

@@ -42,8 +42,17 @@
 		<div class="header-top-section">
 			<div class="site-branding">
 				<?php if ( get_header_image() ) : ?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" alt="Logo" id="logo"></a>
 				<?php endif; // End header image check. ?>
+				<?php if ( ! has_nav_menu( 'language' ) ) : // If there is no language menu, use the space for an additional image ?>
+					<?php $img_id = get_theme_mod( 'additional_header_image', false ); // get the attachment image id ?>
+					<?php $img = wp_get_attachment_image_src( $img_id, array(500, 308) ); ?>
+					<?php if ( ! empty( $img ) ) : // if an additional_header_image was set up ?>
+						<div id="additional-header-image">
+							<img src="<?php echo $img[0]; ?>" width="<?php echo $img[1]/2; ?>" height="<?php echo $img[2]/2; ?>">
+						</div>
+					<?php endif; // End if ! empty( $img ) ?>
+				<?php endif; // End if ! has_nav_menu( 'language' ) ?>
 			</div><!-- .site-branding -->
 			
 			<?php if ( has_nav_menu( 'language' ) ) : ?>
