@@ -337,26 +337,22 @@ function gruene_custom_home_category( $query ) {
 			if ( is_string( $cat_name ) ) {
 				$cat_ID = get_category_by_slug( $cat_name )->cat_ID;
 				
+				/**
+				 * Hide sticky posts, which are not in the given category,
+				 * make sticky posts unsticky. gruene_add_sticky_functionality()
+				 * makes them sticky again. This is nessecary to exclude the
+				 * sticky posts, which are not part of the home category, from
+				 * the home query.
+				 * 
+				 * @since 1.8.2
+				 */
+				$query->set( 'ignore_sticky_posts', true );
+				
 				// filter the QP_Query
 				$query->set( 'cat', $cat_ID );
 				
-				/**
-				 * Hide sticky posts, which are not in the given categroy
-				 * 
-				 * @since 1.6.1
-				 */
-				$args = array(
-					'category__not_in'    => array( $cat_ID ),
-				);
-				$forbidden_posts = get_posts( $args ); // Maybe ressource consuming. If you find a better alternative....
-				
-				$forbidden_post_ids = array();
-				foreach( $forbidden_posts as $forbidden_post ) {
-					$forbidden_post_ids[] = $forbidden_post->ID;
-				}
-				
 				// filter out sticky posts of wrong category
-				$query->set( 'post__not_in', $forbidden_post_ids );
+				$query->set( 'post__not_in', $forbidden_posts_ids );
 			}
 		}
 	}
@@ -389,7 +385,7 @@ function gruene_get_front_page_category() {
 endif;
 
 
-if ( ! function_exists( 'gruene_add_sticky_functionality_for_category_pages' ) ) :
+if ( ! function_exists( 'gruene_add_sticky_functionality' ) ) :
 /**
   * Places the sticky posts at the top of the list of posts for the category that is being displayed.
   *
@@ -398,12 +394,17 @@ if ( ! function_exists( 'gruene_add_sticky_functionality_for_category_pages' ) )
   *
   * @since      1.7.0
   */
-function gruene_add_sticky_functionality_for_category_pages( $posts, $query ) {
+function gruene_add_sticky_functionality( $posts, $query ) {
 	
 	$sticky_posts = array();
 	
 	// we only consider the main query of category pages
-	if ( $query->is_main_query() && is_category() ) {
+	/**
+	 * also consider the home page
+	 * 
+	 * @since 1.8.2
+	 */
+	if ( $query->is_main_query() && ( is_category() || is_home() ) ) {
 		
 		// loop through the posts and move the sticky ones into an other array
 		foreach( $posts as $post_index => $post ) {
@@ -421,7 +422,7 @@ function gruene_add_sticky_functionality_for_category_pages( $posts, $query ) {
 	return array_merge( $sticky_posts, $posts );
 }
 endif;
-add_filter( 'the_posts', 'gruene_add_sticky_functionality_for_category_pages', 10, 2 );
+add_filter( 'the_posts', 'gruene_add_sticky_functionality', 10, 2 );
 
 
 /**
