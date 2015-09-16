@@ -350,9 +350,6 @@ function gruene_custom_home_category( $query ) {
 				
 				// filter the QP_Query
 				$query->set( 'cat', $cat_ID );
-				
-				// filter out sticky posts of wrong category
-				$query->set( 'post__not_in', $forbidden_posts_ids );
 			}
 		}
 	}
