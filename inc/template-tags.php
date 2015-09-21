@@ -53,7 +53,7 @@ function gruene_the_site_icon_fallback() {
 	$icon = get_option( 'site_icon' );
 	
 	// if none was defined echo the default ones
-	if ( empty( $icon ) ) {
+	if ( false == (bool) $icon ) {
 		?>
 			<link rel="apple-touch-icon" sizes="57x57" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/apple-icon-57x57.png">
 			<link rel="apple-touch-icon" sizes="60x60" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/apple-icon-60x60.png">
