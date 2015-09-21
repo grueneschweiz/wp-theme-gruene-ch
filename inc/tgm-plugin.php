@@ -92,6 +92,16 @@ function gruene_register_required_plugins() {
 			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
 			'external_url'       => 'https://github.com/cyrillbolliger/cyboslider', // If set, overrides default API URL and points to an external URL.
 		),
+		array(
+			'name'      => 'Meta Box',
+			'slug'      => 'meta-box',
+			'required'  => false,
+		),
+		array(
+			'name'      => 'Meta Box Text Limiter',
+			'slug'      => 'meta-box-text-limiter',
+			'required'  => false,
+		),
 	);
 	
 	/**
