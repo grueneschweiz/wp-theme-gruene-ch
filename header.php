@@ -93,4 +93,13 @@
 		<?php gruene_language_nav(); ?>
 	</nav>
 
+	<?php 
+		/**
+		 * show social sharing (side)
+		 */
+		if ( function_exists( 'cybosm-side' ) ) {
+			cybosm( 'cybosm-side' ); 
+		}
+	?>
+
 	<div id="content" class="site-content">
