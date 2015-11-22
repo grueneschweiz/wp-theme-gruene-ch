@@ -677,7 +677,7 @@ nav.pagination div.nav-links a.next
 .widget h1, .widget h2, .widget h3, .widget h4, .widget h5, .widget h6
 	{ font-size: 15px; font-size: 0.9375rem; margin: 0 0 5px; }
 
-.widget h1 a, .widget h2 a, .widget h3 a,
+.widget h1 a, .widget h2 a, .widget h3 a
 	{ color: #e10078; text-decoration: none; }
 
 .widget ul, .widget ol
