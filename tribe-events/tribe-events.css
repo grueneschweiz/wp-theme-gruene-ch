@@ -2,13 +2,16 @@
 # Widget
 --------------------------------------------------------------*/
 
-aside.widget.tribe-events-list-widget ol.hfeed.vcalendar
+aside.widget.tribe-events-list-widget ol.hfeed.vcalendar, /* legacy tribe events 3.x */
+aside.widget.tribe-events-list-widget ol.tribe-list-widget
 	{ padding: 0; }
 	
-aside.widget.tribe-events-list-widget ol.hfeed.vcalendar li h4.entry-title.summary
+aside.widget.tribe-events-list-widget ol.hfeed.vcalendar li h4.entry-title.summary, /* legacy tribe events 3.x */
+aside.widget.tribe-events-list-widget ol.tribe-list-widget li h4.tribe-event-title
 	{ font-weight: normal; font-size: 13px; font-size: 0.8125rem; margin-bottom: 0; }
 
-aside.widget.tribe-events-list-widget ol.hfeed.vcalendar li div.duration
+aside.widget.tribe-events-list-widget ol.hfeed.vcalendar li div.duration, /* legacy tribe events 3.x */
+aside.widget.tribe-events-list-widget ol.tribe-list-widget li div.tribe-event-duration
 	{ font-weight: normal; margin-left: 15px; }
 
 .tribe-events-list-widget ol li
