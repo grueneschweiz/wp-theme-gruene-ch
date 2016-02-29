@@ -9,4 +9,4 @@ We propose you a maintained ready-to-use installation for a personal website for
 - Newsletter functionalitiy
 - 1h of support for free
 
-One-time Installation fee CHF 200.-. 
+Additional one-time Installation fee CHF 200.-. 
