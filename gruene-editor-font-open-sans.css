@@ -1,0 +1,11 @@
+/**
+ * custom editor font
+ * 
+ * this style sheet will only be loaded if the open sans font is chosen
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,800);
+
+body#tinymce.wp-editor
+	{ font-family: 'Open Sans', 'Tahoma', 'Verdana', 'Segoe', 'sans-serif'; }
+

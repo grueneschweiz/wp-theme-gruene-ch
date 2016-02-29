@@ -86,19 +86,26 @@ if ( ! function_exists( 'gruene_the_post_thumbnail' ) ) :
 function gruene_the_post_thumbnail() {
 	if ( has_post_thumbnail() ) {
 		// echo the given thumbnail
-		echo the_post_thumbnail();
+          $class = 'attachment-post-thumbnail gruene-thumbnail-size-' . get_theme_mod( 'thumbnail_size', 'large' );
+          the_post_thumbnail( 'post-thumbnail', array( 'class' => $class ) );
 	} else {
 		// if thumbnail is missing
 		
-		// get header image
-		$url = get_header_image();
-		$width = esc_attr( get_custom_header()->width ) / 4; // divide by 2 to make it retina compatible
-		$height = esc_attr( get_custom_header()->height ) / 4; // divide by 2 to make it retina compatible
-	
-		$style = "background-image: url('$url'); background-size: {$width}px {$height}px;";
-		
-		// echo the wrapped image
-		echo '<div class="attachment-post-thumbnail attachment-default-post-thumbnail" style="'.$style.'"></div>';
+          /**
+           * if small thumbnails are chosen, a default image with the logo
+           * will be returned. conditional @since 2.0.0
+           */
+          if ( 'small' == get_theme_mod( 'thumbnail_size', 'large' ) ) {
+               // get header image
+               $url = get_header_image();
+               $width = esc_attr( get_custom_header()->width ) / 4; // divide by 2 to make it retina compatible
+               $height = esc_attr( get_custom_header()->height ) / 4; // divide by 2 to make it retina compatible
+
+               $style = "background-image: url('$url'); background-size: {$width}px {$height}px;";
+
+               // echo the wrapped image
+               echo '<div class="attachment-post-thumbnail attachment-default-post-thumbnail" style="'.$style.'"></div>';
+          }
 	}
 }
 endif;
@@ -127,10 +134,10 @@ function gruene_the_featured_image() {
 	}
 	
 	// get the image properties
-	$image_props = wp_get_attachment_image_src( get_post_thumbnail_id(), 'gruene_large_post_thumbnail' );
+	$image_props = wp_get_attachment_image_src( get_post_thumbnail_id(), 'gruene_featured_image_size' );
 	
 	// get the image
-	$image_html = get_the_post_thumbnail( get_the_ID(), 'gruene_large_post_thumbnail' );
+	$image_html = get_the_post_thumbnail( get_the_ID(), 'gruene_featured_image_size' );
 	
 	echo '<figure class="featured-image'.$caption_class.'" style="width:'.$image_props[1].'px;">'.$image_html.$caption_html.'</figure>';
 }
@@ -175,7 +182,7 @@ if ( ! function_exists( 'gruene_get_read_more_link' ) ) :
  * returns the read more link HTML
  */
 function gruene_get_read_more_link() {
-	return '<a class="read-more" href="' . get_permalink( get_the_ID() ) . '">&rarr;&nbsp;' . __( 'Read More', 'gruene' ) . '</a>';
+	return '<a class="read-more" href="' . get_permalink( get_the_ID() ) . '">&raquo;&nbsp;' . __( 'Read More', 'gruene' ) . '</a>';
 }
 endif;
 
@@ -226,6 +233,54 @@ function gruene_the_back_button() {
 	if ( false !== strpos( $referer, home_url() ) ) {
 		echo '<div><a class="back-button" href="' . esc_attr( $referer ) . '">&larr;&nbsp;' . __( 'Back', 'gruene' ) . '</a></div>';
 	}
+}
+endif;
+
+
+if ( ! function_exists( 'gruene_the_additional_header_image' ) ) :
+/**
+ * echos the additional header image
+ */
+function gruene_the_additional_header_image() {
+     $mode = get_theme_mod( 'theme_purpose', 'politician' );
+     
+     $width  = GRUENE_ADDITIONAL_HEADER_WIDTH;
+     $height = GRUENE_ADDITIONAL_HEADER_HEIGHT;
+     
+     if ( 'politician' == $mode ) {
+          $width  = $width * GRUENE_HEADER_IMAGE_SCALING_RATIO;
+          $height = $height * GRUENE_HEADER_IMAGE_SCALING_RATIO;
+     }
+     
+     $img_id = get_theme_mod( 'additional_header_image', false ); // get the attachment image id
+     $img = wp_get_attachment_image_src( $img_id, array( $width, $height ) );
+     
+     if ( ! empty( $img ) ) { // if an additional_header_image was set up
+          echo '<div id="additional-header-image">'.
+                    '<img src="'. $img[0] .'" width="'. $img[1]/2 .'" height="' . $img[2]/2 .'">'.
+               '</div>';
+     }
+}
+endif;
+
+
+if ( ! function_exists( 'gruene_the_header_text' ) ) :
+/**
+ * echos the header text
+ */
+function gruene_the_header_text() {
+     $line1 = get_theme_mod( 'gruene_header_text_line1' );
+     $line2 = get_theme_mod( 'gruene_header_text_line2' );
+     
+     echo '<div class="gruene-bars-inner-div gruene-bars-right">';
+          echo '<span class="gruene-header-text gruene-header-text-line1 gruene-white-bar">' . $line1 . '</span>';
+          echo '<span class="gruene-header-text gruene-header-text-line2 gruene-magenta-bar">' . $line2 . '</span>';
+     echo '</div>';
+     
+     echo '<div class="gruene-bars-inner-div gruene-bars-left">';
+          echo '<span class="gruene-header-text gruene-header-text-line1 gruene-white-bar">' . $line1 . '</span>';
+          echo '<span class="gruene-header-text gruene-header-text-line2 gruene-magenta-bar">' . $line2 . '</span>';
+     echo '</div>';
 }
 endif;
 

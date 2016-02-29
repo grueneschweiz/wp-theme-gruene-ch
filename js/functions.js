@@ -2,8 +2,9 @@
  * jQuery wrapper
  */
 ( function( $ ) {
-	var Misc = new Misc();
-	var Nav = new Nav();
+	var Misc     = new Misc();
+	var Nav      = new Nav();
+     var Campaign = new Campaign();
 	
 	/**
 	 * handels all the miscellaneous design stuff
@@ -37,37 +38,33 @@
 			
 			$area.find( '.widget_nav_menu' ).width( menuWidth );
 		};
-		
-		/**
-		 * detect if your device uses a touchscreen
-		 * 
-		 * @author Aamir Shahzad
-		 * 
-		 * @see http://aamirshahzad.net/detect-touch-screen-with-javascript/
-		 * 
-		 * @return bool true for touchscreen, else false
-		 */
-		this.isTouchDevice = function isTouchDevice() {
-			return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
-		};
-		
-		
-		/**
-		 * adds hide and show functionality
-		 */
-		this.hide_n_show = function hide_n_show() {
-			$.each( $( 'div.gruene_hide_n_show' ), function( index, element ) {
-				$( element ).find( 'div.gruene_hide_n_show_display' ).click( function( event ) {
-					event.preventDefault();
-					$( this ).toggleClass( 'gruene_hide_n_show_closed' )
-					         .toggleClass( 'gruene_hide_n_show_open' );
-					$( element ).find( 'div.gruene_hide_n_show_content' ).slideToggle( 'fast' );
-				} );
-			} );
-			
-			$( 'div.gruene_hide_n_show_content' ).hide();
-			$( 'div.gruene_hide_n_show_display' ).addClass( 'gruene_hide_n_show_closed' );
-		};
+          
+          /**
+           * adjusts the hight of the header text container
+           */
+          this.setHeaderTextHight = function setHeaderTextHight() {
+               var height,
+                   width,
+                   $line1       = $( '.gruene-header-text-line1:visible' ),
+                   $line2       = $( '.gruene-header-text-line2:visible' ),
+                   $inner_div   = $( '.gruene-bars-inner-div:visible' ),
+                   $header_text = $( '#header-text' );
+               
+               $inner_div.css( 'width', 'auto' );
+               
+               width = $line1.outerWidth() > $line2.outerWidth() ? $line1.outerWidth() : $line2.outerWidth();
+               
+               $inner_div.width( width + 1 );
+               
+               height = $line1.height() * 2.3 
+                       + Math.sin( 5 * Math.PI / 180 ) * width
+                       + parseInt( $header_text.css( 'margin-top' ) )
+                       + parseInt( $header_text.css( 'margin-bottom' ) )
+                       + parseInt( $header_text.css( 'padding-top' ) )
+                       + parseInt( $header_text.css( 'padding-bottom' ) );
+               
+               $header_text.height( height );
+          };
 	}
 	
 	/**
@@ -88,7 +85,7 @@
 			
 			// close button
 			$( 'div#close-side-menu' ).click(function() {
-				self.hideMobile();
+				$( 'nav#side-menu' ).animate( { width: 'toggle' } );
 			} );
 			
 			//menu item with children
@@ -133,19 +130,10 @@
 		/*
 		 * display mobile nav, if there is not enough space for the desktop nav or if its a touch device
 		 */
-		this.showMobileIfNedded = function showMobileIfNedded() {
-			// if its a touch device, always show mobile nav
-			if ( Misc.isTouchDevice() ) {
-				// hide search form
-				$( '#header-search-form' ).hide();
-				// show mobile nav
-				self.showMobile();
-				return; //BREAKPOINT
-			}
-			
+		this.showMobileIfNedded = function showMobileIfNedded() {	
 			var $firstLevelItems = $( '.main-navigation ul#primary-menu > li' ),
-				$nav             = $( 'nav.main-navigation' ),
-				usedSpace        = 0;
+                   $nav             = $( 'nav.main-navigation' ),
+			    usedSpace        = 0;
 			
 			// show desktop nav to make it measurable
 			if ( false == $nav.is( ':visible') ) {
@@ -217,6 +205,121 @@
 			} );
 		};
 	}
+     
+     /**
+      * Handels all the campaign stuff
+      * 
+      * @since 2.0.0
+      */
+     function Campaign() {
+		
+		var self = this;
+		
+		/*
+		 * start up campaign dialog
+		 */
+		this.init = function init() {
+               var layout_max_width = 629,
+                   margin           = 20,
+                   window_width     = $( window ).width(),
+                   $html            = $( 'html' );
+           
+               $( '.gruene-campaign:first' ).dialog( {
+                    modal       : true,
+                    resizable   : false,
+                    draggable   : false,
+                    closeText   : 'x',
+                    maxWidth    : window_width - margin,
+                    minWidth    : layout_max_width > window_width - margin ? window_width - margin : layout_max_width,
+                    dialogClass : 'gruene-campaign-dialog',
+                    position    : { my: 'center center', at: 'center center' },
+                    open        : function() {
+                         // limit size of background document to hide scrollbars
+                         $html
+                                 .css( 'height', '100%' )
+                                 .css( 'width', '100%' )
+                                 .css( 'overflow', 'hidden' )
+                                 .css( 'position', 'fixed' );
+                         
+                         // always open dialog with scrollTop 0
+                         $( '.gruene-campaign-dialog' ).scrollTop( 0 );
+                         
+                         // set dialog hight
+                         self.setDialogHeight();
+                    },
+                    close       : function() {
+                         $html
+                                 .css( 'height', '' )
+                                 .css( 'width', '' )
+                                 .css( 'overflow', '' )
+                                 .css( 'position', '' );
+                    }
+               } );
+          };
+          
+          /*
+		 * Set hight of the dialog
+           * 
+           * This method is a bugfix for chrome browsers an 4k screens, they
+           * don't get along with the css only solution. 
+           */
+		this.setDialogHeight = function setDialogHeight() {
+               var margin           = 20,
+                   content_height   = $( 'article.gruene-campaign' ).outerHeight( true ) + 1,
+                   adminbar_height  = $( '#wpadminbar' ).outerHeight( true ),
+                   window_height    = $( window ).height(),
+                   viewport_height  = window_height - adminbar_height - margin,
+                   dialog_height    = viewport_height < content_height ? viewport_height : content_height;
+           
+               $( '.gruene-campaign-dialog' )
+                       .css( 'height', dialog_height )
+                       .css( 'top', function() {
+                              return ( window_height - adminbar_height - dialog_height ) / 2 ;
+                       } );
+          };
+          
+          /*
+		 * Set width of the dialog
+           * 
+           * This method is basically used when resizing the screen 
+           */
+		this.setDialogWidth = function setDialogWidth() {
+               var  layout_max_width = 629,
+                    margin           = 20,
+                    window_width     = $( window ).width(),
+                    dialog_width     = window_width - margin < layout_max_width ? window_width - margin : layout_max_width;
+           
+               $( '.gruene-campaign-dialog' )
+                       .css( 'width', dialog_width )
+                       .css( 'left', function() {
+                              return ( window_width - dialog_width ) / 2;
+                       } );
+          };
+          
+          /*
+		 * Put the close button in the correct position
+		 */
+		this.positionCloseButton = function positionCloseButton() {
+               var $dialog = $( '.gruene-campaign-dialog' );
+               
+               $( '.gruene-campaign-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close' )
+                       .css( 'top', function() {
+                            return  parseFloat( $dialog.css( 'top' ) ) + 
+                                    $( '#wpadminbar' ).height() - 10;
+                       } )
+                       .css( 'right', function() {
+                            return parseFloat( $dialog.css( 'left' ) ) - 10;
+                       } );
+          };
+          
+          /*
+		 * Close dialog
+		 */
+		this.close = function close() {
+               $( '.gruene-campaign:first' ).dialog( 'close' );
+          };
+     }
+          
 	/**
 	 * fires after DOM is loaded
 	 */
@@ -226,15 +329,21 @@
 		Nav.initiateMobileEvents();
 		Nav.showCurrentTree();
 		Nav.initiateFooterHideNshow();
-		Misc.hide_n_show();
+          Misc.setHeaderTextHight();
+          Campaign.init();
+          Campaign.positionCloseButton();
 	});
 	
 	/**
 	 * fires on resizeing of the window
 	 */
-	jQuery( window ).resize( function() {
+	$( window ).resize( function() {
 		Misc.setFooterMenuWidth();
 		Nav.showMobileIfNedded();
+          Misc.setHeaderTextHight();
+          Campaign.setDialogHeight();
+          Campaign.setDialogWidth();
+          Campaign.positionCloseButton();
 	});
 	
 } )( jQuery );

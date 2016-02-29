@@ -1,12 +1,12 @@
 /**
  * custom editor styles
  * 
- * styled to be consistent with front end styles
+ * styled to be consistent with frontend styles
  */
 
 body#tinymce.wp-editor
 	{ font-family: Tahoma,​​Verdana,​​Segoe,​​sans-serif; }
-	
+
 body#tinymce.wp-editor
 	{ font-size: 16px; font-size: 1rem; line-height: 1.5em; color: #404040; }
 
@@ -31,6 +31,22 @@ body#tinymce.wp-editor h2
 
 body#tinymce.wp-editor h3
 	{ font-size: 1em; }
+
+body#tinymce.wp-editor .gruene-custom-heading
+     { color: #ffffff; text-transform: uppercase; line-height: 1em; 
+       padding: 0.1em 0.3em; display: block; font-weight: bold; margin: 0.1em 0; }
+
+body#tinymce.wp-editor .gruene-custom-heading:first-of-type
+     { margin-top: 0.67em; }
+
+body#tinymce.wp-editor .gruene-custom-heading:last-of-type
+     { margin-bottom: 0.67em; }
+     
+body#tinymce.wp-editor .gruene-green-heading
+     { background-color: #84b414; }
+     
+body#tinymce.wp-editor .gruene-magenta-heading
+     { background-color: #e10078; }
 
 body#tinymce.wp-editor blockquote
 	{ background-color: #aec504; border-radius: 5px; color: #ffffff; padding: 10px 10px 10px 60px; display: block; 
@@ -70,3 +86,4 @@ body#tinymce.wp-editor .wp-caption-dd
 
 body#tinymce.wp-editor .wp-caption-dd::before
 	{ content: "›"; display: inline-block; margin: 0 5px 0 2px; }
+

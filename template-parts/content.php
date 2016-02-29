@@ -11,7 +11,7 @@
 			<?php gruene_the_post_thumbnail(); ?>
 		</a>
 		
-		<?php if ( 'post' == get_post_type() ) : ?>
+		<?php if ( 'post' == get_post_type() && ! is_sticky() ) : ?>
 			<div class="entry-meta">
 				<?php gruene_posted_on(); ?>
 			</div><!-- .entry-meta -->

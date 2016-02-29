@@ -40,8 +40,8 @@ get_header(); ?>
 
 			<?php 
 				the_posts_pagination( array( 
-					'prev_text'   => __( '&larr; Previous page', 'gruene' ),
-					'next_text'   => __( '&rarr; Next page', 'gruene' ),
+					'prev_text'   => sprintf( _x( '%s Previous page', '&laquo;', 'gruene' ), '&laquo;' ),
+					'next_text'   => sprintf( _x( '%s Next page', '&raquo;', 'gruene' ), '&raquo;' ),
 					'format'      => '/page/%#%',
 				) );
 			?>

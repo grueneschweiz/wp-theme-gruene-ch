@@ -11,7 +11,53 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Version number of theme. Dont forget to change it also in the style.css file
  */
-define( 'GRUENE_VERSION', '1.9.0' );
+define( 'GRUENE_VERSION', '2.0.0' );
+
+/**
+ * Header image sizes 
+ * 
+ * Enter twice the size (HiDPI) of the header images for the party theme purpose
+ */
+define( 'GRUENE_CUSTOM_HEADER_WIDTH', 500 );
+define( 'GRUENE_CUSTOM_HEADER_HEIGHT', 308);
+define( 'GRUENE_ADDITIONAL_HEADER_WIDTH', 500 );
+define( 'GRUENE_ADDITIONAL_HEADER_HEIGHT', 308 );
+
+/**
+ * Scaling ratio for header images for the politician theme purpose
+ */
+define( 'GRUENE_HEADER_IMAGE_SCALING_RATIO', 0.75 );
+
+/**
+ * Themes content width in pixels, based on the theme's design and stylesheet
+ */
+define( 'GRUENE_CONTENT_WIDTH', 649 );
+
+
+if ( ! function_exists( 'gruene_update' ) ) :
+/**
+ * Upgrade routine
+ */
+function gruene_update() {
+     $current_version = get_theme_mod( 'version_number', null );
+			
+     // if everything is up to date stop here
+     if ( GRUENE_VERSION == $current_version ) {
+          return; // BREAKPOINT
+     }
+
+     // run the upgrade routine for versions smaller 2.0.0
+     if ( -1 == version_compare( $current_version, '2.0.0' ) ) {
+          set_theme_mod( 'font_family', 'tahoma' );
+          set_theme_mod( 'theme_purpose', 'party' );
+          set_theme_mod( 'thumbnail_size', 'small' );
+     }
+
+     // set the current version number
+    set_theme_mod( 'version_number', GRUENE_VERSION );
+}
+endif;
+add_action( 'after_setup_theme', 'gruene_update', 0 );
 
 if ( ! function_exists( 'gruene_content_width' ) ) :
 /**
@@ -21,11 +67,24 @@ if ( ! function_exists( 'gruene_content_width' ) ) :
  *
  * @global int $content_width
  */
-function gruene_content_width() {
-	$GLOBALS['content_width'] = 649;
+function gruene_set_content_width() {
+	$GLOBALS['content_width'] = GRUENE_CONTENT_WIDTH;
 }
 endif;
-add_action( 'after_setup_theme', 'gruene_content_width', 0 );
+add_action( 'after_setup_theme', 'gruene_set_content_width', 0 );
+
+if ( ! function_exists( 'gruene_get_full_image_width' ) ) :
+/**
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
+ */
+function gruene_get_full_image_width() {
+     return $GLOBALS['content_width'] - 20;
+}
+endif;
 
 if ( ! function_exists( 'gruene_setup' ) ) :
 /**
@@ -55,38 +114,62 @@ function gruene_setup() {
 	 * provide it for us.
 	 */
 	add_theme_support( 'title-tag' );
-
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
-	 *
-	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-	 */
-	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 150, 150, array( 'center', 'center' ) );
 	
 	/**
-	 * Add image size for default post thumbnail
+	 * Add image size for small post thumbnail
 	 * 
 	 * @see gruene_the_post_thumbnail()
 	 * @see add_image_size()
 	 */
-	add_image_size( 'gruene_default_post_thumbnail', get_option( 'thumbnail_size_w' ), get_option( 'thumbnail_size_h' ), false );
+	add_image_size( 'gruene_small_post_thumbnail', 150, 150, array( 'center', 'center' ) );
 	
+     /**
+	 * Add image size for large post thumbnail
+	 * 
+	 * @see gruene_the_post_thumbnail()
+	 * @see add_image_size()
+	 */
+	add_image_size( 'gruene_large_post_thumbnail', gruene_get_full_image_width(), 233, array( 'center', 'center' ) );
+     
 	/**
 	 * Add image size for large post thumbnails
 	 * 
 	 * @see add_image_size()
 	 */
-	add_image_size( 'gruene_large_post_thumbnail', 629 );
+	add_image_size( 'gruene_featured_image_size', gruene_get_full_image_width() );
+     
+     /*
+	 * Enable support for Post Thumbnails on posts and pages.
+      * 
+      * Set the thumbnail size as chosen in the theme customizer
+	 *
+	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+	 */
+     global $_wp_additional_image_sizes;
+     if ( 'small' == get_theme_mod( 'thumbnail_size', 'large' ) ) {
+          $img_size = $_wp_additional_image_sizes['gruene_small_post_thumbnail'];
+     } else {
+          $img_size = $_wp_additional_image_sizes['gruene_large_post_thumbnail'];
+     }
+     add_theme_support( 'post-thumbnails' );
+     set_post_thumbnail_size( (int) $img_size['width'], (int) $img_size['height'], $img_size['crop'] );
 	
-	// This theme uses wp_nav_menu() in several locations.
+	
+	// These menus will always be loaded.
 	register_nav_menus( array(
 		'primary'     => esc_html__( 'Primary Menu', 'gruene' ),
-		'meta'        => esc_html__( 'Meta Menu', 'gruene' ),
 		'footer'      => esc_html__( 'Footer Menu', 'gruene' ),
-		'language'    => esc_html__( 'Language Menu', 'gruene' ),
-		'footer-meta' => esc_html__( 'Footer Meta Menu', 'gruene' ),
+          'footer-meta' => esc_html__( 'Footer Meta Menu', 'gruene' ),
+
 	) );
+     
+     // Those will only load for party representation
+	if ( 'party' == get_theme_mod( 'theme_purpose', 'politician' ) ) {
+          register_nav_menus( array(
+               'language'    => esc_html__( 'Language Menu', 'gruene' ),
+               'meta'        => esc_html__( 'Meta Menu', 'gruene' ),
+          ) );
+     }
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -107,10 +190,19 @@ if ( ! function_exists( 'gruene_widgets_init' ) ) :
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
 function gruene_widgets_init() {
+     register_sidebar( array(
+		'name'          => esc_html__( 'Upper Sidebar', 'gruene' ),
+		'id'            => 'upper-sidebar-widget-area',
+		'description'   => __( 'Put the "Search and Share" widget in here.', 'gruene' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'gruene' ),
 		'id'            => 'sidebar-widget-area',
-		'description'   => '',
+		'description'   => __( 'This is just the regular sidebar.', 'gruene' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
@@ -119,7 +211,7 @@ function gruene_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Footer', 'gruene' ),
 		'id'            => 'footer-widget-area',
-		'description'   => '',
+		'description'   => __( 'This is the footer zone. Example: put your contact details here.', 'gruene' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
@@ -129,20 +221,25 @@ function gruene_widgets_init() {
 endif;
 add_action( 'widgets_init', 'gruene_widgets_init' );
 
+
 if ( ! function_exists( 'gruene_scripts' ) ) :
 /**
  * Enqueue scripts and styles.
  */
 function gruene_scripts() {
-	wp_enqueue_style( 'gruene-style', get_stylesheet_uri(), array(), GRUENE_VERSION );
-
-	//wp_enqueue_script( 'gruene-navigation', get_template_directory_uri() . '/js/navigation.js', array(), GRUENE_VERSION, true );
-	//wp_enqueue_script( 'gruene-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), GRUENE_VERSION, true );
+	// enqueue style sheet
+     wp_enqueue_style( 'gruene-style', get_stylesheet_uri(), array(), GRUENE_VERSION );
+     
+     // enqueue script
 	$deps = array(
-		'jquery',
+          'jquery',
+          'jquery-ui-core',
+          'jquery-ui-button',
+          'jquery-ui-dialog',
 	);
 	wp_enqueue_script( 'gruene-functions', get_template_directory_uri() . '/js/functions.js', $deps, GRUENE_VERSION, true );
-
+          
+     // only load comments script if there is a possibility to comment
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -150,15 +247,26 @@ function gruene_scripts() {
 endif;
 add_action( 'wp_enqueue_scripts', 'gruene_scripts' );
 
+
 if ( ! function_exists( 'gruene_custom_header_setup' ) ) :
 /**
  * Set up the WordPress core custom header feature.
  */
 function gruene_custom_header_setup() {
+     $mode = get_theme_mod( 'theme_purpose', 'politician' );
+     
+     $width  = GRUENE_CUSTOM_HEADER_WIDTH;
+     $height = GRUENE_CUSTOM_HEADER_HEIGHT;
+     
+     if ( 'politician' == $mode ) {
+          $width  = $width * GRUENE_HEADER_IMAGE_SCALING_RATIO;
+          $height = $height * GRUENE_HEADER_IMAGE_SCALING_RATIO;
+     }
+     
 	add_theme_support( 'custom-header', apply_filters( 'gruene_custom_header_args', array(
 		'default-image'          => get_template_directory_uri() . '/img/logo-default.png',
-		'width'                  => 500, // make it two times bigger than expected to be retina compatible
-		'height'                 => 308, // make it two times bigger than expected to be retina compatible
+		'width'                  => $width,
+		'height'                 => $height,
 		'flex-height'            => true,
 		'uploads'                => true,
 	) ) );
@@ -192,6 +300,11 @@ if ( ! function_exists( 'gruene_add_editor_style_sheet' ) ) :
  */
 function gruene_add_editor_style_sheet() {
 	add_editor_style( 'gruene-editor-stlyes.css' );
+     
+     $font = get_theme_mod( 'font_family', 'open_sans' );
+     if ( 'open_sans' == $font ) {
+          add_editor_style( 'gruene-editor-font-open-sans.css' );
+     }
 }
 endif;
 if ( is_admin() ) {
@@ -205,7 +318,7 @@ if ( ! function_exists( 'gruene_config_mce_buttons_1' ) ) :
  */
 function gruene_config_mce_buttons_1( $buttons ) {
 	
-	// foreget the given buttons
+	// forget the given buttons
 	// show the following ones
 	$buttons = array(
 		'bold',
@@ -238,7 +351,7 @@ if ( ! function_exists( 'gruene_config_mce_buttons_2' ) ) :
  * customize second line of editor buttons
  */
 function gruene_config_mce_buttons_2( $buttons ) {	
-	//remove buttons
+	// remove buttons
 	$remove = array(
 		'alignjustify',
 		'forecolor',
@@ -251,6 +364,19 @@ function gruene_config_mce_buttons_2( $buttons ) {
 		}
 	}
 	
+     /**
+      * add buttons
+      * 
+      * buttons will be prepended in reverse order
+      * @since 2.0.0
+      */
+     $add = array(
+         'styleselect'
+     );
+     foreach( $add as $add_val ) {
+          array_unshift( $buttons, $add_val );
+     }
+     
 	return $buttons;
 }
 endif;
@@ -280,6 +406,54 @@ if ( is_admin() ) {
 	add_filter( 'tiny_mce_before_init', 'gruene_mce_advanced_customizations');
 }
 
+if ( ! function_exists( 'gruene_mce_style_formats' ) ) :
+/**
+ * add custom mce style formats
+ * 
+ * @since 2.0.0
+ */
+function gruene_mce_style_formats( $settings ) {
+     
+	$style_formats = array(  
+	// Each array child is a format with it's own settings
+		array(  
+			'title'   => __( 'Green Heading 1', 'gruene'),
+			'block'   => 'h1',
+			'classes' => 'gruene-custom-heading gruene-green-heading',
+		),
+          array(  
+			'title'   => __( 'Green Heading 2', 'gruene'),
+			'block'   => 'h2',
+			'classes' => 'gruene-custom-heading gruene-green-heading',
+		),
+          array(  
+			'title'   => __( 'Green Heading 3', 'gruene'),
+			'block'   => 'h3',
+			'classes' => 'gruene-custom-heading gruene-green-heading',
+		),
+          array(  
+			'title'   => __( 'Magenta Heading 1', 'gruene'),
+			'block'   => 'h1',
+			'classes' => 'gruene-custom-heading gruene-magenta-heading',
+		),
+          array(  
+			'title'   => __( 'Magenta Heading 2', 'gruene'),
+			'block'   => 'h2',
+			'classes' => 'gruene-custom-heading gruene-magenta-heading',
+		),
+          array(  
+			'title'   => __( 'Magenta Heading 3', 'gruene'),
+			'block'   => 'h3',
+			'classes' => 'gruene-custom-heading gruene-magenta-heading',
+		),
+	);
+	// Insert the array, JSON ENCODED, into 'style_formats'
+	$settings['style_formats'] = json_encode( $style_formats );
+	
+	return $settings;
+}
+endif;
+add_filter( 'tiny_mce_before_init', 'gruene_mce_style_formats');
 
 if ( ! function_exists( 'gruene_body_classes' ) ) :
 /**
@@ -324,37 +498,53 @@ if ( ! function_exists( 'gruene_custom_home_category' ) ) :
  * If the theme is set to blogs on the home page and a specific category
  * was choosen, then this functions filtes the WP_Query to output only
  * the chose category. If no spezific category was choosen, all categories
- * are shown
+ * are shown.
+ * 
+ * @param WP_Query $query
  * 
  * @since 1.6.0
  */
 function gruene_custom_home_category( $query ) {
 	if ( $query->is_home() && $query->is_main_query() ) {
-			// get the chosen category slug
-			$cat_name = gruene_get_front_page_category();
-			
-			// if a category was choosen
-			if ( is_string( $cat_name ) ) {
-				$cat_ID = get_category_by_slug( $cat_name )->cat_ID;
-				
-				/**
-				 * Hide sticky posts, which are not in the given category,
-				 * make sticky posts unsticky. gruene_add_sticky_functionality()
-				 * makes them sticky again. This is nessecary to exclude the
-				 * sticky posts, which are not part of the home category, from
-				 * the home query.
-				 * 
-				 * @since 1.8.2
-				 */
-				$query->set( 'ignore_sticky_posts', true );
-				
-				// filter the QP_Query
-				$query->set( 'cat', $cat_ID );
-			}
-		}
+          gruene_custom_category( $query );
 	}
+}
 endif;
 add_action( 'pre_get_posts', 'gruene_custom_home_category' );
+
+
+if ( ! function_exists( 'gruene_custom_category' ) ) :
+/**
+ * Modifies the WP_Query object to output only the category selected for the
+ * home page in the theme customizer. If no spezific category was choosen, 
+ * all categories are shown.
+ * 
+ * @param WP_Query $query
+ */
+function gruene_custom_category( $query ) {
+     // get the chosen category slug
+     $cat_name = gruene_get_front_page_category();
+
+     // if a category was choosen
+     if ( is_string( $cat_name ) ) {
+          $cat_ID = get_category_by_slug( $cat_name )->cat_ID;
+
+          /**
+           * Hide sticky posts, which are not in the given category,
+           * make sticky posts unsticky. gruene_add_sticky_functionality()
+           * makes them sticky again. This is nessecary to exclude the
+           * sticky posts, which are not part of the home category, from
+           * the home query.
+           * 
+           * @since 1.8.2
+           */
+          $query->set( 'ignore_sticky_posts', true );
+
+          // filter the QP_Query
+          $query->set( 'cat', $cat_ID );
+     }
+}
+endif;
 
 
 if ( ! function_exists( 'gruene_get_front_page_category' ) ) :
@@ -420,6 +610,36 @@ function gruene_add_sticky_functionality( $posts, $query ) {
 }
 endif;
 add_filter( 'the_posts', 'gruene_add_sticky_functionality', 10, 2 );
+
+
+if ( ! function_exists( 'gruene_set_font_family_body_class' ) ) :
+/**
+ * Adds the font family class to the body tag
+ * 
+ * @param array $classes
+ * @return array
+ */
+function gruene_set_font_family_body_class( $classes ) {
+	$classes[] = 'gruene-font-' . get_theme_mod( 'font_family', 'open_sans' );
+	return $classes;
+}
+endif;
+add_filter( 'body_class', 'gruene_set_font_family_body_class' );
+
+
+if ( ! function_exists( 'gruene_load_font_family' ) ) :
+/**
+ * Loads the open sans font, if required
+ */
+function gruene_load_font_family() {
+	$font = get_theme_mod( 'font_family', 'open_sans' );
+     if ( 'open_sans' == $font ) {
+          echo '<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,800" rel="stylesheet" type="text/css">';
+     }
+}
+endif;
+add_action( 'wp_head', 'gruene_load_font_family' );
+
 
 
 /**

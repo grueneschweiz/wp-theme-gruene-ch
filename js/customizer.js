@@ -25,5 +25,5 @@
 			$( '.front-page-title' ).text( to );
 		} );
 	} );
-	
+         
 } )( jQuery );

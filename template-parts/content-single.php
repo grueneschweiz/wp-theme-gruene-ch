@@ -8,9 +8,11 @@
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		
-		<div class="entry-meta">
-			<?php gruene_posted_on(); ?>
-		</div><!-- .entry-meta -->
+		<?php if ( 'post' == get_post_type() && ! is_sticky() ) : ?>
+			<div class="entry-meta">
+				<?php gruene_posted_on(); ?>
+			</div><!-- .entry-meta -->
+		<?php endif; ?>
 		
 		<?php gruene_the_featured_image(); ?>
 		

@@ -31,13 +31,7 @@
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" alt="Logo" id="logo"></a>
 				<?php endif; // End header image check. ?>
 				<?php if ( ! has_nav_menu( 'language' ) ) : // If there is no language menu, use the space for an additional image ?>
-					<?php $img_id = get_theme_mod( 'additional_header_image', false ); // get the attachment image id ?>
-					<?php $img = wp_get_attachment_image_src( $img_id, array(500, 308) ); ?>
-					<?php if ( ! empty( $img ) ) : // if an additional_header_image was set up ?>
-						<div id="additional-header-image">
-							<img src="<?php echo $img[0]; ?>" width="<?php echo $img[1]/2; ?>" height="<?php echo $img[2]/2; ?>">
-						</div>
-					<?php endif; // End if ! empty( $img ) ?>
+					<?php gruene_the_additional_header_image(); ?>
 				<?php endif; // End if ! has_nav_menu( 'language' ) ?>
 			</div><!-- .site-branding -->
 			
@@ -47,10 +41,18 @@
 				</nav><!-- #language-switch -->
 			<?php endif; // End if has_nav_menu( 'language' ) ?>
 			
-			<div id="header-search-form">
-				<?php get_search_form(); ?>
-			</div><!-- #header-search-form -->
+               <?php if ( 'party' == get_theme_mod( 'theme_purpose', 'politician' ) ): ?>
+                    <div id="header-search-form" class="gruene-search-form">
+                         <?php get_search_form(); ?>
+                    </div><!-- #header-search-form -->
+               <?php endif; // End if partys theme ?>
 			
+               <?php if ( 'politician' == get_theme_mod( 'theme_purpose', 'politician' ) ): ?>
+                    <div id="header-text">
+                         <?php gruene_the_header_text(); ?>
+                    </div><!-- #header-text -->
+               <?php endif; // End if politicians theme ?>
+               
 			<?php if ( has_nav_menu( 'meta' ) ) : ?>
 				<nav id="meta-navigation" class="meta-navigation navigation" role="navigation">
 					<?php wp_nav_menu( array( 
@@ -88,7 +90,10 @@
 
 	<nav id="side-menu" role="navigation">
 		<div id="close-side-menu"></div>
-		<div id="side-menu-title"><?php _e( 'Menu', 'NaSe-Theme' ); ?></div>
+		<div id="side-menu-title"><?php _e( 'Menu', 'gruene' ); ?></div>
+          <div id="side-nav-search-form" class="gruene-search-form">
+               <?php get_search_form(); ?>
+          </div><!-- #side-nav-search-form -->
 		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu-mobile', 'depth' => 3 ) ); ?>
 		<?php gruene_language_nav(); ?>
 	</nav>

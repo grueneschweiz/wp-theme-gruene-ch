@@ -10,6 +10,10 @@ if ( ! is_active_sidebar( 'sidebar-widget-area' ) ) {
 }
 ?>
 
+<div id="secondary-additional" class="widget-area" role="complementary">
+	<?php dynamic_sidebar( 'upper-sidebar-widget-area' ); ?>
+</div><!-- #secondary-additional -->
+
 <div id="secondary" class="widget-area" role="complementary">
 	<?php dynamic_sidebar( 'sidebar-widget-area' ); ?>
 </div><!-- #secondary -->

@@ -17,7 +17,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 		
 		<h1 class="page-title front-page-title"><?php echo get_theme_mod( 'front_page_title' ); ?></h1>
-		
+        
 		<?php if ( have_posts() ) : ?>
 		
 			<?php /* Start the Loop */ ?>
@@ -35,8 +35,8 @@ get_header(); ?>
 
 			<?php 
 				the_posts_pagination( array( 
-					'prev_text'   => __( '&larr; Previous page', 'gruene' ),
-					'next_text'   => __( '&rarr; Next page', 'gruene' ),
+					'prev_text'   => sprintf( _x( '%s Previous page', '&laquo;', 'gruene' ), '&laquo;' ),
+					'next_text'   => sprintf( _x( '%s Next page', '&raquo;', 'gruene' ), '&raquo;' ),
 					'format'      => '/page/%#%',
 				) );
 			?>
