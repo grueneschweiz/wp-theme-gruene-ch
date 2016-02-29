@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gruene Theme\n"
-"POT-Creation-Date: 2015-09-07 16:14+0100\n"
-"PO-Revision-Date: 2015-09-07 16:17+0100\n"
+"POT-Creation-Date: 2016-02-29 11:51+0100\n"
+"PO-Revision-Date: 2016-02-29 11:52+0100\n"
 "Last-Translator: Cyrill Bolliger <bolliger@gmx.ch>\n"
 "Language-Team: Cyrill Bolliger <bolliger@gmx.ch>\n"
 "Language: DE\n"
@@ -31,12 +31,16 @@ msgstr ""
 "oder mit einer Suche?"
 
 #: ../archive.php:43 ../home.php:38 ../index.php:36 ../search.php:35
-msgid "&larr; Previous page"
-msgstr "&larr; Vorherige Seite"
+#, php-format
+msgctxt "&laquo;"
+msgid "%s Previous page"
+msgstr "%s Vorherige Seite"
 
 #: ../archive.php:44 ../home.php:39 ../index.php:37 ../search.php:36
-msgid "&rarr; Next page"
-msgstr "&rarr; Nächste Seite"
+#, php-format
+msgctxt "&raquo;"
+msgid "%s Next page"
+msgstr "%s Nächste Seite"
 
 #: ../comments.php:29
 #, php-format
@@ -62,43 +66,87 @@ msgstr "Neuere Kommentare"
 msgid "Comments are closed."
 msgstr "Die Kommentarfunktion wurde geschlossen."
 
-#: ../functions.php:84
+#: ../functions.php:160
 msgid "Primary Menu"
 msgstr "Hauptmenü"
 
-#: ../functions.php:85
-msgid "Meta Menu"
-msgstr "Mentamenü"
-
-#: ../functions.php:86
+#: ../functions.php:161
 msgid "Footer Menu"
 msgstr "Footermenü"
 
-#: ../functions.php:87
-msgid "Language Menu"
-msgstr "Sprachmenü"
-
-#: ../functions.php:88
+#: ../functions.php:162
 msgid "Footer Meta Menu"
 msgstr "Footer-Metamenü"
 
-#: ../functions.php:111
+#: ../functions.php:169
+msgid "Language Menu"
+msgstr "Sprachmenü"
+
+#: ../functions.php:170
+msgid "Meta Menu"
+msgstr "Mentamenü"
+
+#: ../functions.php:194
+msgid "Upper Sidebar"
+msgstr "Obere Sidebar"
+
+#: ../functions.php:196
+msgid "Put the \"Search and Share\" widget in here."
+msgstr "Ziehe das \"Suche und Teilen\" widget hier hinein."
+
+#: ../functions.php:203
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: ../functions.php:120
+#: ../functions.php:205
+msgid "This is just the regular sidebar."
+msgstr "Das ist die normale Sidebar."
+
+#: ../functions.php:212
 msgid "Footer"
 msgstr "Footer"
 
-#: ../header.php:39
+#: ../functions.php:214
+msgid ""
+"This is the footer zone. Example: drop a text widget with your contact "
+"details in here."
+msgstr ""
+"Das ist der Fussbereich der Website. Ziehe hier beispielsweise ein Text "
+"Widget mit deinen Kontaktangaben hinein."
+
+#: ../functions.php:420
+msgid "Green Heading 1"
+msgstr "Grüne H1"
+
+#: ../functions.php:425
+msgid "Green Heading 2"
+msgstr "Grüne H2"
+
+#: ../functions.php:430
+msgid "Green Heading 3"
+msgstr "Grüne H3"
+
+#: ../functions.php:435
+msgid "Magenta Heading 1"
+msgstr "Magenta H1"
+
+#: ../functions.php:440
+msgid "Magenta Heading 2"
+msgstr "Magenta H2"
+
+#: ../functions.php:445
+msgid "Magenta Heading 3"
+msgstr "Magenta H3"
+
+#: ../header.php:25
 msgid "Skip to content"
 msgstr "Zum Inhalt springen"
 
-#: ../header.php:82
+#: ../header.php:70
 msgid "Navigation"
 msgstr "Menü"
 
-#: ../header.php:105
+#: ../header.php:93
 msgid "Menu"
 msgstr "Menü"
 
@@ -117,37 +165,151 @@ msgctxt "placeholder"
 msgid "Search …"
 msgstr "Suchen ..."
 
-#: ../inc/customizer.php:29
+#: ../inc/customizer.php:52
+msgid "Theme options"
+msgstr "Theme Optionen"
+
+#: ../inc/customizer.php:53
+msgid ""
+"Please keep in mind, that some options impair the use of others. Please read "
+"the notes to all options."
+msgstr ""
+"Bitte beachte, dass einige Optionen andere beeinflussen. Bitte lies deshalb "
+"immer den Optionsbeschrieb. "
+
+#: ../inc/customizer.php:77
+msgid "Choose your prefered font type"
+msgstr "Wähle die Schriftart"
+
+#: ../inc/customizer.php:78
+msgid ""
+"Open Sans is the free alternative to Sanuk. It's therefore the recommended "
+"font."
+msgstr ""
+"Open Sans ist die kostenlose Alternative zu Sanuk. Wir empfehlen deshalb "
+"Open Sans zu verwenden."
+
+#: ../inc/customizer.php:89
+msgid "Choose the themes purpose"
+msgstr "Wähle den Zweck der Website"
+
+#: ../inc/customizer.php:90
+msgid ""
+"This theme comes with a version optimized to represent a politician and with "
+"a version to represent the party. Several other settings depend on the "
+"option chosen. Just give it a try and see what happens."
+msgstr ""
+"Dieses Theme beinhaltet je eine Version optimiert für Politiker sowie eine "
+"Version für Parteien. Verschiedene Einstellungen hängen von der gewählten "
+"Option ab. Am besten probierst du es einfach mal aus."
+
+#: ../inc/customizer.php:93 ../inc/customizer.php:108
+msgid "Please save and force reload the page after update."
+msgstr ""
+"Wenn die Option geändert wurde, bitte speichern und die Seite manuell "
+"komplett neu laden."
+
+#: ../inc/customizer.php:95
+msgid "Represent a politician"
+msgstr "Politiker Website"
+
+#: ../inc/customizer.php:96
+msgid "Represent the party"
+msgstr "Parteien Website"
+
+#: ../inc/customizer.php:104
+msgid "Choose a thumbnail size"
+msgstr "Wähle die Grösse des Vorschaubildes"
+
+#: ../inc/customizer.php:105
+msgid ""
+"Small thumbnails will float on the left, large ones will use the full "
+"content width."
+msgstr ""
+"Kleine Vorschaubilder werden links vom Titel angezeigt, grosse über dem "
+"Inhalt."
+
+#: ../inc/customizer.php:106
+msgid ""
+"A switch might require you to manually regenerate the thumbnails.You may use "
+"the \"Regenerate Thumbnails\" plugin to do that."
+msgstr ""
+"Wenn diese Einstellung gewechselt wird müssen die Vorschaubilder neu "
+"generiert werden. Verwende dazu beispielsweise das Plugin \"Regenerate "
+"Thumbnails\"."
+
+#: ../inc/customizer.php:110
+msgid "Small"
+msgstr "Klein"
+
+#: ../inc/customizer.php:111
+msgid "Large"
+msgstr "Gross"
+
+#: ../inc/customizer.php:124
 msgid "Additional header image"
 msgstr "Zusätzliches Header-Bild"
 
-#: ../inc/customizer.php:30
+#: ../inc/customizer.php:125
 msgid ""
 "You might only use an additional header image, if you don't use the language "
-"switcher menu. Deactivate tha language switcher menu, if the image doesn't "
+"switcher menu. Deactivate the language switcher menu, if the image doesn't "
 "appear."
 msgstr ""
 "Das zusätzliche Header-Bild wird nur angezeigt, wenn das Sprachmenü nicht "
 "genutzt wird. Deaktiviere das Sprachmenü, falls das Header-Bild nicht "
 "angezeigt wird."
 
-#: ../inc/customizer.php:42
+#: ../inc/customizer.php:148
 msgid "Choose or upload your additional header image."
 msgstr "Wähle dein zusätzliches Headerbild oder lade eines hoch."
 
-#: ../inc/customizer.php:43
+#: ../inc/customizer.php:149
 msgid "Its minimal resolution should be 500 x 308 px."
 msgstr "Die minimale Auflösung sollte 500px * 308px betragen."
 
-#: ../inc/customizer.php:54
+#: ../inc/customizer.php:165
+msgid "Header text"
+msgstr "Header-Text"
+
+#: ../inc/customizer.php:166
+msgid "Note:"
+msgstr "Beachte:"
+
+#: ../inc/customizer.php:167
+msgid ""
+" This will only show up if you chose the theme mode \"Represent a politician"
+"\". You can change the theme mode in the theme options here in the "
+"customizer."
+msgstr ""
+"Dies wird nur angezeigt, wenn du die Option \"Politiker Website\" ausgewählt "
+"hast. Diese Einstellung kannst du hier im Theme Customizer ändern."
+
+#: ../inc/customizer.php:174 ../inc/customizer.php:190
+msgid "Your function"
+msgstr "Deine Funktion"
+
+#: ../inc/customizer.php:180 ../inc/customizer.php:200
+msgid "Your name"
+msgstr "Dein Name"
+
+#: ../inc/customizer.php:188
+msgid "Enter your function, for example \"National Councillor\"."
+msgstr "Gib deine Funktion ein, beispielsweise \"Nationalrat\"."
+
+#: ../inc/customizer.php:198
+msgid "Enter your name, \"firstname lastname\" is best."
+msgstr "Gib deinen Namen ein, am besten \"Vorname Nachname\"."
+
+#: ../inc/customizer.php:213
 msgid "Ihre letzten Beiträge der Kategorie"
 msgstr "Ihre letzten Beiträge der Kategorie"
 
-#: ../inc/customizer.php:66
+#: ../inc/customizer.php:225
 msgid "Category for front page"
 msgstr "Kategorie für die Startseite"
 
-#: ../inc/customizer.php:68
+#: ../inc/customizer.php:227
 msgid ""
 "If the fist option was choosen, the front page shows posts of the selected "
 "category."
@@ -155,206 +317,88 @@ msgstr ""
 "Wenn die erste Option gewählt wurde, werden auf der Frontseite postes der "
 "gewählten Kategorie angezeigt."
 
-#: ../inc/customizer.php:76 ../inc/customizer.php:87
+#: ../inc/customizer.php:239 ../inc/customizer.php:250
 msgid "Home"
 msgstr "Startseite"
 
-#: ../inc/customizer.php:84
+#: ../inc/customizer.php:247
 msgid "Front page title"
 msgstr "Titel auf der Frontseite"
 
-#: ../inc/customizer.php:85
+#: ../inc/customizer.php:248
 msgid "If the fist option was choosen: the title shown on the front page."
 msgstr ""
 "Wenn die erste Option gewählt wurde: Der Titel, welcher auf der Frontseite "
 "angezeigt wird."
 
-#: ../inc/customizer.php:116
+#: ../inc/customizer.php:266
 msgid "All categories"
 msgstr "Alle Kategorien"
 
-#: ../inc/template-tags.php:27
-msgid "Posts navigation"
-msgstr "Postnavigation"
-
-#: ../inc/template-tags.php:31
-msgid "Older posts"
-msgstr "Ältere Posts"
-
-#: ../inc/template-tags.php:35
-msgid "Newer posts"
-msgstr "Neuere Posts"
-
-#: ../inc/template-tags.php:60
-msgid "Post navigation"
-msgstr "Postnavigation"
-
-#: ../inc/template-tags.php:185
+#: ../inc/template-tags.php:170
 #, php-format
 msgctxt "post author"
 msgid "by %s"
 msgstr "von %s"
 
-#: ../inc/template-tags.php:200
+#: ../inc/template-tags.php:185
 msgid "Read More"
 msgstr "Weiterlesen"
 
-#: ../inc/template-tags.php:230
+#: ../inc/template-tags.php:215
 msgid "Leave a comment"
 msgstr "Einen Kommentar schreiben"
 
-#: ../inc/template-tags.php:230
+#: ../inc/template-tags.php:215
 msgid "1 Comment"
 msgstr "Einen Kommentar"
 
-#: ../inc/template-tags.php:230
+#: ../inc/template-tags.php:215
 msgid "% Comments"
 msgstr "% Kommentare"
 
-#: ../inc/template-tags.php:234 ../template-parts/content-page.php:26
+#: ../inc/template-tags.php:219 ../template-parts/content-campaign.php:26
+#: ../template-parts/content-campaign.php:46
+#: ../template-parts/content-page.php:26
 msgid "Edit"
 msgstr "Bearbeiten"
 
-#: ../inc/template-tags.php:249
+#: ../inc/template-tags.php:234
 msgid "Back"
 msgstr "Zurück"
 
-#: ../inc/template-tags.php:268
-#, php-format
-msgid "Category: %s"
-msgstr "Kategorie: %s"
-
-#: ../inc/template-tags.php:270
-#, php-format
-msgid "Tag: %s"
-msgstr "Tag: %s"
-
-#: ../inc/template-tags.php:272
-#, php-format
-msgid "Author: %s"
-msgstr "Author: %s"
-
-#: ../inc/template-tags.php:274
-#, php-format
-msgid "Year: %s"
-msgstr "Jahr: %s"
-
-#: ../inc/template-tags.php:274
-msgctxt "yearly archives date format"
-msgid "Y"
-msgstr "Y"
-
-#: ../inc/template-tags.php:276
-#, php-format
-msgid "Month: %s"
-msgstr "Monat: %s"
-
-#: ../inc/template-tags.php:276
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr "F Y"
-
-#: ../inc/template-tags.php:278
-#, php-format
-msgid "Day: %s"
-msgstr "Tag: %s"
-
-#: ../inc/template-tags.php:278
-msgctxt "daily archives date format"
-msgid "F j, Y"
-msgstr "j. F Y"
-
-#: ../inc/template-tags.php:281
-msgctxt "post format archive title"
-msgid "Asides"
-msgstr "Randnotitz"
-
-#: ../inc/template-tags.php:283
-msgctxt "post format archive title"
-msgid "Galleries"
-msgstr "Gallerie"
-
-#: ../inc/template-tags.php:285
-msgctxt "post format archive title"
-msgid "Images"
-msgstr "Bilder"
-
-#: ../inc/template-tags.php:287
-msgctxt "post format archive title"
-msgid "Videos"
-msgstr "Videos"
-
-#: ../inc/template-tags.php:289
-msgctxt "post format archive title"
-msgid "Quotes"
-msgstr "Zitate"
-
-#: ../inc/template-tags.php:291
-msgctxt "post format archive title"
-msgid "Links"
-msgstr "Links"
-
-#: ../inc/template-tags.php:293
-msgctxt "post format archive title"
-msgid "Statuses"
-msgstr "Statusangaben"
-
-#: ../inc/template-tags.php:295
-msgctxt "post format archive title"
-msgid "Audio"
-msgstr "Audio"
-
-#: ../inc/template-tags.php:297
-msgctxt "post format archive title"
-msgid "Chats"
-msgstr "Chats"
-
-#: ../inc/template-tags.php:300
-#, php-format
-msgid "Archives: %s"
-msgstr "Archive: %s"
-
-#: ../inc/template-tags.php:304
-#, php-format
-msgid "%1$s: %2$s"
-msgstr "%1$s: %2$s"
-
-#: ../inc/template-tags.php:306
-msgid "Archives"
-msgstr "Archive"
-
-#: ../inc/tgm-plugin.php:113 ../vendor/class-tgm-plugin-activation.php:333
+#: ../inc/tgm-plugin.php:149 ../vendor/class-tgm-plugin-activation.php:333
 msgid "Install Required Plugins"
 msgstr "Benötigte Plugins installieren"
 
-#: ../inc/tgm-plugin.php:114 ../vendor/class-tgm-plugin-activation.php:334
+#: ../inc/tgm-plugin.php:150 ../vendor/class-tgm-plugin-activation.php:334
 msgid "Install Plugins"
 msgstr "Plugins installieren"
 
-#: ../inc/tgm-plugin.php:115 ../vendor/class-tgm-plugin-activation.php:335
+#: ../inc/tgm-plugin.php:151 ../vendor/class-tgm-plugin-activation.php:335
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr "Folgendes Plugin wird installiert: %s"
 
-#: ../inc/tgm-plugin.php:116 ../vendor/class-tgm-plugin-activation.php:336
+#: ../inc/tgm-plugin.php:152 ../vendor/class-tgm-plugin-activation.php:336
 msgid "Something went wrong with the plugin API."
 msgstr "Leider gab es einen Fehler mit der plugin API."
 
-#: ../inc/tgm-plugin.php:117 ../vendor/class-tgm-plugin-activation.php:338
+#: ../inc/tgm-plugin.php:153 ../vendor/class-tgm-plugin-activation.php:338
 #, php-format
 msgid "This theme requires the following plugin: %1$s."
 msgid_plural "This theme requires the following plugins: %1$s."
 msgstr[0] "Dieses Theme benötigt das folgende Plugin: %1$s."
 msgstr[1] "Dieses Theme benötigt die folgenden Plugins: %1$s."
 
-#: ../inc/tgm-plugin.php:118 ../vendor/class-tgm-plugin-activation.php:343
+#: ../inc/tgm-plugin.php:154 ../vendor/class-tgm-plugin-activation.php:343
 #, php-format
 msgid "This theme recommends the following plugin: %1$s."
 msgid_plural "This theme recommends the following plugins: %1$s."
 msgstr[0] "Dieses Theme empfiehlt das folgende Plugin: %1$s."
 msgstr[1] "Dieses Theme empfiehlt die folgenden Plugins: %1$s."
 
-#: ../inc/tgm-plugin.php:119
+#: ../inc/tgm-plugin.php:155
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to install the %s plugin. "
@@ -373,7 +417,7 @@ msgstr[1] ""
 "installieren. Für weitere Infos kontaktieren Sie bitte den Administrator "
 "dieser Seite."
 
-#: ../inc/tgm-plugin.php:120 ../vendor/class-tgm-plugin-activation.php:368
+#: ../inc/tgm-plugin.php:156 ../vendor/class-tgm-plugin-activation.php:368
 #, php-format
 msgid "The following required plugin is currently inactive: %1$s."
 msgid_plural "The following required plugins are currently inactive: %1$s."
@@ -382,14 +426,14 @@ msgstr[0] ""
 msgstr[1] ""
 "Die folgenden zwingend benötigten Plugins sind momentan deaktiviert: %1s."
 
-#: ../inc/tgm-plugin.php:121 ../vendor/class-tgm-plugin-activation.php:373
+#: ../inc/tgm-plugin.php:157 ../vendor/class-tgm-plugin-activation.php:373
 #, php-format
 msgid "The following recommended plugin is currently inactive: %1$s."
 msgid_plural "The following recommended plugins are currently inactive: %1$s."
 msgstr[0] "Das folgende empfohlene Plugin ist momentan deaktiviert: %1s."
 msgstr[1] "Die folgenden empfohlenen Plugins sind momentan deaktiviert: %1s."
 
-#: ../inc/tgm-plugin.php:122
+#: ../inc/tgm-plugin.php:158
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to activate the %s "
@@ -406,7 +450,7 @@ msgstr[1] ""
 "Leider haben Sie keine ausreichenden Rechte um die Plugins %s zu aktivieren. "
 "Für weitere Infos kontaktieren Sie bitte den Administrator dieser Seite."
 
-#: ../inc/tgm-plugin.php:123 ../vendor/class-tgm-plugin-activation.php:353
+#: ../inc/tgm-plugin.php:159 ../vendor/class-tgm-plugin-activation.php:353
 #, php-format
 msgid ""
 "The following plugin needs to be updated to its latest version to ensure "
@@ -421,7 +465,7 @@ msgstr[1] ""
 "Die folgenden Plugins müssen upgedated werden damit die maximale "
 "Kompatibilität gewährleistet ist: %1$s."
 
-#: ../inc/tgm-plugin.php:124
+#: ../inc/tgm-plugin.php:160
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to update the %s plugin. "
@@ -438,28 +482,28 @@ msgstr[1] ""
 "Leider haben Sie keine ausreichenden Rechte um die Plugins %s zu updaten. "
 "Für weitere Infos kontaktieren Sie bitte den Administrator dieser Seite."
 
-#: ../inc/tgm-plugin.php:125 ../vendor/class-tgm-plugin-activation.php:383
+#: ../inc/tgm-plugin.php:161 ../vendor/class-tgm-plugin-activation.php:383
 msgid "Begin installing plugin"
 msgid_plural "Begin installing plugins"
 msgstr[0] "Beginn der Plugin Installation"
 msgstr[1] "Beginn der Plugin Installation"
 
-#: ../inc/tgm-plugin.php:126 ../vendor/class-tgm-plugin-activation.php:393
+#: ../inc/tgm-plugin.php:162 ../vendor/class-tgm-plugin-activation.php:393
 msgid "Begin activating plugin"
 msgid_plural "Begin activating plugins"
 msgstr[0] "Beginn der Plugin Aktivierung"
 msgstr[1] "Beginn der Plugin Aktivierung"
 
-#: ../inc/tgm-plugin.php:127 ../vendor/class-tgm-plugin-activation.php:397
+#: ../inc/tgm-plugin.php:163 ../vendor/class-tgm-plugin-activation.php:397
 msgid "Return to Required Plugins Installer"
 msgstr "Zurück zum Plugin-Installer für zwingend benötigte Plugins"
 
-#: ../inc/tgm-plugin.php:128 ../vendor/class-tgm-plugin-activation.php:399
+#: ../inc/tgm-plugin.php:164 ../vendor/class-tgm-plugin-activation.php:399
 #: ../vendor/class-tgm-plugin-activation.php:3029
 msgid "Plugin activated successfully."
 msgstr "Plugin erfolgreich aktiviert."
 
-#: ../inc/tgm-plugin.php:129
+#: ../inc/tgm-plugin.php:165
 #, php-format
 msgid "All plugins installed and activated successfully. %s"
 msgstr "Alle plugins wurden erfolgreich installiert und aktiviert. %s"
@@ -491,7 +535,7 @@ msgstr ""
 "eine Suche weiter."
 
 #: ../template-parts/content-page.php:19
-#: ../template-parts/content-single.php:23
+#: ../template-parts/content-single.php:25
 msgid "Pages:"
 msgstr "Seiten:"
 
@@ -904,6 +948,99 @@ msgstr "Alle Installationen wurden erfolgreich abgeschlossen."
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr "Plugin %1$s (%2$d/%3$d) wird installiert"
 
+#~ msgid "Enter your function"
+#~ msgstr "Gib deine Funktion ein, bspw. \"Nationalrat\"."
+
+#~ msgid "Enter your name"
+#~ msgstr "Gib deinen Namen ein, am besten \"Vorname Nachname\"."
+
+#~ msgid "Posts navigation"
+#~ msgstr "Postnavigation"
+
+#~ msgid "Older posts"
+#~ msgstr "Ältere Posts"
+
+#~ msgid "Newer posts"
+#~ msgstr "Neuere Posts"
+
+#~ msgid "Post navigation"
+#~ msgstr "Postnavigation"
+
+#~ msgid "Category: %s"
+#~ msgstr "Kategorie: %s"
+
+#~ msgid "Tag: %s"
+#~ msgstr "Tag: %s"
+
+#~ msgid "Author: %s"
+#~ msgstr "Author: %s"
+
+#~ msgid "Year: %s"
+#~ msgstr "Jahr: %s"
+
+#~ msgctxt "yearly archives date format"
+#~ msgid "Y"
+#~ msgstr "Y"
+
+#~ msgid "Month: %s"
+#~ msgstr "Monat: %s"
+
+#~ msgctxt "monthly archives date format"
+#~ msgid "F Y"
+#~ msgstr "F Y"
+
+#~ msgid "Day: %s"
+#~ msgstr "Tag: %s"
+
+#~ msgctxt "daily archives date format"
+#~ msgid "F j, Y"
+#~ msgstr "j. F Y"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Asides"
+#~ msgstr "Randnotitz"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Galleries"
+#~ msgstr "Gallerie"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Images"
+#~ msgstr "Bilder"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Videos"
+#~ msgstr "Videos"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Quotes"
+#~ msgstr "Zitate"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Links"
+#~ msgstr "Links"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Statuses"
+#~ msgstr "Statusangaben"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Audio"
+#~ msgstr "Audio"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Chats"
+#~ msgstr "Chats"
+
+#~ msgid "Archives: %s"
+#~ msgstr "Archive: %s"
+
+#~ msgid "%1$s: %2$s"
+#~ msgstr "%1$s: %2$s"
+
+#~ msgid "Archives"
+#~ msgstr "Archive"
+
 #~ msgid "Weitere Beiträge"
 #~ msgstr "Weitere Beiträge"
 
@@ -1051,9 +1188,6 @@ msgstr "Plugin %1$s (%2$d/%3$d) wird installiert"
 
 #~ msgid "Add or remove Groups"
 #~ msgstr "Gruppe hinzufügen oder Entfernen"
-
-#~ msgid "Choose from the most used Groups"
-#~ msgstr "Wähle von den belibtesten Gruppen"
 
 #~ msgid "No Groups found."
 #~ msgstr "Keine Gruppen gefunden."

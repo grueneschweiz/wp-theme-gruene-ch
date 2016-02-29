@@ -89,7 +89,7 @@ function gruene_add_theme_spezific_settings( $wp_customize ) {
 		'label'      => __( 'Choose the themes purpose', 'gruene' ),
 		'description'=> __( 'This theme comes with a version optimized to represent a politician'.
                               ' and with a version to represent the party. Several other settings depend'.
-                              ' on the option chosen.', 'gruene' ) .
+                              ' on the option chosen. Just give it a try and see what happens.', 'gruene' ) .
                               ' <strong>' . __( 'Please save and force reload the page after update.', 'gruene' ) . '</strong>',
 		'choices'    => array( 
               'politician' => __( 'Represent a politician', 'gruene' ),
@@ -103,7 +103,8 @@ function gruene_add_theme_spezific_settings( $wp_customize ) {
           'section'    => 'gruene_theme_options',
 		'label'      => __( 'Choose a thumbnail size', 'gruene' ),
 		'description'=> __( 'Small thumbnails will float on the left, large ones will use the full content width.', 'gruene' ) .
-                              ' <strong>' . __( 'A switch might require you to regenerate the thumbnails.', 'gruene' ) . '</strong>',
+                              ' <strong>' . __( 'A switch might require you to manually regenerate the thumbnails.' .
+                                                'You may use the "Regenerate Thumbnails" plugin to do that.', 'gruene' ) . '</strong>',
                               ' <strong>' . __( 'Please save and force reload the page after update.', 'gruene' ) . '</strong>',
 		'choices'    => array( 
               'small' => __( 'Small', 'gruene' ), 
@@ -184,7 +185,7 @@ function gruene_add_header_text( $wp_customize ) {
 	$wp_customize->add_control( 'gruene_header_text_line1', array(
 		'type'            => 'text',
 		'section'         => 'gruene_header_text',
-		'label'           => __( 'Enter your function', 'gruene' ),
+		'label'           => __( 'Enter your function, for example "National Councillor".', 'gruene' ),
 		'input_attrs' => array(
 			'placeholder' => __( 'Your function', 'gruene' ),
 		),
@@ -194,7 +195,7 @@ function gruene_add_header_text( $wp_customize ) {
 	$wp_customize->add_control( 'gruene_header_text_line2', array(
 		'type'            => 'text',
 		'section'         => 'gruene_header_text',
-		'label'           => __( 'Enter your name', 'gruene' ),
+		'label'           => __( 'Enter your name, "firstname lastname" is best.', 'gruene' ),
 		'input_attrs' => array(
 			'placeholder' => __( 'Your name', 'gruene' ),
 		),

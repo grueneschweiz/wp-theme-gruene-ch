@@ -211,7 +211,7 @@ function gruene_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Footer', 'gruene' ),
 		'id'            => 'footer-widget-area',
-		'description'   => __( 'This is the footer zone. Example: put your contact details here.', 'gruene' ),
+		'description'   => __( 'This is the footer zone. Example: drop a text widget with your contact details in here.', 'gruene' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
