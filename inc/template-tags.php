@@ -88,6 +88,7 @@ function gruene_the_post_thumbnail() {
 		// echo the given thumbnail
           $class = 'attachment-post-thumbnail gruene-thumbnail-size-' . get_theme_mod( 'thumbnail_size', 'large' );
           the_post_thumbnail( 'post-thumbnail', array( 'class' => $class ) );
+          
 	} else {
 		// if thumbnail is missing
 		
