@@ -1,7 +1,6 @@
 # wp-theme-gruene-ch
 Wordpress theme for the green parties and politicians of Switzerland. As member of the green party, feel free to use it for your personal website. As party, please contact me (bolliger@gmx.ch).
 
-<div style="background-color: #aaaaff">
 ##Special offer for politicians##
 We propose you a maintained ready-to-use installation for a personal website for only CHF 200.- per year. This package contains:
 - A site in a WPMU installation
@@ -11,4 +10,3 @@ We propose you a maintained ready-to-use installation for a personal website for
 - 1h of support for free
 
 Additional one-time Installation fee CHF 200.-. 
-</div>
