@@ -104,7 +104,7 @@ function gruene_the_post_thumbnail() {
                $style = "background-image: url('$url'); background-size: {$width}px {$height}px;";
 
                // echo the wrapped image
-               echo '<div class="attachment-post-thumbnail attachment-default-post-thumbnail" style="'.$style.'"></div>';
+               echo '<div class="attachment-post-thumbnail gruene-thumbnail-size-small attachment-default-post-thumbnail" style="'.$style.'"></div>';
           }
 	}
 }
