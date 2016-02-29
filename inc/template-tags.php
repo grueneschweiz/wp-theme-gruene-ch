@@ -231,7 +231,7 @@ function gruene_the_back_button() {
 	
 	// if the referer url contains the home url --> if internal
 	if ( false !== strpos( $referer, home_url() ) ) {
-		echo '<div><a class="back-button" href="' . esc_attr( $referer ) . '">&larr;&nbsp;' . __( 'Back', 'gruene' ) . '</a></div>';
+		echo '<div><a class="back-button" href="' . esc_attr( $referer ) . '">&laquo;&nbsp;' . __( 'Back', 'gruene' ) . '</a></div>';
 	}
 }
 endif;
