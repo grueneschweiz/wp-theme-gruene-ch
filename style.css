@@ -1127,3 +1127,7 @@ aside.widget_rss ul li span.rss-date
 .ff-stream,
 [id^=ff-stream-]
      { background: transparent !important; }
+     
+/* Jetpack Contact Form */
+.contact-form-submission
+     { padding: 10px 10px 10px 60px; }
