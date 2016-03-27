@@ -577,7 +577,7 @@ textarea
 .main-navigation ul#primary-menu > li > ul > li > ul
 	{ overflow: hidden; float: left; padding-left: 5px; margin-left: 5px; margin-top: -5px; }
 
-.main-navigation ul#primary-menu > li > ul > li > ul > li::before
+.main-navigation ul#primary-menu > li > ul > li > ul > li:before
 	{ border-color: transparent #305f05; border-style: solid; border-width: 0.25em 0 0.25em 0.25em; content: "";
 	  display: block; height: 0; left: -5px; position: relative; top: 0.7em; width: 0; }
 
@@ -948,7 +948,7 @@ article footer.entry-footer
 article footer.entry-footer .comments-link
      { font-size: 0.875em; }
      
-article footer.entry-footer .comments-link::before
+article footer.entry-footer .comments-link:before
      { content: ''; display: block; width: 2em; height: 2em; float: left;
        background: transparent url('img/comments.svg') no-repeat; background-size: contain;
        margin-right: 0.5em; }
@@ -1087,7 +1087,7 @@ embed, iframe, object
 .wp-caption .wp-caption-text 
 	{ margin: 0; font-size: 0.875em; color: #666666; line-height: 1.375em; padding-bottom: 2px; }
 
-.wp-caption .wp-caption-text::before 
+.wp-caption .wp-caption-text:before 
 	{ content: "›"; display: inline-block; margin: 0 5px 0 2px; }
 
 
