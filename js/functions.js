@@ -244,7 +244,10 @@
                          // always open dialog with scrollTop 0
                          $( '.gruene-campaign-dialog' ).scrollTop( 0 );
                          
-                         // set dialog hight
+                         // set dialog width
+                         self.setDialogWidth();
+                         
+                         // set dialog height
                          self.setDialogHeight();
                     },
                     close       : function() {
@@ -269,13 +272,24 @@
                    adminbar_height  = $( '#wpadminbar' ).outerHeight( true ),
                    window_height    = $( window ).height(),
                    viewport_height  = window_height - adminbar_height - margin,
-                   dialog_height    = viewport_height < content_height ? viewport_height : content_height;
-           
-               $( '.gruene-campaign-dialog' )
-                       .css( 'height', dialog_height )
-                       .css( 'top', function() {
-                              return ( window_height - adminbar_height - dialog_height ) / 2 ;
-                       } );
+                   dialog_height    = viewport_height < content_height ? viewport_height : content_height,
+                   $dialog          = $( '.gruene-campaign:first' ).dialog( 'instance' ).uiDialog;
+                   
+                   // set dialog height
+                   $dialog.css( 'height', dialog_height );
+                   
+                   // if content height > dialog height enable scrolling
+                   // else disable to hide scrollbars
+                   if ( content_height > dialog_height ) {
+                        $dialog.css( 'overflow-y', 'scroll' );
+                   } else {
+                        $dialog.css( 'overflow-y', 'auto' );
+                   }
+                   
+                   // set postition
+                   $dialog.css( 'top', function() {
+                         return ( window_height - adminbar_height - dialog_height ) / 2 ;
+                   } );
           };
           
           /*

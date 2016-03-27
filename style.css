@@ -1165,7 +1165,7 @@ aside.widget_rss ul li span.rss-date
 # Campaign Dialog
 --------------------------------------------------------------*/
 .gruene-campaign-dialog
-     { z-index: 100; position: absolute; overflow-y: scroll; overflow-x: hidden;
+     { z-index: 100; position: absolute; overflow-x: hidden;
 	top: 0; left: 0; outline: 0; background-color: #f3f3f3;
      border-radius: 5px; }
 
@@ -1177,7 +1177,7 @@ aside.widget_rss ul li span.rss-date
        box-shadow: none; font-size: 1.2em; font-weight: normal;
        line-height: 1em; padding: 0.1em 0.5em 0.2em 0.5em; 
        box-shadow: 0 0 7px 1px #cc006d inset; height: 1.7em; width: 1.7em; 
-       border-radius: 0.85em; }
+       border-radius: 0.85em; z-index: 101; }
 
 .gruene-campaign-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close:hover
      { text-decoration: none; }
