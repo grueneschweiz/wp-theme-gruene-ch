@@ -52,6 +52,11 @@ function gruene_update() {
           set_theme_mod( 'theme_purpose', 'party' );
           set_theme_mod( 'thumbnail_size', 'small' );
      }
+     
+     // run the upgrade routine for versions smaller 2.1.0
+     if ( -1 == version_compare( $current_version, '2.1.0' ) ) {
+          set_theme_mod( 'mobile_nav_style', 'classic' );
+     }
 
      // set the current version number
     set_theme_mod( 'version_number', GRUENE_VERSION );

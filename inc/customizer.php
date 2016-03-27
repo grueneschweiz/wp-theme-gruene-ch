@@ -70,6 +70,11 @@ function gruene_add_theme_spezific_settings( $wp_customize ) {
 		'default'        => 'small',
 	) );
 	
+     // add setting
+     $wp_customize->add_setting( 'mobile_nav_style', array(
+         'default'         => 'modern',
+     ) );
+     
 	// add control
 	$wp_customize->add_control( 'font_family', array(
           'type'       => 'select',
@@ -109,6 +114,18 @@ function gruene_add_theme_spezific_settings( $wp_customize ) {
 		'choices'    => array( 
               'small' => __( 'Small', 'gruene' ), 
               'large' => __( 'Large', 'gruene' ), 
+          ),
+	) );
+     
+     // add control
+	$wp_customize->add_control( 'mobile_nav_style', array(
+          'type'       => 'select',
+          'section'    => 'gruene_theme_options',
+		'label'      => __( 'Choose your prefered style for the mobile navigation', 'gruene' ),
+		'description'=> __( 'The classic style indents subpages and comes in a grayisch style. The mordern one is magenta based and distinguishes subpages by color.', 'gruene' ),
+		'choices'    => array( 
+              'classic' => __( 'Classic', 'gruene' ),
+              'modern'  => __( 'Modern', 'gruene' ),
           ),
 	) );
 }

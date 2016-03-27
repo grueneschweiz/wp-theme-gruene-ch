@@ -619,11 +619,16 @@ div#mobile-nav-toggle .mobile-nav-symbol
 }
 
 nav#side-menu
-	{ display: none; background-color: #660036; height: 100%; left: 0;
+	{ display: none; height: 100%; left: 0; border-right: #bbb 1px solid;
 	  position: fixed; top: 0; width: 280px; z-index: 100000; 
        float: left;/* float command is a slider bug-fix */
-	  border-right: #bbb 1px solid; overflow-y: scroll; overflow-x: hidden;
-	  }
+	  overflow-y: scroll; overflow-x: hidden; }
+       
+nav#side-menu.gruene-mobile-nav-classic
+     { background-color: #333333; }
+     
+nav#side-menu.gruene-mobile-nav-modern
+     { background-color: #660036; }
 	
 div#close-side-menu
 	{ font-weight: 700; margin: 20px 20px 0 0; width: 32px; height: 32px;
@@ -633,14 +638,22 @@ div#close-side-menu
 div#side-menu-title
 	{ color: #bbbbbb; font-weight: 700; font-size: 2em; margin: 30px 10px 10px 20px; }
 	
+nav#side-menu.gruene-mobile-nav-classic input.lookup-glass
+     { background-color: #555555; border: 1px solid #bbbbbb; border-left: none; 
+       box-shadow: none; }
+     
 nav#side-menu ul.menu
 	{ border-top: 1px solid #bbbbbb; margin: 0; list-style-type: none; padding: 0;
        line-height: 2.4em; font-size: 1.3em; }
 	
-nav#side-menu ul.menu li
+nav#side-menu.gruene-mobile-nav-modern ul.menu li
 	{ position: relative; background-color: #870047; width: 280px; }
+
+nav#side-menu.gruene-mobile-nav-classic ul.menu li
+     { line-height: 2.4em; border-bottom: 1px solid #bbbbbb; 
+       background-color: #555555; }
 	     
-nav#side-menu ul.menu li.current-menu-item:before 
+nav#side-menu.gruene-mobile-nav-modern ul.menu li.current-menu-item:before 
 	{ content: ""; border-color: transparent #fff; border-style: solid; 
 	  border-width: 1.2em 0 1.2em 0.7em; display: block; height: 0; width: 0;
 	  left: 0; top: 0; position: absolute; }
@@ -648,17 +661,40 @@ nav#side-menu ul.menu li.current-menu-item:before
 nav#side-menu ul.menu li a
 	{ color: #ffffff; text-decoration: none; padding-left: 20px; background-color: inherit; }
 
-nav#side-menu ul.menu > li
+nav#side-menu.gruene-mobile-nav-classic ul.menu li.current-menu-item a
+	{ color: #84b414; }
+     
+nav#side-menu.gruene-mobile-nav-modern ul.menu > li
 	{ border-bottom: 1px solid #bbbbbb; }
      
 nav#side-menu ul.sub-menu
-	{ display: none; list-style: none; padding-left: 0; margin-left: 0; }
-	
-nav#side-menu ul.sub-menu > li
+	{ display: none; list-style: none; padding-left: 0; }
+     
+nav#side-menu.gruene-mobile-nav-modern ul.sub-menu
+     { margin-left: 0; }
+     
+nav#side-menu.gruene-mobile-nav-modern ul.sub-menu > li
 	{ background-color: #e10078; }
 
-nav#side-menu ul.sub-menu > li > ul > li
+nav#side-menu.gruene-mobile-nav-modern ul.sub-menu > li > ul > li
 	{ background-color: #f45bac; }
+     
+nav#side-menu.gruene-mobile-nav-classic ul#primary-menu-mobile > li > ul.sub-menu
+     { margin-top: -10px; padding-bottom: 15px; }
+	
+nav#side-menu.gruene-mobile-nav-classic ul.sub-menu li
+     { line-height: 1em; font-size: 0.9em; border-bottom: none; background-color: #555555; }
+	
+nav#side-menu.gruene-mobile-nav-classic ul.sub-menu li:before 
+	{ content: ""; border-color: transparent #fff; border-style: solid; 
+	  border-width: 0.25em 0 0.25em 0.25em; display: block; height: 0; width: 0;
+       left: 5px; top: 0.7em; position: relative; }
+   
+ nav#side-menu.gruene-mobile-nav-classic ul.menu li ul.sub-menu li a
+     { display: block; color: #fff; }
+ 
+ nav#side-menu.gruene-mobile-nav-classic ul.menu li ul.sub-menu li.current-menu-item a
+     { color: #77B800; }
      
 nav#side-menu ul#language-menu
 	{ border: none; margin-top: 7px; }

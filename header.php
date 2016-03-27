@@ -88,7 +88,7 @@
 		<?php endif; // End if has_nav_menu( 'primary' ) ?>
 	</header><!-- #masthead -->
 
-	<nav id="side-menu" role="navigation">
+	<nav id="side-menu" role="navigation" class="gruene-mobile-nav gruene-mobile-nav-<?php echo get_theme_mod( 'mobile_nav_style', 'modern' ); ?>">
 		<div id="close-side-menu"></div>
 		<div id="side-menu-title"><?php _e( 'Menu', 'gruene' ); ?></div>
           <div id="side-nav-search-form" class="gruene-search-form">
