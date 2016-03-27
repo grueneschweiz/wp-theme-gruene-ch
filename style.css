@@ -273,7 +273,7 @@ body
 div#page
 	{ width: 100%; max-width: 669px; margin-left: auto; margin-right: auto; }
 	
-@media screen and (min-width: 970px) {
+@media screen and (min-width: 985px) {
 	div#page
 		{ max-width: 970px; }
 }
@@ -422,7 +422,7 @@ textarea
 .site-header .site-branding a
 	{ display: block; background-repeat: no-repeat; background-position: center; background-size: contain;}
 
-@media screen and (max-width: 969px) {
+@media screen and (max-width: 984px) {
 	.site-header .site-branding a,
 	.site-header #additional-header-image
 		{ margin-right: 25px; margin-bottom: 0;width: 85px; height: 50px; }
@@ -450,7 +450,7 @@ textarea
 #header-search-form form input.search-field
 	{ width: 140px; }
 
-@media screen and (min-width: 970px) {
+@media screen and (min-width: 985px) {
 	#header-search-form
 		{ display: block; }
 }
@@ -475,7 +475,7 @@ textarea
 #header-text .gruene-bars-left
      { display: block; }
      
-@media all and (min-width: 970px) { 
+@media all and (min-width: 985px) { 
      #header-text
           { float: right; margin-top: 20px; width: 490px; }
      
@@ -839,7 +839,7 @@ nav.pagination div.nav-links a.next
 #secondary
 	{ float: left; width: 100%; min-width: 286px; margin-top: 24px; }
 
-@media screen and (min-width: 970px) {
+@media screen and (min-width: 985px) {
 	#secondary
 		{ margin-left: 15px; width: 286px; margin-top: 0px; }
      
@@ -1021,9 +1021,9 @@ div.footer-content
 	{ width: 100%; max-width: 669px; margin-left: auto; margin-right: auto; padding: 10px 20px; color: #ffffff; 
 	  font-size: 14px; font-size: 0.875rem; }
 
-@media screen and (min-width: 970px) {
+@media screen and (min-width: 985px) {
 	div.footer-content
-		{ max-width: 970px; }
+		{ max-width: 985px; }
 }
 
 div.footer-content a
