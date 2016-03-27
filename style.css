@@ -723,12 +723,15 @@ nav#side-menu ul#language-menu li a
 .site-main .comment-navigation, .site-main .posts-navigation, .site-main .post-navigation 
 	{ margin: 0 0 1.5em; overflow: hidden; float: none; }
      
-.comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous 
+.site-main .comment-navigation
+     { margin: 0 20px; }
+     
+     .comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous 
 	{ float: left; max-width: calc( 50% - 7.5px ); background-color: #f3f3f3; padding: 10px; border-radius: 5px;
 	  margin-right: 15px; min-width: 0; }
      
 .comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next 
-	{ float: right; text-align: right; width: calc( 50% - 7.5px ); background-color: #f3f3f3; padding: 10px;
+	{ float: right; text-align: right; max-width: calc( 50% - 7.5px ); background-color: #f3f3f3; padding: 10px;
 	  border-radius: 5px; }
 	
 @media screen and (max-width: 668px) {
@@ -940,7 +943,15 @@ article div.entry-summary
 	{ margin-top: -5px; }
 
 article footer.entry-footer
-	{  }
+	{ }
+     
+article footer.entry-footer .comments-link
+     { font-size: 0.875em; }
+     
+article footer.entry-footer .comments-link::before
+     { content: ''; display: block; width: 2em; height: 2em; float: left;
+       background: transparent url('img/comments.svg') no-repeat; background-size: contain;
+       margin-right: 0.5em; }
 
 .edit-link.button a
 	{ border-radius: 5px; background: #e10078; color: #ffffff; font-size: 14px; font-size: 0.875rem;
@@ -960,12 +971,46 @@ article footer.entry-footer
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/ 
+.comment-list
+     { list-style: none; padding: 0; }
+
+.comment-list .comment
+     { margin: 20px; }
+
+.comment-author.vcard img.avatar
+     { float: left; margin-right: 0.875em; }
+
+.comment-metadata
+     { font-size: 0.875em; }
+
+.comment-metadata .edit-link
+     { display: block; }
+
+.comment-content p
+     { margin: 1em 0; }
+
 .comment-content a
 	{ word-wrap: break-word; }
 
 .bypostauthor
 	{ display: block; }
+     
+.comment-respond
+     { margin: 20px; padding: 10px; background-color: #f3f3f3;
+       border-radius: 5px; }
 
+.comment-reply-title
+     { margin-top: 0; }
+     
+.comment-notes
+     { font-size: 0.875em; }
+     
+.comment-form label
+     { }
+
+.comment-respond .form-submit
+     { margin-bottom: 0; }
+     
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/

@@ -37,9 +37,13 @@ if ( post_password_required() ) {
 		<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
 			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'gruene' ); ?></h2>
 			<div class="nav-links">
-
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'gruene' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'gruene' ) ); ?></div>
+                    
+                    <?php if ( ! empty( get_previous_comments_link() ) ) : ?>
+                         <div class="nav-previous"><?php previous_comments_link() ; ?></div>
+				<?php endif; ?>
+                    <?php if ( ! empty( get_next_comments_link() ) ) : ?>
+                         <div class="nav-next"><?php next_comments_link(); ?></div>
+                    <?php endif; ?>
 
 			</div><!-- .nav-links -->
 		</nav><!-- #comment-nav-above -->
@@ -50,6 +54,8 @@ if ( post_password_required() ) {
 				wp_list_comments( array(
 					'style'      => 'ol',
 					'short_ping' => true,
+                         'reply_text' => esc_html_x( sprintf( '%s Reply', '&raquo;' ), 'Right arrow', 'gruene' ),
+                         'avatar_size'=> 48,
 				) );
 			?>
 		</ol><!-- .comment-list -->
@@ -59,8 +65,12 @@ if ( post_password_required() ) {
 			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'gruene' ); ?></h2>
 			<div class="nav-links">
 
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'gruene' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'gruene' ) ); ?></div>
+				<?php if ( ! empty( get_previous_comments_link() ) ) : ?>
+                         <div class="nav-previous"><?php previous_comments_link() ; ?></div>
+				<?php endif; ?>
+                    <?php if ( ! empty( get_next_comments_link() ) ) : ?>
+                         <div class="nav-next"><?php next_comments_link(); ?></div>
+                    <?php endif; ?>
 
 			</div><!-- .nav-links -->
 		</nav><!-- #comment-nav-below -->
