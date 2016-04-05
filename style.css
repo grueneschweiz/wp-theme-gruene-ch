@@ -1167,10 +1167,10 @@ aside.widget_rss ul li span.rss-date
 .gruene-campaign-dialog
      { z-index: 100; position: absolute; overflow-x: hidden;
 	top: 0; left: 0; outline: 0; background-color: #f3f3f3;
-     border-radius: 5px; }
+     border-radius: 5px; box-sizing: content-box; /* IE-Fix */ }
 
 .gruene-campaign-dialog .ui-dialog-titlebar
-     { height: 0; }
+     { height: 0; box-sizing: border-box; /* IE-Fix */ }
      
 .gruene-campaign-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close
      { position: fixed; top: 10px; right: 10px; background: #e10078;
@@ -1183,7 +1183,7 @@ aside.widget_rss ul li span.rss-date
      { text-decoration: none; }
      
 .gruene-campaign-dialog article
-     { height: auto; }
+     { height: auto; box-sizing: border-box; /* IE-Fix */ }
      
 .gruene-campaign-dialog article header.entry-header .featured-image
      { margin: -10px -10px 0 -10px; width: calc( 100% + 20px );
