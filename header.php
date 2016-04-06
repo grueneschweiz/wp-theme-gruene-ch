@@ -71,6 +71,7 @@
 				</div><!-- #mobile-nav-toggle -->
 			<?php endif; // End if has_nav_menu( 'primary' ) ?>
 			
+               <div class="clear"></div>
 		</div><!-- .header-top-section -->
 		
 		<div class="clear"></div>

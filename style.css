@@ -425,7 +425,9 @@ textarea
 @media screen and (max-width: 984px) {
 	.site-header .site-branding a,
 	.site-header #additional-header-image
-		{ margin-right: 25px; margin-bottom: 0;width: 85px; height: 50px; }
+		{ margin-right: 25px; margin-bottom: 0; width: 85px; height: 50px; }
+     .header-top-section
+          { margin-bottom: 15px; }
 }
 
 @media screen and (max-width: 669px) {
@@ -466,7 +468,7 @@ textarea
 
 /* header text */     
 #header-text
-     { float: left; height: 96px; overflow: hidden; margin-bottom: 10px;
+     { float: left; height: 96px; overflow: hidden;
        position: relative; width: 100%; font-size: 1.25em; }
 
 #header-text .gruene-bars-right 
