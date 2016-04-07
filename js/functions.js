@@ -219,6 +219,9 @@
 		 * start up campaign dialog
 		 */
 		this.init = function init() {
+               // exit if no dialog
+               if ( 0 === $( '.gruene-campaign' ).length ) return; //BREAKPOINT
+               
                var layout_max_width = 629,
                    margin           = 20,
                    window_width     = $( window ).width(),
@@ -267,6 +270,9 @@
            * don't get along with the css only solution. 
            */
 		this.setDialogHeight = function setDialogHeight() {
+               // exit if no dialog
+               if ( 0 === $( '.gruene-campaign' ).length ) return; //BREAKPOINT
+               
                var margin           = 20,
                    content_height   = $( 'article.gruene-campaign' ).outerHeight( true ) + 1,
                    adminbar_height  = $( '#wpadminbar' ).outerHeight( true ),
@@ -298,6 +304,9 @@
            * This method is basically used when resizing the screen 
            */
 		this.setDialogWidth = function setDialogWidth() {
+               // exit if no dialog
+               if ( 0 === $( '.gruene-campaign' ).length ) return; //BREAKPOINT
+               
                var  layout_max_width = 629,
                     margin           = 20,
                     window_width     = $( window ).width(),
@@ -314,6 +323,9 @@
 		 * Put the close button in the correct position
 		 */
 		this.positionCloseButton = function positionCloseButton() {
+               // exit if no dialog
+               if ( 0 === $( '.gruene-campaign' ).length ) return; //BREAKPOINT
+               
                var $dialog = $( '.gruene-campaign-dialog' );
                
                $( '.gruene-campaign-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close' )
@@ -330,6 +342,9 @@
 		 * Close dialog
 		 */
 		this.close = function close() {
+               // exit if no dialog
+               if ( 0 === $( '.gruene-campaign' ).length ) return; //BREAKPOINT
+               
                $( '.gruene-campaign:first' ).dialog( 'close' );
           };
      }
