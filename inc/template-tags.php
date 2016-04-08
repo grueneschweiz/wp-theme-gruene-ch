@@ -140,7 +140,7 @@ function gruene_the_featured_image() {
 	// get the image
 	$image_html = get_the_post_thumbnail( get_the_ID(), 'gruene_featured_image_size' );
 	
-	echo '<figure class="featured-image'.$caption_class.'" style="width:'.$image_props[1].'px;">'.$image_html.$caption_html.'</figure>';
+	echo '<figure class="featured-image'.$caption_class.'" style="width: 100%; max-width:'.$image_props[1].'px;">'.$image_html.$caption_html.'</figure>';
 }
 endif;
 
