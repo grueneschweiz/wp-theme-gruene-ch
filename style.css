@@ -436,12 +436,6 @@ textarea
 		{ margin-right: 15px; }
 }
 
-@media screen and (max-width: 479px) {
-	.site-header .site-branding a,
-	.site-header #additional-header-image
-		{ float: none; }
-}
-
 /* search forms */
 #header-search-form
 	{ float: right; margin-top: 15px; width: 204px; display: none; }
