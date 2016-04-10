@@ -480,6 +480,9 @@ function gruene_body_classes( $classes ) {
      
      // Adds title style class
      $classes[] = 'gruene-' . get_theme_mod( 'title_caps', 'title_caps_none' );
+     
+     // Adds the font family class
+     $classes[] = 'gruene-font-' . get_theme_mod( 'font_family', 'open_sans' );
 
 	return $classes;
 }
@@ -623,21 +626,6 @@ function gruene_add_sticky_functionality( $posts, $query ) {
 }
 endif;
 add_filter( 'the_posts', 'gruene_add_sticky_functionality', 10, 2 );
-
-
-if ( ! function_exists( 'gruene_set_font_family_body_class' ) ) :
-/**
- * Adds the font family class to the body tag
- * 
- * @param array $classes
- * @return array
- */
-function gruene_set_font_family_body_class( $classes ) {
-	$classes[] = 'gruene-font-' . get_theme_mod( 'font_family', 'open_sans' );
-	return $classes;
-}
-endif;
-add_filter( 'body_class', 'gruene_set_font_family_body_class' );
 
 
 if ( ! function_exists( 'gruene_load_font_family' ) ) :
