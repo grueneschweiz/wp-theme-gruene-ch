@@ -1208,3 +1208,7 @@ aside.widget_rss ul li span.rss-date
 /* Jetpack Contact Form */
 .contact-form-submission
      { padding: 10px 10px 10px 60px; }
+
+/* Jetpack Twitter Timeline */
+.widget_twitter_timeline .widget-title
+     { text-transform: none; }
