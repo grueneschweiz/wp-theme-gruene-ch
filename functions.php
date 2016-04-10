@@ -33,6 +33,10 @@ define( 'GRUENE_HEADER_IMAGE_SCALING_RATIO', 0.75 );
  */
 define( 'GRUENE_CONTENT_WIDTH', 649 );
 
+/**
+ * Holds the original query of a campaign page (template)
+ */
+$gruene_campaign_query = array();
 
 if ( ! function_exists( 'gruene_update' ) ) :
 /**
@@ -642,6 +646,33 @@ function gruene_load_font_family() {
 endif;
 add_action( 'wp_head', 'gruene_load_font_family' );
 
+
+if ( ! function_exists( 'gruene_handle_campaign' ) ) :
+/**
+ * This function handles the WP_Query object stuff of a campaign page
+ * 
+ * The main query is set to a fresh 'home' query, the originaly given query
+ * is stored in a gobal variable so we can use it to display the campaign later
+ * on. As a result of this function the campaign template file isn't used any
+ * more. The home template will be loaded instead. A call of the
+ * gruene_the_campaign() function in the home template loads the campaign.
+ * 
+ * @global array $gruene_campaign_query
+ * @param object $query
+ */
+function gruene_handle_campaign( $query ) {
+     // if were loading a campaign page
+     if ( is_page_template() && $query->is_main_query() ) {
+          // store the original query
+          global $gruene_campaign_query;
+          $gruene_campaign_query = $query->query;
+          
+          // set the 'home' query as the query
+          $query->query( array() );
+     }
+}
+endif;
+add_action( 'pre_get_posts', 'gruene_handle_campaign', 9 );
 
 
 /**

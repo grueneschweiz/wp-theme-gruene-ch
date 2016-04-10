@@ -26,23 +26,3 @@
 		<?php edit_post_link( esc_html__( 'Edit', 'gruene' ), '<span class="edit-link button">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
-
-<?php
-/**
- * Regular content block
- */
-?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		
-		<?php gruene_the_featured_image(); ?>
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		<?php the_content(); ?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php edit_post_link( esc_html__( 'Edit', 'gruene' ), '<span class="edit-link button">', '</span>' ); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->

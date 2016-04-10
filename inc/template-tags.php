@@ -337,6 +337,39 @@ function the_archive_description( $before = '', $after = '' ) {
 }
 endif;
 
+if ( ! function_exists( 'gruene_the_campaign' ) ) :
+/**
+ * Shows the campaign content
+ * 
+ * @global array $gruene_campaign_query
+ * @return string
+ */
+function gruene_the_campaign() {
+     global $gruene_campaign_query;
+          
+     if ( empty( $gruene_campaign_query ) ) {
+          return ''; // BREAKPOINT
+     }
+     
+     // get the query     
+     $query = new WP_Query( $gruene_campaign_query );
+     
+     while ( $query->have_posts() ) : $query->the_post(); ?>
+
+          <?php get_template_part( 'template-parts/content', 'campaign' ); ?>
+
+          <?php
+               // If comments are open or we have at least one comment, load up the comment template
+               if ( comments_open() || get_comments_number() ) :
+                    comments_template();
+               endif;
+          ?>
+
+     <?php endwhile; // end of the loop.
+}
+endif;
+
+
 /**
  * Returns true if a blog has more than 1 category.
  *

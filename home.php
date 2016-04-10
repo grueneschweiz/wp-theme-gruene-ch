@@ -15,14 +15,16 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+               
+          <?php gruene_the_campaign(); ?>
 		
 		<h1 class="page-title front-page-title"><?php echo get_theme_mod( 'front_page_title' ); ?></h1>
-        
+                  
 		<?php if ( have_posts() ) : ?>
-		
+          
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				
+				          
 				<?php
 					/* Include the Post-Format-specific template for the content.
 					 * If you want to override this in a child theme, then include a file

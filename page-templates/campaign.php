@@ -3,34 +3,16 @@
  * Template Name: Campaign Page
  * 
  * This template is designed to promote a signle topic, issue, petition, etc.
- * The content will open in a dialog box above it's page.
+ * The content will open in a dialog box above the home page.
  * 
  * @package WordPress
  * @subpackage Gruene Theme
  * @since 2.0.0
  */
 
-get_header(); ?>
-     
-	<div id="primary" class="content-area">
-		
-		<main id="main" class="site-main" role="main">
-			
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php get_template_part( 'template-parts/content', 'campaign' ); ?>
-
-				<?php
-					// If comments are open or we have at least one comment, load up the comment template
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-				?>
-
-			<?php endwhile; // end of the loop. ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+/**
+ * This is just a dummy template. The whole mechanics are handled by:
+ * functions.php      --> the gruene_handle_campaign() function
+ * template-tags.php  --> the gruene_the_campaign() function
+ * home.php           --> the gruene_the_campaign() call
+ */
