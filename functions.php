@@ -57,6 +57,11 @@ function gruene_update() {
      if ( -1 == version_compare( $current_version, '2.1.0' ) ) {
           set_theme_mod( 'mobile_nav_style', 'classic' );
      }
+     
+     // run the upgrade routine for versions smaller 2.2.0
+     if ( -1 == version_compare( $current_version, '2.2.0' ) ) {
+          set_theme_mod( 'title_caps', 'title_caps_none' );
+     }
 
      // set the current version number
     set_theme_mod( 'version_number', GRUENE_VERSION );
@@ -472,6 +477,9 @@ function gruene_body_classes( $classes ) {
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
 	}
+     
+     // Adds title style class
+     $classes[] = 'gruene-' . get_theme_mod( 'title_caps', 'title_caps_none' );
 
 	return $classes;
 }

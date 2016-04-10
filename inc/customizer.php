@@ -61,6 +61,11 @@ function gruene_add_theme_spezific_settings( $wp_customize ) {
 	) );
      
      // add setting
+	$wp_customize->add_setting( 'title_caps', array(
+		'default'        => 'title_caps_none',
+	) );
+     
+     // add setting
 	$wp_customize->add_setting( 'theme_purpose', array(
 		'default'        => 'politician',
 	) );
@@ -84,6 +89,19 @@ function gruene_add_theme_spezific_settings( $wp_customize ) {
 		'choices'    => array( 
               'open_sans' => 'Open Sans', 
               'tahoma' => 'Tahoma' 
+          ),
+	) );
+     
+     // add control
+	$wp_customize->add_control( 'title_caps', array(
+          'type'       => 'select',
+          'section'    => 'gruene_theme_options',
+		'label'      => __( 'Choose if you want to capitalize all titles', 'gruene' ),
+		'description'=> __( 'If you set this to "capitalize" all titles will appear in capital letters.'.
+                             ' Else the titles will show up the way they were written.', 'gruene' ),
+		'choices'    => array( 
+              'title_caps_none' => "Don't capitalize titles", 
+              'title_caps_all'  => "Capitalize titles",
           ),
 	) );
      
