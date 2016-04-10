@@ -38,7 +38,7 @@ $organizer = tribe_get_organizer();
 <!-- Event Title -->
 <div class="tribe-events-list-title-meta-wrapper">
 	<?php do_action( 'tribe_events_before_the_event_title' ) ?>
-	<h2 class="tribe-events-list-event-title entry-title summary">
+	<h2 class="tribe-events-list-event-title entry-title summary tribe-events-<?php echo get_theme_mod( 'title_caps', 'title_caps_none' );?>">
 		<a class="url" href="<?php echo esc_url( tribe_get_event_link() ); ?>" title="<?php the_title() ?>" rel="bookmark">
 			<?php the_title() ?>
 		</a>

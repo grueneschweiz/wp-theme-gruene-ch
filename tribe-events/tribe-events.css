@@ -40,6 +40,9 @@ aside.tribe-events-list-widget p.tribe-events-widget-link:before
 
 .tribe-events-read-more
 	{ display: none; }
+     
+aside.tribe-events-list-widget ol.tribe-list-widget li h4.tribe-event-title
+     { text-transform: none; }
 
 /*--------------------------------------------------------------
 # Overview List
@@ -85,6 +88,9 @@ aside.tribe-events-list-widget p.tribe-events-widget-link:before
 
 .tribe-events-event-meta.vcard
 	{ margin: 15px 0 0 0; }
+     
+.tribe-events-list h2.tribe-events-list-event-title.tribe-events-title_caps_all
+     { text-transform: uppercase; }
 
 /*--------------------------------------------------------------
 # Single Event
