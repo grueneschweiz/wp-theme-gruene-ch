@@ -98,3 +98,9 @@ aside.tribe-events-list-widget ol.tribe-list-widget li h4.tribe-event-title
 
 div.tribe-events-single div#tribe-events-header ul.tribe-events-sub-nav
 	{ display: none; }
+     
+div.tribe-events-single span.tribe-events-divider
+     { display: none; }
+     
+div.tribe-events-single .tribe-events-schedule .tribe-events-cost
+     { font-size: 1em; color: #666666; }
