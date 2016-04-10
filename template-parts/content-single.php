@@ -31,7 +31,7 @@
           
           <?php if ( 'short' == get_theme_mod( 'title_length', 'normal' ) && 'post' == get_post_type() && ! is_sticky() ) : ?>
                <div class="entry-meta">
-                    <?php gruene_posted_on(); ?>
+                    <?php gruene_posted_on( true ); ?>
                </div><!-- .entry-meta -->
           <?php endif; ?>
           

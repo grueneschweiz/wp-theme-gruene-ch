@@ -149,7 +149,7 @@ if ( ! function_exists( 'gruene_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function gruene_posted_on() {
+function gruene_posted_on( $show_posted_on = false ) {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>'; //<time class="updated" datetime="%3$s">%4$s</time>';
@@ -161,11 +161,15 @@ function gruene_posted_on() {
 		//esc_attr( get_the_modified_date( 'c' ) ),
 		//esc_html( get_the_modified_date() )
 	);
-
-	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'gruene' ),
-		$time_string
-	);
+     
+     if ( $show_posted_on ) {
+          $posted_on = sprintf(
+               esc_html_x( 'Posted on %s', 'post date', 'gruene' ),
+               $time_string
+          );
+     } else {
+          $posted_on = $time_string;
+     }
 
 	$byline = sprintf(
 		esc_html_x( 'by %s', 'post author', 'gruene' ),
