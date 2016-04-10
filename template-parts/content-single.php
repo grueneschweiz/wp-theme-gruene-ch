@@ -4,22 +4,37 @@
  */
 ?>
 
+<?php if ( 'short' == get_theme_mod( 'title_length', 'normal' ) ) : ?>
+	<?php the_title( '<h1 class="entry-title entry-title-short">', '</h1>' ); ?>
+<?php endif; ?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		
-		<?php if ( 'post' == get_post_type() && ! is_sticky() ) : ?>
-			<div class="entry-meta">
-				<?php gruene_posted_on(); ?>
-			</div><!-- .entry-meta -->
+	<header class="entry-header gruene-title_length-<?php echo get_theme_mod( 'title_length', 'normal' ); ?>">
+          <?php if ( 'normal' == get_theme_mod( 'title_length', 'normal' ) ) : ?>
+               
+               <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+               <?php if ( 'post' == get_post_type() && ! is_sticky() ) : ?>
+                    <div class="entry-meta">
+                         <?php gruene_posted_on(); ?>
+                    </div><!-- .entry-meta -->
+               <?php endif; ?>
+                    
 		<?php endif; ?>
-		
+               
 		<?php gruene_the_featured_image(); ?>
 		
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php the_content(); ?>
+          
+          <?php if ( 'short' == get_theme_mod( 'title_length', 'normal' ) && 'post' == get_post_type() && ! is_sticky() ) : ?>
+               <div class="entry-meta">
+                    <?php gruene_posted_on(); ?>
+               </div><!-- .entry-meta -->
+          <?php endif; ?>
+          
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'gruene' ),

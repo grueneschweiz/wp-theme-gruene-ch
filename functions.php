@@ -61,6 +61,7 @@ function gruene_update() {
      // run the upgrade routine for versions smaller 2.2.0
      if ( -1 == version_compare( $current_version, '2.2.0' ) ) {
           set_theme_mod( 'title_caps', 'title_caps_none' );
+          set_theme_mod( 'title_length', 'normal' );
      }
 
      // set the current version number

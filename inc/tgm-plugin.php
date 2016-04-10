@@ -129,6 +129,17 @@ function gruene_register_required_plugins() {
 			'external_url'       => 'https://github.com/cyrillbolliger/cybosm', // If set, overrides default API URL and points to an external URL.
 		),
 	);
+     
+     /**
+      * Only recommend this plugin if the theme option 'title_length' is set to short.
+      */
+     if ( 'short' == get_theme_mod( 'title_length', 'normal' ) ) {
+          $plugins[] = array(
+               'name'      => 'Limit Post Titles',
+               'slug'      => 'limit-post-titles',
+               'required'  => false,
+          );
+     }
 	
 	/**
 	 * Array of configuration settings. Amend each line as needed.

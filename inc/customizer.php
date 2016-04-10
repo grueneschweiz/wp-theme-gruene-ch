@@ -66,6 +66,11 @@ function gruene_add_theme_spezific_settings( $wp_customize ) {
 	) );
      
      // add setting
+	$wp_customize->add_setting( 'title_length', array(
+		'default'        => 'title_length_normal',
+	) );
+     
+     // add setting
 	$wp_customize->add_setting( 'theme_purpose', array(
 		'default'        => 'politician',
 	) );
@@ -102,6 +107,21 @@ function gruene_add_theme_spezific_settings( $wp_customize ) {
 		'choices'    => array( 
               'title_caps_none' => "Don't capitalize titles", 
               'title_caps_all'  => "Capitalize titles",
+          ),
+	) );
+     
+     // add control
+	$wp_customize->add_control( 'title_length', array(
+          'type'       => 'select',
+          'section'    => 'gruene_theme_options',
+		'label'      => __( 'Post title style', 'gruene' ),
+		'description'=> __( "This option let's you choose between style consistency and functionality.".
+                              ' With short titles the heading style of posts is same as for pages.'.
+                              ' With the normal title length option, you can set long titles but it violates the design.', 'gruene' ) .
+                              ' <strong>' . __( 'Short titles: We highly recommend to use the "Limit Post Titles" plugin and set it to 35 character max.', 'gruene' ) . '</strong>',
+		'choices'    => array( 
+              'short'    => __( 'Short titles = Better styles', 'gruene' ),
+              'normal'   => __( 'Normal title length = Design loss', 'gruene' ),
           ),
 	) );
      

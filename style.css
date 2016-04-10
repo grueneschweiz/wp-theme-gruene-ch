@@ -891,7 +891,7 @@ nav.pagination div.nav-links a.next
 .single .byline, .group-blog .byline 
 	{ display: inline; }
 
-.page-title
+.page-title, .entry-title-short
 	{ margin-top: 10px; font-size: 32px; font-size: 2em; }
 
 .page-content, .entry-content, .entry-summary 
@@ -908,7 +908,7 @@ article header.entry-header
 
 article header.entry-header .attachment-post-thumbnail 
 	{ border-radius: 5px; margin: 0 10px 0 0; display: none; }
-
+     
 article header.entry-header .attachment-post-thumbnail.gruene-thumbnail-size-small
      { float: left; }
      
@@ -929,6 +929,10 @@ article header.entry-header .attachment-default-post-thumbnail-wrapper .attachme
 
 article header.entry-header .featured-image
 	{ margin: 1em auto 0 auto; line-height: 0.85em; }
+     
+article header.entry-header.gruene-title_length-short .featured-image,
+article.type-page header.entry-header .featured-image
+     { margin-top: 0; }
 
 article header.entry-header h1.entry-title
 	{ clear: none; font-size: 1.5em; margin-top: 0.2em; margin-bottom: 0; }
@@ -936,7 +940,7 @@ article header.entry-header h1.entry-title
 article header.entry-header h1.entry-title a:visited
 	{ color: #e10078; }
 
-article header.entry-header div.entry-meta
+article div.entry-meta
 	{ font-size: 0.875em; color: #666666; }
 
 article div.entry-summary
