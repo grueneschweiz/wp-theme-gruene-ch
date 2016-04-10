@@ -59,7 +59,7 @@ function gruene_register_required_plugins() {
 		array(
 			'name'      => 'Disable Comments',
 			'slug'      => 'disable-comments',
-			'required'  => true,
+			'required'  => false,
 		),
 		// RECOMMENDED PLUGINS from the WordPress Plugin Repository.
 		array(
