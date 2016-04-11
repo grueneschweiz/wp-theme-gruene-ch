@@ -12,7 +12,7 @@
  * Content block for the lightbox
  */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'gruene-campaign' ); ?>>
+<article id="post-<?php the_ID(); ?>">
 	<header class="entry-header">
 		
 		<?php gruene_the_featured_image(); ?>

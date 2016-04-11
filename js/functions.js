@@ -227,7 +227,7 @@
                    window_width     = $( window ).width(),
                    $html            = $( 'html' );
            
-               $( '.gruene-campaign:first' ).dialog( {
+               $( '.gruene-campaign' ).dialog( {
                     modal       : true,
                     resizable   : false,
                     draggable   : false,
@@ -274,12 +274,12 @@
                if ( 0 === $( '.gruene-campaign' ).length ) return; //BREAKPOINT
                
                var margin           = 20,
-                   content_height   = $( 'article.gruene-campaign' ).outerHeight( true ) + 1,
+                   content_height   = $( '.gruene-campaign' ).outerHeight( true ) + 1,
                    adminbar_height  = $( '#wpadminbar' ).outerHeight( true ),
                    window_height    = $( window ).height(),
                    viewport_height  = window_height - adminbar_height - margin,
                    dialog_height    = viewport_height < content_height ? viewport_height : content_height,
-                   $dialog          = $( '.gruene-campaign:first' ).dialog( 'instance' ).uiDialog;
+                   $dialog          = $( '.gruene-campaign' ).dialog( 'instance' ).uiDialog;
                    
                    // set dialog height
                    $dialog.css( 'height', dialog_height );
@@ -345,7 +345,7 @@
                // exit if no dialog
                if ( 0 === $( '.gruene-campaign' ).length ) return; //BREAKPOINT
                
-               $( '.gruene-campaign:first' ).dialog( 'close' );
+               $( '.gruene-campaign' ).dialog( 'close' );
           };
      }
           

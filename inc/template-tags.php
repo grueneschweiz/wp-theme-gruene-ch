@@ -342,30 +342,46 @@ if ( ! function_exists( 'gruene_the_campaign' ) ) :
  * Shows the campaign content
  * 
  * @global array $gruene_campaign_query
+ * @global bool  $withcomments
  * @return string
  */
 function gruene_the_campaign() {
      global $gruene_campaign_query;
-          
+     global $withcomments;
+     
+     // Return if this isn't a campaign
      if ( empty( $gruene_campaign_query ) ) {
           return ''; // BREAKPOINT
      }
      
-     // get the query     
-     $query = new WP_Query( $gruene_campaign_query );
+     // Temporarely store the value of $withcomments. We'll reset it later on.
+     $withcomments_original = $withcomments;
      
-     while ( $query->have_posts() ) : $query->the_post(); ?>
+     // Set $withcomments to true to show comments despite it's not is_single() || is_page()
+     $withcomments = true;
+     
+     // Get the query     
+     $query = new WP_Query( $gruene_campaign_query ); ?>
+     
+     <div class="gruene-campaign"> 
+             
+          <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
-          <?php get_template_part( 'template-parts/content', 'campaign' ); ?>
+               <?php get_template_part( 'template-parts/content', 'campaign' ); ?>
 
-          <?php
-               // If comments are open or we have at least one comment, load up the comment template
-               if ( comments_open() || get_comments_number() ) :
-                    comments_template();
-               endif;
-          ?>
+               <?php
+                    // If comments are open or we have at least one comment, load up the comment template
+                    if ( comments_open() || get_comments_number() ) :
+                         comments_template();
+                    endif;
+               ?>
 
-     <?php endwhile; // end of the loop.
+          <?php endwhile; // end of the loop. ?>
+     
+     </div>
+     
+     <?php // Reset $withcomments
+     $withcomments = $withcomments_original;
 }
 endif;
 
