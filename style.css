@@ -1190,8 +1190,7 @@ aside.widget_rss ul li span.rss-date
      { height: auto; box-sizing: border-box; /* IE-Fix */ }
      
 .gruene-campaign-dialog article header.entry-header .featured-image
-     { margin: -10px -10px 0 -10px; width: calc( 100% + 20px );
-       max-width: calc( 100% + 20px ); }
+     { margin-top: 0; }
      
 .gruene-campaign-dialog article header.entry-header .featured-image img
      { width: 100%; height: auto; }
