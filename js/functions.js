@@ -320,25 +320,6 @@
           };
           
           /*
-		 * Put the close button in the correct position
-		 */
-		this.positionCloseButton = function positionCloseButton() {
-               // exit if no dialog
-               if ( 0 === $( '.gruene-campaign' ).length ) return; //BREAKPOINT
-               
-               var $dialog = $( '.gruene-campaign-dialog' );
-               
-               $( '.gruene-campaign-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close' )
-                       .css( 'top', function() {
-                            return  parseFloat( $dialog.css( 'top' ) ) + 
-                                    $( '#wpadminbar' ).height() - 10;
-                       } )
-                       .css( 'right', function() {
-                            return parseFloat( $dialog.css( 'left' ) ) - 10;
-                       } );
-          };
-          
-          /*
 		 * Close dialog
 		 */
 		this.close = function close() {
@@ -360,7 +341,6 @@
 		Nav.initiateFooterHideNshow();
           Misc.setHeaderTextHight();
           Campaign.init();
-          Campaign.positionCloseButton();
 	});
 	
 	/**
@@ -372,7 +352,6 @@
           Misc.setHeaderTextHight();
           Campaign.setDialogHeight();
           Campaign.setDialogWidth();
-          Campaign.positionCloseButton();
 	});
 	
 } )( jQuery );
