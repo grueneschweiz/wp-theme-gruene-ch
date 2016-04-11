@@ -522,7 +522,7 @@ textarea
 
 /* meta navigation */
 .meta-navigation
-	{ margin: 0 40px; float: right; }
+	{ margin: 0 35px; float: right; }
 
 .meta-navigation ul li
 	{ padding: 20px 3px 0; text-transform: uppercase; color: #fff; font-size: 14px; font-size: 0.875rem; }
