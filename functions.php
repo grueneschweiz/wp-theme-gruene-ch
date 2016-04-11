@@ -95,8 +95,12 @@ function gruene_service_contract() {
      // this array holds the md5 hashes of the url's of the instances with a
      // service contract. Use the network_site_url.
      $service_contracts = array(
-         '5959c1ca59be6f8d55a70ede9028f1d7',
-         'aff29eb83b4b3b81e9a59ce4bc132700',
+         /**
+          * You think i'm making loads of money? My dev pages are in the list as well :(
+          */
+         '6abb6b7115b5b0a410e1f4d82cdf8923',
+         '5078d6c827100ed03e2aa1739d900aed',
+         'ac36db01e6358125b9f536d589770915',
      );
      
      // get current base url of the network
@@ -108,7 +112,7 @@ function gruene_service_contract() {
      }
      
      // 
-     $clean_url = preg_replace( 'https?:\/\/(www\.|)', '', $url );
+     $clean_url = preg_replace( '/https?:\/\/(www\.|)/', '', $url );
      
      // get the md5 hash of the current sites url
      $clean_url_hash = md5( $clean_url );
