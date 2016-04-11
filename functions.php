@@ -70,9 +70,76 @@ function gruene_update() {
 
      // set the current version number
     set_theme_mod( 'version_number', GRUENE_VERSION );
+    
+    // set initiatil version number
+    $ini_version = null == $current_version ? GRUENE_VERSION : $current_version;
+    update_site_option( 'gruene_ini_version', $ini_version );
 }
 endif;
 add_action( 'after_setup_theme', 'gruene_update', 0 );
+
+
+if ( ! function_exists( 'gruene_service_contract' ) ) :
+/**
+ * Show admin notice, if theme was updated without having a service contract.
+ */
+function gruene_service_contract() {
+     // get initially installed version
+     $ini_version = get_site_option( 'gruene_ini_version', null );
+
+     // if were still running the initially installed version, stop here
+     if ( GRUENE_VERSION == $ini_version ) {
+          return; // BREAKPOINT
+     }
+     
+     // this array holds the md5 hashes of the url's of the instances with a
+     // service contract. Use the network_site_url.
+     $service_contracts = array(
+         '5959c1ca59be6f8d55a70ede9028f1d7',
+         'aff29eb83b4b3b81e9a59ce4bc132700',
+     );
+     
+     // get current base url of the network
+     $url = network_site_url();
+     
+     // don't show notice on localhosts
+     if ( 1 === preg_match( '/localhost/', $url ) ) {
+          return;
+     }
+     
+     // 
+     $clean_url = preg_replace( 'https?:\/\/(www\.|)', '', $url );
+     
+     // get the md5 hash of the current sites url
+     $clean_url_hash = md5( $clean_url );
+     
+     // return if site has a service contract
+     if ( in_array( $clean_url_hash, $service_contracts ) ) {
+          return; // BREAKPOINT
+          
+     } else { 
+          // if user has updated whithout having a service contract
+          // show admin notice
+          $current_user = wp_get_current_user();
+          
+          $class = 'notice notice-warning';
+          $message = sprintf( 
+                  _x( "Hey %s, updating is great. Contributing also. It's quite time consuming".
+                      " to keep your theme and its non 3rd party plugins up to date.".
+                      " So please support this job by agreeing to a service contract.".
+                      " It costs you 300.- CHF a year and ensures further compatibility of the".
+                      " Gruene-Theme and it's non 3rd party plugins with future updates of the".
+                      " WordPress core and the supported plugins. Please email me (cyrill.bolliger@gmail.com)".
+                      " to get a service contract and hide this message. Thank you!", 'Users display name', 'gruene' ), 
+                  $current_user->display_name 
+          );
+
+          printf( '<div class="%1$s"><p>%2$s</p></div>', $class, $message ); 
+     }
+}
+endif;
+add_action( 'admin_notices', 'gruene_service_contract' );
+
 
 if ( ! function_exists( 'gruene_content_width' ) ) :
 /**
