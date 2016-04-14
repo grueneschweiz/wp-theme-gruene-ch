@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gruene Theme\n"
-"POT-Creation-Date: 2016-04-14 23:01+0100\n"
-"PO-Revision-Date: 2016-04-14 23:18+0100\n"
+"POT-Creation-Date: 2016-04-14 23:24+0100\n"
+"PO-Revision-Date: 2016-04-14 23:24+0100\n"
 "Last-Translator: Cyrill Bolliger <bolliger@gmx.ch>\n"
 "Language-Team: Cyrill Bolliger <bolliger@gmx.ch>\n"
 "Language: DE\n"
@@ -290,6 +290,14 @@ msgstr ""
 "Wenn du diese Option auf \"Grossbuchstaben\" setzt, werden alle Titel als "
 "Grossbuchstaben ausgegeben. Sonst erscheinen die Titel so wie sie "
 "geschrieben sind."
+
+#: ../inc/customizer.php:150
+msgid "Don't capitalize titles"
+msgstr "Normale Titel"
+
+#: ../inc/customizer.php:151
+msgid "Capitalize titles"
+msgstr "Titel in Grossbuchstaben"
 
 #: ../inc/customizer.php:159
 msgid "Choose your post title style"
