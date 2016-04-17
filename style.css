@@ -833,8 +833,16 @@ nav.pagination div.nav-links a.next
 	{ max-width: 100%; }
 
 /* Search widget. */
+.widget_search .search-form label
+     { display: block; float: left; height: 100%; width: calc( 100% - 37px ); }
+
+.widget_search .search-field
+     { width: 100%; border-radius: 5px 0 0 5px;
+       height: calc( 100% - 1em ); }
+     
 .widget_search .search-submit 
-	{ display: none; }
+	{ padding-left: 0; padding-right: 0; width: 37px; border-radius: 0 5px 5px 0;
+       height: 100%; }
 
 /* Upper Sidebar */
 #secondary-additional
