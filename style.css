@@ -962,10 +962,13 @@ article footer.entry-footer .comments-link:before
        background: transparent url('img/comments.svg') no-repeat; background-size: contain;
        margin-right: 0.5em; }
 
+.edit-link.button
+     { display: block; margin: 10px 0; }
+     
 .edit-link.button a
 	{ border-radius: 5px; background: #e10078; color: #ffffff; font-size: 14px; font-size: 0.875rem;
 	  padding: 0.5em 1em; border: none; font-weight: bold; box-shadow: 0 0 7px 1px #cc006d inset; }
-
+     
 .posts-nav
 	{ font-size: 0.875em; }
 
