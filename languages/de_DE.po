@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gruene Theme\n"
-"POT-Creation-Date: 2016-04-14 23:24+0100\n"
-"PO-Revision-Date: 2016-04-14 23:24+0100\n"
+"POT-Creation-Date: 2016-04-17 15:11+0100\n"
+"PO-Revision-Date: 2016-04-17 15:11+0100\n"
 "Last-Translator: Cyrill Bolliger <bolliger@gmx.ch>\n"
 "Language-Team: Cyrill Bolliger <bolliger@gmx.ch>\n"
 "Language: DE\n"
@@ -434,8 +434,10 @@ msgid "by %s"
 msgstr "von %s"
 
 #: ../inc/template-tags.php:190
-msgid "Read More"
-msgstr "Weiterlesen"
+#, php-format
+msgctxt "Read more arrow"
+msgid "%s Read more"
+msgstr "%s Weiterlesen"
 
 #: ../inc/template-tags.php:220
 msgid "Leave a comment"
