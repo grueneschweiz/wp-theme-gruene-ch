@@ -262,6 +262,11 @@ a:focus
 a:hover, a:active
 	{ outline: 0; }
 
+a.read-more,
+a.back-button,
+a.comment-reply-link
+     { text-decoration: none; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -754,7 +759,7 @@ nav.pagination div.nav-links a.page-numbers
 
 nav.pagination div.nav-links a.prev,
 nav.pagination div.nav-links a.next
-	{ position: absolute; text-decoration: underline; }
+	{ position: absolute; text-decoration: none; }
 
 nav.pagination div.nav-links a.prev:hover,
 nav.pagination div.nav-links a.next:hover
