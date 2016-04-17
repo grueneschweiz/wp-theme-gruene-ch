@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gruene Theme\n"
 "POT-Creation-Date: 2016-04-17 15:11+0100\n"
-"PO-Revision-Date: 2016-04-17 15:11+0100\n"
+"PO-Revision-Date: 2016-04-17 19:19+0100\n"
 "Last-Translator: Cyrill Bolliger <bolliger@gmx.ch>\n"
 "Language-Team: Cyrill Bolliger <bolliger@gmx.ch>\n"
 "Language: DE\n"
@@ -34,13 +34,13 @@ msgstr ""
 #, php-format
 msgctxt "&laquo;"
 msgid "%s Previous page"
-msgstr "%s Vorherige Seite"
+msgstr "%s&nbsp;Vorherige Seite"
 
 #: ../archive.php:44 ../home.php:41 ../index.php:37 ../search.php:36
 #, php-format
 msgctxt "&raquo;"
 msgid "%s Next page"
-msgstr "%s Nächste Seite"
+msgstr "%s&nbsp;Nächste Seite"
 
 #: ../comments.php:29
 #, php-format
@@ -437,7 +437,7 @@ msgstr "von %s"
 #, php-format
 msgctxt "Read more arrow"
 msgid "%s Read more"
-msgstr "%s Weiterlesen"
+msgstr "%s&nbsp;Weiterlesen"
 
 #: ../inc/template-tags.php:220
 msgid "Leave a comment"
