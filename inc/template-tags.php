@@ -187,7 +187,7 @@ if ( ! function_exists( 'gruene_get_read_more_link' ) ) :
  * returns the read more link HTML
  */
 function gruene_get_read_more_link() {
-	return '<a class="read-more" href="' . get_permalink( get_the_ID() ) . '">&raquo;&nbsp;' . __( 'Read More', 'gruene' ) . '</a>';
+	return '<a class="read-more" href="' . get_permalink( get_the_ID() ) . '">'.sprintf( _x( '%s Read more', 'Read more arrow', 'gruene' ), '&raquo;').'</a>';
 }
 endif;
 
