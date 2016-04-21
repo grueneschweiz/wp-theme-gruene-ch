@@ -560,7 +560,7 @@ textarea
 
 .main-navigation ul#primary-menu > li > ul 
 	{ background-color: #f3f3f3; box-shadow: 0 5px 10px 0 #777777; float: left; position: absolute; 
-	  top: 30px; z-index: 99999; width: 200px; border-radius: 0 5px 5px 5px; height: 0; overflow: hidden; 
+	  top: 29px; z-index: 99999; width: 200px; border-radius: 0 5px 5px 5px; height: 0; overflow: hidden; 
 	  border-top: 5px solid #e00078; display: none; }
 
 .main-navigation ul#primary-menu > li:hover > ul
