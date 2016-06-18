@@ -96,7 +96,9 @@
                <?php get_search_form(); ?>
           </div><!-- #side-nav-search-form -->
 		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu-mobile', 'depth' => 3 ) ); ?>
-		<?php gruene_language_nav(); ?>
+          <?php if ( has_nav_menu( 'language' ) ) : ?>
+               <?php gruene_language_nav(); ?>
+          <?php endif; // End if has_nav_menu( 'language' ) ?>
 	</nav>
 
 	<div id="content" class="site-content">
