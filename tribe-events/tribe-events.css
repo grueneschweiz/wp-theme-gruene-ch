@@ -1,4 +1,14 @@
 /*--------------------------------------------------------------
+# Global & Miscellaneous Styles
+--------------------------------------------------------------*/
+
+ul.tribe-events-sub-nav a,
+.tribe-events-back a,
+.tribe-events-list-widget .tribe-events-widget-link a,
+.tribe-events-adv-list-widget .tribe-events-widget-link a 
+     { font-weight: inherit; font-size: 1em; }
+
+/*--------------------------------------------------------------
 # Widget
 --------------------------------------------------------------*/
 
