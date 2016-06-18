@@ -103,6 +103,7 @@ function gruene_service_contract() {
          'ac36db01e6358125b9f536d589770915',
          'b372cf968035ec4d3bd1f2c580c57c97',
          'a19081bf0c3f7c1b50e3cb8176334499',
+         '78373e56b47e871ea69ffed79a229c9d',
      );
      
      // get current base url of the network
