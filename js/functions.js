@@ -343,6 +343,13 @@
           Campaign.init();
 	});
 	
+     /**
+      * Fires when complete page is fully loaded
+      */
+     $( window ).load(function() {
+          Misc.setHeaderTextHight();
+     });
+     
 	/**
 	 * fires on resizeing of the window
 	 */
