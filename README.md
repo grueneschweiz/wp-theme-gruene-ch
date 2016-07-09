@@ -10,5 +10,5 @@ We propose you a maintained ready-to-use installation for a personal website for
 - 1h of support for free
 
 Please note:
-- Additional one-time Installation fee CHF 200.-
-- This offer will be lauched, as soon as we've got more than ten potential buyers
+- Additional one-time installation fee CHF 200.-
+- See [virides.personae.ch](https://virides.personae.ch/) for details.
