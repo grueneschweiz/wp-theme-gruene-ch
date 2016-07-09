@@ -198,7 +198,8 @@ h1, h2, h3, h1 a, h2 a, h3 a
 	{ line-height: 1.5em; color: #e10078; margin: 0.67em 0; text-decoration: none; }
 
 .gruene-title_caps_all h1, .gruene-title_caps_all h2, .gruene-title_caps_all h3,
-.gruene-title_caps_all h4, .gruene-title_caps_all h5, .gruene-title_caps_all h6
+.gruene-title_caps_all h4, .gruene-title_caps_all h5, .gruene-title_caps_all h6,
+.gruene-title_caps_all #gruene-slider
      { text-transform: uppercase; }
      
 p 
