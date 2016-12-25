@@ -445,6 +445,7 @@ function gruene_config_mce_buttons_2( $buttons ) {
 		'alignjustify',
 		'forecolor',
 		'underline',
+          'block_formats', // @since 2.2.10
 	);
 	
 	foreach( $remove as $del_val ){
@@ -476,11 +477,14 @@ if ( is_admin() ) {
 
 if ( ! function_exists( 'gruene_mce_block_formats' ) ) :
 /**
- * customize editor blockformats and presettings of buttons
+ * customize presettings of buttons
  */
 function gruene_mce_advanced_customizations( $settings ) {
 	
-	$settings['block_formats'] = "Heading 1=h1; Heading 2=h2; Heading 3=h3; Paragraph=p";
+	/**
+      * removed block formats
+      * @since 2.2.10
+      */
 	 
 	/**
 	 * turns on paste as plain text by default
@@ -505,7 +509,28 @@ function gruene_mce_style_formats( $settings ) {
      
 	$style_formats = array(  
 	// Each array child is a format with it's own settings
-		array(  
+         /**
+          * Paragraph and normal headings moved from block formats to style formats
+          * @since 2.2.10
+          */
+         array(  
+			'title'   => __( 'Paragraph', 'gruene'),
+			'block'   => 'p',
+          ),
+         array(  
+			'title'   => __( 'Heading 1', 'gruene'),
+			'block'   => 'h1',
+          ),
+         array(  
+			'title'   => __( 'Heading 2', 'gruene'),
+			'block'   => 'h2',
+          ),
+         array(  
+			'title'   => __( 'Heading 3', 'gruene'),
+			'block'   => 'h3',
+          ),
+         
+         array(  
 			'title'   => __( 'Green Heading 1', 'gruene'),
 			'block'   => 'h1',
 			'classes' => 'gruene-custom-heading gruene-green-heading',
