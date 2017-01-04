@@ -841,8 +841,7 @@ nav.pagination div.nav-links a.next
      { width: 100%; border-radius: 5px 0 0 5px; }
      
 .widget_search .search-submit 
-	{ padding-left: 0; padding-right: 0; width: 37px; border-radius: 0 5px 5px 0;
-       height: 100%; }
+	{ padding-left: 0; padding-right: 0; width: 37px; border-radius: 0 5px 5px 0; }
 
 /* Upper Sidebar */
 #secondary-additional
