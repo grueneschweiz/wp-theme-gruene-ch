@@ -26,6 +26,9 @@ aside.widget.tribe-events-list-widget ol.tribe-list-widget li div.tribe-event-du
 
 .tribe-events-list-widget ol li
 	{ margin-bottom: 10px; }
+     
+.tribe-events-list-widget ol li.type-tribe_events /* fix for tribe events > 4.3.5 */
+	{ border: none; padding: 0; }
 
 .tribe-events-list-widget ol li:not(:first-of-type):before
 	{ background:-moz-linear-gradient( left, #F3F3F3 0%,#DDDDDD 50%,#F3F3F3 100% ); 
