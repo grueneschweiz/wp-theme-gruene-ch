@@ -835,7 +835,7 @@ nav.pagination div.nav-links a.next
 
 /* Search widget. */
 .widget_search .search-form label
-     { display: block; float: left; height: 100%; }
+     { display: block; float: left; height: 100%; width: calc(100% - 37px); }
 
 .widget_search .search-field
      { width: 100%; border-radius: 5px 0 0 5px; }
