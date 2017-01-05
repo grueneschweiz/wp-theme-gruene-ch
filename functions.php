@@ -129,16 +129,19 @@ function gruene_service_contract() {
           // show admin notice
           $current_user = wp_get_current_user();
           
-          $class = 'notice notice-warning';
+          $price = 'politician' == get_theme_mod( 'theme_purpose', 'politician' ) ? 50 : 300;
+          
+          $class = 'notice notice-warning is-dismissible';
           $message = sprintf( 
                   _x( "Hey %s, updating is great. Contributing also. It's quite time consuming".
                       " to keep your theme and its non 3rd party plugins up to date.".
                       " So please support this job by agreeing to a service contract.".
-                      " It costs you 300.- CHF a year and ensures further compatibility of the".
+                      " It costs you %d.- CHF a year and ensures further compatibility of the".
                       " Gruene-Theme and it's non 3rd party plugins with future updates of the".
                       " WordPress core and the supported plugins. Please email me (cyrill.bolliger@gmail.com)".
                       " to get a service contract and hide this message. Thank you!", 'Users display name', 'gruene' ), 
-                  $current_user->display_name 
+                  $current_user->display_name,
+                  $price
           );
 
           printf( '<div class="%1$s"><p>%2$s</p></div>', $class, $message ); 

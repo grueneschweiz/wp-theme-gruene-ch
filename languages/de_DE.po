@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gruene Theme\n"
-"POT-Creation-Date: 2016-12-25 23:28+0100\n"
-"PO-Revision-Date: 2016-12-25 23:31+0100\n"
+"POT-Creation-Date: 2017-01-05 14:12+0100\n"
+"PO-Revision-Date: 2017-01-05 14:13+0100\n"
 "Last-Translator: Cyrill Bolliger <bolliger@gmx.ch>\n"
 "Language-Team: Cyrill Bolliger <bolliger@gmx.ch>\n"
 "Language: DE\n"
@@ -58,14 +58,14 @@ msgstr "Kommentarnavigation"
 msgid "Comments are closed."
 msgstr "Die Kommentarfunktion wurde geschlossen."
 
-#: ../functions.php:134
+#: ../functions.php:136
 #, php-format
 msgctxt "Users display name"
 msgid ""
 "Hey %s, updating is great. Contributing also. It's quite time consuming to "
 "keep your theme and its non 3rd party plugins up to date. So please support "
-"this job by agreeing to a service contract. It costs you 300.- CHF a year "
-"and ensures further compatibility of the Gruene-Theme and it's non 3rd party "
+"this job by agreeing to a service contract. It costs you %d.- CHF a year and "
+"ensures further compatibility of the Gruene-Theme and it's non 3rd party "
 "plugins with future updates of the WordPress core and the supported plugins. "
 "Please email me (cyrill.bolliger@gmail.com) to get a service contract and "
 "hide this message. Thank you!"
@@ -73,53 +73,53 @@ msgstr ""
 "Hey %s, updaten ist super. Einen Beitrag zur Entwicklung leisten auch. Es "
 "brauch ziemlich viel Zeit dein Theme und die dazugehörigen eigenen Plugins "
 "aktuell zu halten. Bitte unterstütze diese Arbeit mit einem Servicevertrag. "
-"Dieser kostet 300.- CHF pro Jahr und garantiert die Kompatibilität des "
-"Gruene-Themes und der dazugehörigen eigenen Plugins mit zukünfigen Updates "
-"von WordPress und der vom Theme unterstützen Plugins. Bitte kontaktiere mich "
-"(cyrill.bolliger@gmx.com) für einen Servicevertrag. Danke!"
+"Dieser kostet %d.- CHF pro Jahr und garantiert die Kompatibilität des Gruene-"
+"Themes und der dazugehörigen eigenen Plugins mit zukünftigen Updates von "
+"WordPress und der vom Theme unterstützen Plugins. Bitte kontaktiere mich "
+"(cyrill.bolliger@gmail.com) für einen Servicevertrag. Danke!"
 
-#: ../functions.php:249
+#: ../functions.php:252
 msgid "Primary Menu"
 msgstr "Hauptmenü"
 
-#: ../functions.php:250
+#: ../functions.php:253
 msgid "Footer Menu"
 msgstr "Footermenü"
 
-#: ../functions.php:251
+#: ../functions.php:254
 msgid "Footer Meta Menu"
 msgstr "Footer-Metamenü"
 
-#: ../functions.php:258
+#: ../functions.php:261
 msgid "Language Menu"
 msgstr "Sprachmenü"
 
-#: ../functions.php:259
+#: ../functions.php:262
 msgid "Meta Menu"
 msgstr "Mentamenü"
 
-#: ../functions.php:283
+#: ../functions.php:286
 msgid "Upper Sidebar"
 msgstr "Obere Sidebar"
 
-#: ../functions.php:285
+#: ../functions.php:288
 msgid "Put only the \"Search\" or \"Cybo Social Sharing\" widget in here."
 msgstr ""
 "Ziehe das \"Suche\"- oder das \"Cybo Social Sharing\"-Widget hier hinein."
 
-#: ../functions.php:292
+#: ../functions.php:295
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: ../functions.php:294
+#: ../functions.php:297
 msgid "This is just the regular sidebar."
 msgstr "Das ist die normale Sidebar."
 
-#: ../functions.php:301
+#: ../functions.php:304
 msgid "Footer"
 msgstr "Footer"
 
-#: ../functions.php:303
+#: ../functions.php:306
 msgid ""
 "This is the footer zone. Example: drop a text widget with your contact "
 "details in here."
@@ -127,43 +127,43 @@ msgstr ""
 "Das ist der Fussbereich der Website. Ziehe hier beispielsweise ein Text "
 "Widget mit deinen Kontaktangaben hinein."
 
-#: ../functions.php:517
+#: ../functions.php:520
 msgid "Paragraph"
 msgstr "Absatzformat"
 
-#: ../functions.php:521
+#: ../functions.php:524
 msgid "Heading 1"
 msgstr "Überschrift 1"
 
-#: ../functions.php:525
+#: ../functions.php:528
 msgid "Heading 2"
 msgstr "Überschrift 2"
 
-#: ../functions.php:529
+#: ../functions.php:532
 msgid "Heading 3"
 msgstr "Überschrift 3"
 
-#: ../functions.php:534
+#: ../functions.php:537
 msgid "Green Heading 1"
 msgstr "Grüne H1"
 
-#: ../functions.php:539
+#: ../functions.php:542
 msgid "Green Heading 2"
 msgstr "Grüne H2"
 
-#: ../functions.php:544
+#: ../functions.php:547
 msgid "Green Heading 3"
 msgstr "Grüne H3"
 
-#: ../functions.php:549
+#: ../functions.php:552
 msgid "Magenta Heading 1"
 msgstr "Magenta H1"
 
-#: ../functions.php:554
+#: ../functions.php:557
 msgid "Magenta Heading 2"
 msgstr "Magenta H2"
 
-#: ../functions.php:559
+#: ../functions.php:562
 msgid "Magenta Heading 3"
 msgstr "Magenta H3"
 
