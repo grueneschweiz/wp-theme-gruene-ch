@@ -1091,6 +1091,11 @@ div.footer-content h1
 embed, iframe, object 
 	{ max-width: 100%; }
 
+/* Make Issuu embeds responsive */
+.issuuembed.issuu-isrendered {
+  max-width: 100% !important;
+}
+
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
