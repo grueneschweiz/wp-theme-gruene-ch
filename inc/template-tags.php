@@ -15,28 +15,28 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 if ( ! function_exists( 'gruene_language_nav' ) ) :
 /**
  * echos the language menu
- * 
+ *
  * adds the .current-site class to correspondig elements
  */
 function gruene_language_nav() {
 	$nav = wp_nav_menu( array(
-		'theme_location' => 'language', 
-		'menu_id'        => 'language-menu', 
+		'theme_location' => 'language',
+		'menu_id'        => 'language-menu',
 		'depth'          => -1,
 		'echo'           => false,
 	) );
-	
+
 	$esc_url = str_replace( '/', '\/', get_site_url() );
 	$current = '/<li[^>]*>\s*<a href="'.$esc_url.'[^>]*>[^<]*<\/a>\s*<\/li>/';
-	
+
 	$result = preg_match( $current, $nav, $match );
-	
+
 	// if current site url was found in menu list, add .current-site class
 	if ( 1 == $result ) {
 		$replacement = preg_replace( '/(class="[^"]*)/', '$1 current-site', $match[0] );
 		$nav = preg_replace( $current, $replacement, $nav, 1 );
 	}
-	
+
 	echo $nav;
 }
 endif;
@@ -45,32 +45,24 @@ endif;
 if ( ! function_exists( 'gruene_the_site_icon_fallback' ) ) :
 /**
  * echos a default fav-icon, if none is defined in the theme customizer
- * 
+ *
  * @since 1.8.1
  */
 function gruene_the_site_icon_fallback() {
 	// get the icon defined in the theme customizer
 	$icon = get_option( 'site_icon' );
-	
+
 	// if none was defined echo the default ones
 	if ( false == (bool) $icon ) {
 		?>
-			<link rel="apple-touch-icon" sizes="57x57" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/apple-icon-57x57.png">
-			<link rel="apple-touch-icon" sizes="60x60" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/apple-icon-60x60.png">
-			<link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/apple-icon-72x72.png">
-			<link rel="apple-touch-icon" sizes="76x76" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/apple-icon-76x76.png">
-			<link rel="apple-touch-icon" sizes="114x114" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/apple-icon-114x114.png">
-			<link rel="apple-touch-icon" sizes="120x120" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/apple-icon-120x120.png">
-			<link rel="apple-touch-icon" sizes="144x144" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/apple-icon-144x144.png">
-			<link rel="apple-touch-icon" sizes="152x152" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/apple-icon-152x152.png">
-			<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/apple-icon-180x180.png">
-			<link rel="icon" type="image/png" sizes="192x192"  href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/android-icon-192x192.png">
-			<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/favicon-32x32.png">
-			<link rel="icon" type="image/png" sizes="96x96" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/favicon-96x96.png">
-			<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/favicon-16x16.png">
-			<link rel="manifest" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/manifest.json">
-			<meta name="msapplication-TileColor" content="#ffffff">
-			<meta name="msapplication-TileImage" content="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/ms-icon-144x144.png">
+			<link rel="apple-touch-icon" sizes="180x180" href="/<?php echo get_stylesheet_directory_uri(); ?>img/favicon/apple-touch-icon.png?v=00rdjbaPyz">
+			<link rel="icon" type="image/png" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/favicon-32x32.png?v=00rdjbaPyz" sizes="32x32">
+			<link rel="icon" type="image/png" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/favicon-16x16.png?v=00rdjbaPyz" sizes="16x16">
+			<link rel="manifest" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/manifest.json?v=00rdjbaPyz">
+			<link rel="mask-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/safari-pinned-tab.svg?v=00rdjbaPyz" color="#5bbad5">
+			<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/favicon.ico?v=00rdjbaPyz">
+			<meta name="msapplication-config" content="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/browserconfig.xml?v=00rdjbaPyz">
+			<meta name="theme-color" content="#ffffff">
 		<?php
 	}
 }
@@ -80,7 +72,7 @@ endif;
 if ( ! function_exists( 'gruene_the_post_thumbnail' ) ) :
 /**
  * custom version of the_post_thumbnail() // no attributes supportet!
- * 
+ *
  * echos out post thumbnail or default image if thumbnail wasn't given
  */
 function gruene_the_post_thumbnail() {
@@ -88,10 +80,10 @@ function gruene_the_post_thumbnail() {
 		// echo the given thumbnail
           $class = 'attachment-post-thumbnail gruene-thumbnail-size-' . get_theme_mod( 'thumbnail_size', 'large' );
           the_post_thumbnail( 'post-thumbnail', array( 'class' => $class ) );
-          
+
 	} else {
 		// if thumbnail is missing
-		
+
           /**
            * if small thumbnails are chosen, a default image with the logo
            * will be returned. conditional @since 2.0.0
@@ -121,10 +113,10 @@ function gruene_the_featured_image() {
 		// if there is no featured image end here
 		return; // BEAKPOINT
 	}
-	
+
 	// get the image caption
 	$caption = get_post( get_post_thumbnail_id() )->post_excerpt;
-	
+
 	// if a caption is provided wrap it in div container, else leave it blank
 	if ( ! empty( $caption ) ) {
 		$caption_html  = '<figcaption class="wp-caption-text">'.$caption.'</figcaption>';
@@ -133,13 +125,13 @@ function gruene_the_featured_image() {
 		$caption_html  = '';
 		$caption_class = '';
 	}
-	
+
 	// get the image properties
 	$image_props = wp_get_attachment_image_src( get_post_thumbnail_id(), 'gruene_featured_image_size' );
-	
+
 	// get the image
 	$image_html = get_the_post_thumbnail( get_the_ID(), 'gruene_featured_image_size' );
-	
+
 	echo '<figure class="featured-image'.$caption_class.'" style="width: 100%; max-width:'.$image_props[1].'px;">'.$image_html.$caption_html.'</figure>';
 }
 endif;
@@ -161,7 +153,7 @@ function gruene_posted_on( $show_posted_on = false ) {
 		//esc_attr( get_the_modified_date( 'c' ) ),
 		//esc_html( get_the_modified_date() )
 	);
-     
+
      if ( $show_posted_on ) {
           $posted_on = sprintf(
                esc_html_x( 'Posted on %s', 'post date', 'gruene' ),
@@ -199,7 +191,7 @@ function gruene_entry_footer() {
 	/**
 	 * Uncomment to show category or tags
 	 */
-	
+
 	//// Hide category and tag text for pages.
 	//if ( 'post' == get_post_type() ) {
 	//	/* translators: used between list items, there is a space after the comma */
@@ -233,7 +225,7 @@ if ( ! function_exists( 'gruene_the_back_button' ) ) :
 function gruene_the_back_button() {
 	// the referer url
 	$referer = wp_get_referer();
-	
+
 	// if the referer url contains the home url --> if internal
 	if ( false !== strpos( $referer, home_url() ) ) {
 		echo '<div><a class="back-button" href="' . esc_attr( $referer ) . '">&laquo;&nbsp;' . __( 'Back', 'gruene' ) . '</a></div>';
@@ -248,18 +240,18 @@ if ( ! function_exists( 'gruene_the_additional_header_image' ) ) :
  */
 function gruene_the_additional_header_image() {
      $mode = get_theme_mod( 'theme_purpose', 'politician' );
-     
+
      $width  = GRUENE_ADDITIONAL_HEADER_WIDTH;
      $height = GRUENE_ADDITIONAL_HEADER_HEIGHT;
-     
+
      if ( 'politician' == $mode ) {
           $width  = $width * GRUENE_HEADER_IMAGE_SCALING_RATIO;
           $height = $height * GRUENE_HEADER_IMAGE_SCALING_RATIO;
      }
-     
+
      $img_id = get_theme_mod( 'additional_header_image', false ); // get the attachment image id
      $img = wp_get_attachment_image_src( $img_id, array( $width, $height ) );
-     
+
      if ( ! empty( $img ) ) { // if an additional_header_image was set up
           echo '<div id="additional-header-image">'.
                     '<img src="'. $img[0] .'" width="'. $img[1]/2 .'" height="' . $img[2]/2 .'">'.
@@ -276,12 +268,12 @@ if ( ! function_exists( 'gruene_the_header_text' ) ) :
 function gruene_the_header_text() {
      $line1 = get_theme_mod( 'gruene_header_text_line1' );
      $line2 = get_theme_mod( 'gruene_header_text_line2' );
-     
+
      echo '<div class="gruene-bars-inner-div gruene-bars-right">';
           echo '<span class="gruene-header-text gruene-header-text-line1 gruene-white-bar">' . $line1 . '</span>';
           echo '<span class="gruene-header-text gruene-header-text-line2 gruene-magenta-bar">' . $line2 . '</span>';
      echo '</div>';
-     
+
      echo '<div class="gruene-bars-inner-div gruene-bars-left">';
           echo '<span class="gruene-header-text gruene-header-text-line1 gruene-white-bar">' . $line1 . '</span>';
           echo '<span class="gruene-header-text gruene-header-text-line2 gruene-magenta-bar">' . $line2 . '</span>';
@@ -293,10 +285,10 @@ endif;
 if ( ! function_exists( 'gruene_the_archive_title' ) ) :
 /**
  * like the_archive_title()
- * but dont show 'Category: ' 
- * 
+ * but dont show 'Category: '
+ *
  * @param string $before can be any string supposed to be echoed before the title
- * @param string $after  can be any string supposed to be echoed after the title 
+ * @param string $after  can be any string supposed to be echoed after the title
  */
 function gruene_the_archive_title( $before = '', $after = '' ) {
 	if ( is_category() ) {
@@ -340,7 +332,7 @@ endif;
 if ( ! function_exists( 'gruene_the_campaign' ) ) :
 /**
  * Shows the campaign content
- * 
+ *
  * @global array $gruene_campaign_query
  * @global bool  $withcomments
  * @return string
@@ -348,23 +340,23 @@ if ( ! function_exists( 'gruene_the_campaign' ) ) :
 function gruene_the_campaign() {
      global $gruene_campaign_query;
      global $withcomments;
-     
+
      // Return if this isn't a campaign
      if ( empty( $gruene_campaign_query ) ) {
           return ''; // BREAKPOINT
      }
-     
+
      // Temporarely store the value of $withcomments. We'll reset it later on.
      $withcomments_original = $withcomments;
-     
+
      // Set $withcomments to true to show comments despite it's not is_single() || is_page()
      $withcomments = true;
-     
-     // Get the query     
+
+     // Get the query
      $query = new WP_Query( $gruene_campaign_query ); ?>
-     
-     <div class="gruene-campaign"> 
-             
+
+     <div class="gruene-campaign">
+
           <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
                <?php get_template_part( 'template-parts/content', 'campaign' ); ?>
@@ -377,9 +369,9 @@ function gruene_the_campaign() {
                ?>
 
           <?php endwhile; // end of the loop. ?>
-     
+
      </div>
-     
+
      <?php // Reset $withcomments
      $withcomments = $withcomments_original;
 }
