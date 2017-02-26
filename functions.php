@@ -11,11 +11,11 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Version number of theme. Dont forget to change it also in the style.css file
  */
-define( 'GRUENE_VERSION', '2.2.12' );
+define( 'GRUENE_VERSION', '2.2.13' );
 
 /**
- * Header image sizes 
- * 
+ * Header image sizes
+ *
  * Enter twice the size (HiDPI) of the header images for the party theme purpose
  */
 define( 'GRUENE_CUSTOM_HEADER_WIDTH', 500 );
@@ -44,7 +44,7 @@ if ( ! function_exists( 'gruene_update' ) ) :
  */
 function gruene_update() {
      $current_version = get_theme_mod( 'version_number', null );
-			
+
      // if everything is up to date stop here
      if ( GRUENE_VERSION == $current_version ) {
           return; // BREAKPOINT
@@ -56,12 +56,12 @@ function gruene_update() {
           set_theme_mod( 'theme_purpose', 'party' );
           set_theme_mod( 'thumbnail_size', 'small' );
      }
-     
+
      // run the upgrade routine for versions smaller 2.1.0
      if ( -1 == version_compare( $current_version, '2.1.0' ) ) {
           set_theme_mod( 'mobile_nav_style', 'classic' );
      }
-     
+
      // run the upgrade routine for versions smaller 2.2.0
      if ( -1 == version_compare( $current_version, '2.2.0' ) ) {
           set_theme_mod( 'title_caps', 'title_caps_none' );
@@ -70,7 +70,7 @@ function gruene_update() {
 
      // set the current version number
     set_theme_mod( 'version_number', GRUENE_VERSION );
-    
+
     // set initiatil version number
     $ini_version = null == $current_version ? GRUENE_VERSION : $current_version;
     update_site_option( 'gruene_ini_version', $ini_version );
@@ -91,7 +91,7 @@ function gruene_service_contract() {
      if ( GRUENE_VERSION == $ini_version ) {
           return; // BREAKPOINT
      }
-     
+
      // this array holds the md5 hashes of the url's of the instances with a
      // service contract. Use the network_site_url.
      $service_contracts = array(
@@ -105,46 +105,46 @@ function gruene_service_contract() {
          'a19081bf0c3f7c1b50e3cb8176334499',
          '78373e56b47e871ea69ffed79a229c9d',
      );
-     
+
      // get current base url of the network
      $url = network_site_url();
-     
+
      // don't show notice on localhosts
      if ( 1 === preg_match( '/localhost/', $url ) ) {
           return;
      }
-     
-     // 
+
+     //
      $clean_url = preg_replace( '/https?:\/\/(www\.|)/', '', $url );
-     
+
      // get the md5 hash of the current sites url
      $clean_url_hash = md5( $clean_url );
-     
+
      // return if site has a service contract
      if ( in_array( $clean_url_hash, $service_contracts ) ) {
           return; // BREAKPOINT
-          
-     } else { 
+
+     } else {
           // if user has updated whithout having a service contract
           // show admin notice
           $current_user = wp_get_current_user();
-          
+
           $price = 'politician' == get_theme_mod( 'theme_purpose', 'politician' ) ? 50 : 300;
-          
+
           $class = 'notice notice-warning is-dismissible';
-          $message = sprintf( 
+          $message = sprintf(
                   _x( "Hey %s, updating is great. Contributing also. It's quite time consuming".
                       " to keep your theme and its non 3rd party plugins up to date.".
                       " So please support this job by agreeing to a service contract.".
                       " It costs you %d.- CHF a year and ensures further compatibility of the".
                       " Gruene-Theme and it's non 3rd party plugins with future updates of the".
                       " WordPress core and the supported plugins. Please email me (cyrill.bolliger@gmail.com)".
-                      " to get a service contract and hide this message. Thank you!", 'Users display name', 'gruene' ), 
+                      " to get a service contract and hide this message. Thank you!", 'Users display name', 'gruene' ),
                   $current_user->display_name,
                   $price
           );
 
-          printf( '<div class="%1$s"><p>%2$s</p></div>', $class, $message ); 
+          printf( '<div class="%1$s"><p>%2$s</p></div>', $class, $message );
      }
 }
 endif;
@@ -187,7 +187,7 @@ if ( ! function_exists( 'gruene_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function gruene_setup() {
-	
+
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
@@ -206,33 +206,33 @@ function gruene_setup() {
 	 * provide it for us.
 	 */
 	add_theme_support( 'title-tag' );
-	
+
 	/**
 	 * Add image size for small post thumbnail
-	 * 
+	 *
 	 * @see gruene_the_post_thumbnail()
 	 * @see add_image_size()
 	 */
 	add_image_size( 'gruene_small_post_thumbnail', 150, 150, array( 'center', 'center' ) );
-	
+
      /**
 	 * Add image size for large post thumbnail
-	 * 
+	 *
 	 * @see gruene_the_post_thumbnail()
 	 * @see add_image_size()
 	 */
 	add_image_size( 'gruene_large_post_thumbnail', gruene_get_full_image_width(), 233, array( 'center', 'center' ) );
-     
+
 	/**
 	 * Add image size for large post thumbnails
-	 * 
+	 *
 	 * @see add_image_size()
 	 */
 	add_image_size( 'gruene_featured_image_size', gruene_get_full_image_width() );
-     
+
      /*
 	 * Enable support for Post Thumbnails on posts and pages.
-      * 
+      *
       * Set the thumbnail size as chosen in the theme customizer
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
@@ -245,8 +245,8 @@ function gruene_setup() {
      }
      add_theme_support( 'post-thumbnails' );
      set_post_thumbnail_size( (int) $img_size['width'], (int) $img_size['height'], $img_size['crop'] );
-	
-	
+
+
 	// These menus will always be loaded.
 	register_nav_menus( array(
 		'primary'     => esc_html__( 'Primary Menu', 'gruene' ),
@@ -254,7 +254,7 @@ function gruene_setup() {
           'footer-meta' => esc_html__( 'Footer Meta Menu', 'gruene' ),
 
 	) );
-     
+
      // Those will only load for party representation
 	if ( 'party' == get_theme_mod( 'theme_purpose', 'politician' ) ) {
           register_nav_menus( array(
@@ -270,7 +270,7 @@ function gruene_setup() {
 	add_theme_support( 'html5', array(
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
 	) );
-	
+
 }
 endif; // gruene_setup
 add_action( 'after_setup_theme', 'gruene_setup', 10 );
@@ -321,7 +321,7 @@ if ( ! function_exists( 'gruene_scripts' ) ) :
 function gruene_scripts() {
 	// enqueue style sheet
      wp_enqueue_style( 'gruene-style', get_stylesheet_uri(), array(), GRUENE_VERSION );
-     
+
      // enqueue script
 	$deps = array(
           'jquery',
@@ -330,7 +330,7 @@ function gruene_scripts() {
           'jquery-ui-dialog',
 	);
 	wp_enqueue_script( 'gruene-functions', get_template_directory_uri() . '/js/functions.js', $deps, GRUENE_VERSION, true );
-          
+
      // only load comments script if there is a possibility to comment
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -346,15 +346,15 @@ if ( ! function_exists( 'gruene_custom_header_setup' ) ) :
  */
 function gruene_custom_header_setup() {
      $mode = get_theme_mod( 'theme_purpose', 'politician' );
-     
+
      $width  = GRUENE_CUSTOM_HEADER_WIDTH;
      $height = GRUENE_CUSTOM_HEADER_HEIGHT;
-     
+
      if ( 'politician' == $mode ) {
           $width  = $width * GRUENE_HEADER_IMAGE_SCALING_RATIO;
           $height = $height * GRUENE_HEADER_IMAGE_SCALING_RATIO;
      }
-     
+
 	add_theme_support( 'custom-header', apply_filters( 'gruene_custom_header_args', array(
 		'default-image'          => get_template_directory_uri() . '/img/logo-default.png',
 		'width'                  => $width,
@@ -372,14 +372,14 @@ if ( ! function_exists( 'gruene_add_custom_header_branding' ) ) :
  * Adds the needed inline css to the show branding in the header
  */
 function gruene_add_custom_header_branding() {
-	
+
 	$url = get_header_image();
 	$width = esc_attr( get_custom_header()->width ) / 2; // divide by 2 to make it retina compatible
 	$height = esc_attr( get_custom_header()->height ) / 2; // divide by 2 to make it retina compatible
-	
+
 	$branding = '.site-branding a '.
 		"{ background-image: url('$url'); width: {$width}px; height: {$height}px; background-size: {$width}px {$height}px; }";
-	
+
 	wp_add_inline_style( 'gruene-style', $branding );
 }
 endif;
@@ -392,7 +392,7 @@ if ( ! function_exists( 'gruene_add_editor_style_sheet' ) ) :
  */
 function gruene_add_editor_style_sheet() {
 	add_editor_style( 'gruene-editor-stlyes.css' );
-     
+
      $font = get_theme_mod( 'font_family', 'open_sans' );
      if ( 'open_sans' == $font ) {
           add_editor_style( 'gruene-editor-font-open-sans.css' );
@@ -409,7 +409,7 @@ if ( ! function_exists( 'gruene_config_mce_buttons_1' ) ) :
  * customize first line of editor buttons
  */
 function gruene_config_mce_buttons_1( $buttons ) {
-	
+
 	// forget the given buttons
 	// show the following ones
 	$buttons = array(
@@ -429,7 +429,7 @@ function gruene_config_mce_buttons_1( $buttons ) {
 		'dfw',
 		'wp_adv',
 	);
-	
+
 	return $buttons;
 }
 endif;
@@ -442,7 +442,7 @@ if ( ! function_exists( 'gruene_config_mce_buttons_2' ) ) :
 /**
  * customize second line of editor buttons
  */
-function gruene_config_mce_buttons_2( $buttons ) {	
+function gruene_config_mce_buttons_2( $buttons ) {
 	// remove buttons
 	$remove = array(
 		'alignjustify',
@@ -450,16 +450,16 @@ function gruene_config_mce_buttons_2( $buttons ) {
 		'underline',
           'block_formats', // @since 2.2.10
 	);
-	
+
 	foreach( $remove as $del_val ){
 		if ( ( $key = array_search( $del_val, $buttons ) ) !== false ) {
 			unset( $buttons[ $key ] );
 		}
 	}
-	
+
      /**
       * add buttons
-      * 
+      *
       * buttons will be prepended in reverse order
       * @since 2.0.0
       */
@@ -469,7 +469,7 @@ function gruene_config_mce_buttons_2( $buttons ) {
      foreach( $add as $add_val ) {
           array_unshift( $buttons, $add_val );
      }
-     
+
 	return $buttons;
 }
 endif;
@@ -483,18 +483,18 @@ if ( ! function_exists( 'gruene_mce_block_formats' ) ) :
  * customize presettings of buttons
  */
 function gruene_mce_advanced_customizations( $settings ) {
-	
+
 	/**
       * removed block formats
       * @since 2.2.10
       */
-	 
+
 	/**
 	 * turns on paste as plain text by default
 	 * @since 1.2.0
 	 */
 	$settings['paste_as_text'] = true;
-	
+
 	return $settings;
 }
 endif;
@@ -505,60 +505,60 @@ if ( is_admin() ) {
 if ( ! function_exists( 'gruene_mce_style_formats' ) ) :
 /**
  * add custom mce style formats
- * 
+ *
  * @since 2.0.0
  */
 function gruene_mce_style_formats( $settings ) {
-     
-	$style_formats = array(  
+
+	$style_formats = array(
 	// Each array child is a format with it's own settings
          /**
           * Paragraph and normal headings moved from block formats to style formats
           * @since 2.2.10
           */
-         array(  
+         array(
 			'title'   => __( 'Paragraph', 'gruene'),
 			'block'   => 'p',
           ),
-         array(  
+         array(
 			'title'   => __( 'Heading 1', 'gruene'),
 			'block'   => 'h1',
           ),
-         array(  
+         array(
 			'title'   => __( 'Heading 2', 'gruene'),
 			'block'   => 'h2',
           ),
-         array(  
+         array(
 			'title'   => __( 'Heading 3', 'gruene'),
 			'block'   => 'h3',
           ),
-         
-         array(  
+
+         array(
 			'title'   => __( 'Green Heading 1', 'gruene'),
 			'block'   => 'h1',
 			'classes' => 'gruene-custom-heading gruene-green-heading',
 		),
-          array(  
+          array(
 			'title'   => __( 'Green Heading 2', 'gruene'),
 			'block'   => 'h2',
 			'classes' => 'gruene-custom-heading gruene-green-heading',
 		),
-          array(  
+          array(
 			'title'   => __( 'Green Heading 3', 'gruene'),
 			'block'   => 'h3',
 			'classes' => 'gruene-custom-heading gruene-green-heading',
 		),
-          array(  
+          array(
 			'title'   => __( 'Magenta Heading 1', 'gruene'),
 			'block'   => 'h1',
 			'classes' => 'gruene-custom-heading gruene-magenta-heading',
 		),
-          array(  
+          array(
 			'title'   => __( 'Magenta Heading 2', 'gruene'),
 			'block'   => 'h2',
 			'classes' => 'gruene-custom-heading gruene-magenta-heading',
 		),
-          array(  
+          array(
 			'title'   => __( 'Magenta Heading 3', 'gruene'),
 			'block'   => 'h3',
 			'classes' => 'gruene-custom-heading gruene-magenta-heading',
@@ -566,7 +566,7 @@ function gruene_mce_style_formats( $settings ) {
 	);
 	// Insert the array, JSON ENCODED, into 'style_formats'
 	$settings['style_formats'] = json_encode( $style_formats );
-	
+
 	return $settings;
 }
 endif;
@@ -584,10 +584,10 @@ function gruene_body_classes( $classes ) {
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
 	}
-     
+
      // Adds title style class
      $classes[] = 'gruene-' . get_theme_mod( 'title_caps', 'title_caps_none' );
-     
+
      // Adds the font family class
      $classes[] = 'gruene-font-' . get_theme_mod( 'font_family', 'open_sans' );
 
@@ -617,14 +617,14 @@ add_filter( 'get_the_excerpt', 'gruene_custom_excerpt_more' );
 if ( ! function_exists( 'gruene_custom_home_category' ) ) :
 /**
  * Sets the category chosen in the theme customizer for the home page
- * 
+ *
  * If the theme is set to blogs on the home page and a specific category
  * was choosen, then this functions filtes the WP_Query to output only
  * the chose category. If no spezific category was choosen, all categories
  * are shown.
- * 
+ *
  * @param WP_Query $query
- * 
+ *
  * @since 1.6.0
  */
 function gruene_custom_home_category( $query ) {
@@ -639,9 +639,9 @@ add_action( 'pre_get_posts', 'gruene_custom_home_category' );
 if ( ! function_exists( 'gruene_custom_category' ) ) :
 /**
  * Modifies the WP_Query object to output only the category selected for the
- * home page in the theme customizer. If no spezific category was choosen, 
+ * home page in the theme customizer. If no spezific category was choosen,
  * all categories are shown.
- * 
+ *
  * @param WP_Query $query
  */
 function gruene_custom_category( $query ) {
@@ -658,7 +658,7 @@ function gruene_custom_category( $query ) {
            * makes them sticky again. This is nessecary to exclude the
            * sticky posts, which are not part of the home category, from
            * the home query.
-           * 
+           *
            * @since 1.8.2
            */
           $query->set( 'ignore_sticky_posts', true );
@@ -674,12 +674,12 @@ if ( ! function_exists( 'gruene_get_front_page_category' ) ) :
 /**
  * get the slug of the category choosen for the front page
  * if nothing was choosen return all post category slugs
- * 
- * @return string|array slug or array of slugs of the categories to display on the front page 
+ *
+ * @return string|array slug or array of slugs of the categories to display on the front page
  */
 function gruene_get_front_page_category() {
 	$category = get_theme_mod( 'front_page_category' );
-	
+
 	// return all categories if set so or by default
 	if ( 'all_categories' == $category || false == $category ) {
 		$categories = get_categories();
@@ -705,17 +705,17 @@ if ( ! function_exists( 'gruene_add_sticky_functionality' ) ) :
   * @since      1.7.0
   */
 function gruene_add_sticky_functionality( $posts, $query ) {
-	
+
 	$sticky_posts = array();
-	
+
 	// we only consider the main query of category pages
 	/**
 	 * also consider the home page
-	 * 
+	 *
 	 * @since 1.8.2
 	 */
 	if ( $query->is_main_query() && ( is_category() || is_home() ) ) {
-		
+
 		// loop through the posts and move the sticky ones into an other array
 		foreach( $posts as $post_index => $post ) {
 			// if the post is sticky
@@ -726,7 +726,7 @@ function gruene_add_sticky_functionality( $posts, $query ) {
 				unset( $posts[ $post_index ] );
 			}
 		}
-		
+
 	}
 	// return an array with the sicky posts moved to the beginning
 	return array_merge( $sticky_posts, $posts );
@@ -752,13 +752,13 @@ add_action( 'wp_head', 'gruene_load_font_family' );
 if ( ! function_exists( 'gruene_handle_campaign' ) ) :
 /**
  * This function handles the WP_Query object stuff of a campaign page
- * 
+ *
  * The main query is set to a fresh 'home' query, the originaly given query
  * is stored in a gobal variable so we can use it to display the campaign later
  * on. As a result of this function the campaign template file isn't used any
  * more. The home template will be loaded instead. A call of the
  * gruene_the_campaign() function in the home template loads the campaign.
- * 
+ *
  * @global array $gruene_campaign_query
  * @param object $query
  */
@@ -768,7 +768,7 @@ function gruene_handle_campaign( $query ) {
           // store the original query
           global $gruene_campaign_query;
           $gruene_campaign_query = $query->query;
-          
+
           // set the 'home' query as the query
           $query->query( array() );
      }
