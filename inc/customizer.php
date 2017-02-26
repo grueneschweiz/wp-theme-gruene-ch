@@ -13,19 +13,19 @@ if ( !defined( 'ABSPATH' ) ) exit;
  * Adds front page title
  * Adds front page category selection
  * Adds dynamic changing support for blogname, blogdescription and front_page_title
- * 
+ *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function gruene_customize_register( $wp_customize ) {
 	$wp_customize->remove_control( 'header_textcolor' );
 	$wp_customize->remove_control( 'display_header_text' );
-	
+
      gruene_add_theme_spezific_settings( $wp_customize );
      gruene_add_category_selection_for_front_page( $wp_customize );
 	gruene_add_title_for_dynamic_front_page( $wp_customize );
 	gruene_add_aditional_header_image( $wp_customize );
      gruene_add_header_text( $wp_customize );
-     
+
 	// add dynamic changing support
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
@@ -43,7 +43,7 @@ add_action( 'customize_preview_init', 'gruene_customize_preview_js' );
 
 /**
  * Add section with theme spezific settings like font, size of logo etc.
- * 
+ *
  * @param type $wp_customize @see customize_register action hook
  */
 function gruene_add_theme_spezific_settings( $wp_customize ) {
@@ -54,32 +54,32 @@ function gruene_add_theme_spezific_settings( $wp_customize ) {
                                   ' Please read the notes to all options.', 'gruene' ),
 		'priority'       => 55,
 	) );
-	
+
 	// add setting
 	$wp_customize->add_setting( 'font_family', array(
 		'default'        => 'open_sans',
 	) );
-     
+
      // add setting
 	$wp_customize->add_setting( 'title_caps', array(
 		'default'        => 'title_caps_none',
 	) );
-     
+
      // add setting
 	$wp_customize->add_setting( 'title_length', array(
 		'default'        => 'title_length_normal',
 	) );
-     
+
      // add setting
 	$wp_customize->add_setting( 'theme_purpose', array(
 		'default'        => 'politician',
 	) );
-	
+
      // add setting
 	$wp_customize->add_setting( 'thumbnail_size', array(
 		'default'        => 'small',
 	) );
-	
+
      // add setting
      $wp_customize->add_setting( 'mobile_nav_style', array(
          'default'         => 'modern',
@@ -94,12 +94,12 @@ function gruene_add_theme_spezific_settings( $wp_customize ) {
                               ' and with a version to represent the party. Several other settings depend'.
                               ' on the option chosen. Just give it a try and see what happens.', 'gruene' ) .
                               ' <strong>' . __( 'Please save and force reload the page after update.', 'gruene' ) . '</strong>',
-		'choices'    => array( 
+		'choices'    => array(
               'politician' => __( 'Represent a politician', 'gruene' ),
               'party'      => __( 'Represent the party', 'gruene' ),
           ),
 	) );
-     
+
      // add control
 	$wp_customize->add_control( 'thumbnail_size', array(
           'type'       => 'select',
@@ -109,36 +109,36 @@ function gruene_add_theme_spezific_settings( $wp_customize ) {
                               ' <strong>' . __( 'A switch might require you to manually regenerate the thumbnails.' .
                                                 'You may use the "Regenerate Thumbnails" plugin to do that.', 'gruene' ) . '</strong>',
                               ' <strong>' . __( 'Please save and force reload the page after update.', 'gruene' ) . '</strong>',
-		'choices'    => array( 
-              'small' => __( 'Small', 'gruene' ), 
-              'large' => __( 'Large', 'gruene' ), 
+		'choices'    => array(
+              'small' => __( 'Small', 'gruene' ),
+              'large' => __( 'Large', 'gruene' ),
           ),
 	) );
-     
+
      // add control
 	$wp_customize->add_control( 'mobile_nav_style', array(
           'type'       => 'select',
           'section'    => 'gruene_theme_options',
 		'label'      => __( 'Choose your prefered style for the mobile navigation', 'gruene' ),
 		'description'=> __( 'The classic style indents subpages and comes in a grayisch style. The mordern one is magenta based and distinguishes subpages by color.', 'gruene' ),
-		'choices'    => array( 
+		'choices'    => array(
               'classic' => __( 'Classic', 'gruene' ),
               'modern'  => __( 'Modern', 'gruene' ),
           ),
 	) );
-     
+
 	// add control
 	$wp_customize->add_control( 'font_family', array(
           'type'       => 'select',
           'section'    => 'gruene_theme_options',
 		'label'      => __( 'Choose your prefered font type', 'gruene' ),
 		'description'=> __( "Open Sans is the free alternative to Sanuk. It's therefore the recommended font.", 'gruene' ),
-		'choices'    => array( 
-              'open_sans' => 'Open Sans', 
-              'tahoma' => 'Tahoma' 
+		'choices'    => array(
+              'open_sans' => 'Open Sans',
+              'tahoma' => 'Tahoma'
           ),
 	) );
-     
+
      // add control
 	$wp_customize->add_control( 'title_caps', array(
           'type'       => 'select',
@@ -146,12 +146,12 @@ function gruene_add_theme_spezific_settings( $wp_customize ) {
 		'label'      => __( 'Choose if you want to capitalize all titles', 'gruene' ),
 		'description'=> __( 'If you set this to "capitalize" all titles will appear in capital letters.'.
                              ' Else the titles will show up the way they were written.', 'gruene' ),
-		'choices'    => array( 
-              'title_caps_none' => __( "Don't capitalize titles", 'gruene' ), 
+		'choices'    => array(
+              'title_caps_none' => __( "Don't capitalize titles", 'gruene' ),
               'title_caps_all'  => __( 'Capitalize titles', 'gruene' ),
           ),
 	) );
-     
+
      // add control
 	$wp_customize->add_control( 'title_length', array(
           'type'       => 'select',
@@ -161,7 +161,7 @@ function gruene_add_theme_spezific_settings( $wp_customize ) {
                               ' With short titles the heading style of posts is same as for pages.'.
                               ' With the normal title length option, you can set long titles but it violates the design.', 'gruene' ) .
                               ' <strong>' . __( 'Short titles: We highly recommend to use the "Limit Post Titles" plugin and set it to 35 character max.', 'gruene' ) . '</strong>',
-		'choices'    => array( 
+		'choices'    => array(
               'short'    => __( 'Short titles = Better styles', 'gruene' ),
               'normal'   => __( 'Normal title length = Design loss', 'gruene' ),
           ),
@@ -170,7 +170,7 @@ function gruene_add_theme_spezific_settings( $wp_customize ) {
 
 /**
  * Add additional header image
- * 
+ *
  * @param type $wp_customize @see customize_register action hook
  */
 function gruene_add_aditional_header_image( $wp_customize ) {
@@ -181,23 +181,23 @@ function gruene_add_aditional_header_image( $wp_customize ) {
 		                        " Deactivate the language switcher menu, if the image doesn't appear.", 'gruene' ),
 		'priority'       => 75,
 	) );
-	
+
 	// add setting
 	$wp_customize->add_setting( 'additional_header_image', array(
 		'default'        => false,
 	) );
-	
+
      // define image size
      $mode = get_theme_mod( 'theme_purpose', 'politician' );
-     
+
      $width  = GRUENE_ADDITIONAL_HEADER_WIDTH;
      $height = GRUENE_ADDITIONAL_HEADER_HEIGHT;
-     
+
      if ( 'politician' == $mode ) {
           $width  = $width * GRUENE_HEADER_IMAGE_SCALING_RATIO;
           $height = $height * GRUENE_HEADER_IMAGE_SCALING_RATIO;
      }
-     
+
 	// add control
 	$wp_customize->add_control( new WP_Customize_Cropped_Image_Control( $wp_customize, 'additional_header_image', array(
 		'label'      => __( 'Choose or upload your additional header image.', 'gruene' ),
@@ -211,7 +211,7 @@ function gruene_add_aditional_header_image( $wp_customize ) {
 
 /**
  * Add text to header
- * 
+ *
  * @param type $wp_customize @see customize_register action hook
  */
 function gruene_add_header_text( $wp_customize ) {
@@ -223,19 +223,19 @@ function gruene_add_header_text( $wp_customize ) {
                                   ' You can change the theme mode in the theme options here in the customizer.', 'gruene' ),
 		'priority'       => 76,
 	) );
-	
+
 	// add setting
 	$wp_customize->add_setting( 'gruene_header_text_line1', array(
 		'default'          => __( 'Your function', 'gruene' ),
           'sanitize_callback'=> 'esc_html',
 	) );
-     
+
      // add setting
 	$wp_customize->add_setting( 'gruene_header_text_line2', array(
 		'default'          => __( 'Your name', 'gruene' ),
           'sanitize_callback'=> 'esc_html',
 	) );
-     
+
 	//add control
 	$wp_customize->add_control( 'gruene_header_text_line1', array(
 		'type'            => 'text',
@@ -245,7 +245,7 @@ function gruene_add_header_text( $wp_customize ) {
 			'placeholder' => __( 'Your function', 'gruene' ),
 		),
 	) );
-     
+
      //add control
 	$wp_customize->add_control( 'gruene_header_text_line2', array(
 		'type'            => 'text',
@@ -260,19 +260,19 @@ function gruene_add_header_text( $wp_customize ) {
 
 /**
  * Add category selection for the front page
- * 
+ *
  * @param type $wp_customize @see customize_register action hook
  */
 function gruene_add_category_selection_for_front_page( $wp_customize ) {
      // rename default
-	$wp_customize->get_control( 'show_on_front' )->choices['posts'] = __( 'Ihre letzten Beiträge der Kategorie', 'gruene' );
-	
+	$wp_customize->get_control( 'show_on_front' )->choices['posts'] = __( 'Your last posts with the category', 'gruene' );
+
 	// add setting
 	$wp_customize->add_setting( 'front_page_category', array(
 		'default'           => 'all_categories',
 		'sanitize_callback' => 'gruene_sanitize_front_page_category',
 	) );
-	
+
 	// add control
 	$wp_customize->add_control( 'front_page_category', array(
 		'type'            => 'select',
@@ -285,7 +285,7 @@ function gruene_add_category_selection_for_front_page( $wp_customize ) {
 
 /**
  * Add title for dynamic front page
- * 
+ *
  * @param type $wp_customize @see customize_register action hook
  */
 function gruene_add_title_for_dynamic_front_page( $wp_customize ) {
@@ -294,7 +294,7 @@ function gruene_add_title_for_dynamic_front_page( $wp_customize ) {
 		'default'           => __( 'Home', 'gruene' ),
 		'sanitize_callback' => 'esc_html',
 	) );
-	
+
 	//add control
 	$wp_customize->add_control( 'front_page_title', array(
 		'type'            => 'text',
@@ -305,28 +305,28 @@ function gruene_add_title_for_dynamic_front_page( $wp_customize ) {
 			'placeholder' => __( 'Home', 'gruene' ),
 		),
 	) );
-     
+
      // add dynamic changing support
 	$wp_customize->get_setting( 'front_page_title' )->transport = 'postMessage';
 }
 
 if ( ! function_exists( 'gruene_get_possible_front_page_categories' ) ) :
 /**
- * get keyed array with passible categories for front page 
+ * get keyed array with passible categories for front page
  */
 function gruene_get_possible_front_page_categories() {
 	$categories = get_categories();
-	
+
 	$possible_categories = array(
 		'all_categories'	=> __( 'All categories', 'gruene' ),
 	);
-	
+
 	foreach ( $categories as $category ) {
 		$slug = esc_attr( $category->slug );
 		$name = esc_html( $category->name );
 		$possible_categories[ $slug ] = $name;
 	}
-	
+
 	return $possible_categories;
 }
 endif;
@@ -336,19 +336,19 @@ if ( ! function_exists( 'gruene_sanitize_front_page_category' ) ) :
 /**
  * check if the given value is a category
  * if not return false
- * 
+ *
  * @param string $data the choosen category
- * 
+ *
  * @return null|string category slug, if the category exists, else null
  */
 function gruene_sanitize_front_page_category( $data ) {
 	$categories = get_categories();
 	$categories_slugs = array();
-	
+
 	foreach ( $categories as $category ) {
 		$categories_slugs[] = $category->slug;
 	}
-	
+
 	if ( in_array( $data, $categories_slugs ) || 'all_categories' == $data ) {
 		return $data;
 	} else {
