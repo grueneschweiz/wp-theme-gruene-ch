@@ -928,7 +928,7 @@ article header.entry-header .attachment-post-thumbnail.gruene-thumbnail-size-lar
      { float: none; margin-bottom: 8px; display: block; }
 
 @media screen and (min-width: 480px) {
-     article header.entry-header .attachment-post-thumbnail.gruene-thumbnail-size-small
+     article header.entry-header .attachment-post-thumbnail
           { display: block; }
 }
 
