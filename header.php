@@ -76,7 +76,7 @@
 		
 		<div class="clear"></div>
 		
-		<?php if( is_home() ) : ?>
+		<?php if( is_front_page() ) : ?>
 			<div id="gruene-slider" class="image-slider">
 				<?php the_cyboslider(); ?>
 			</div><!-- #slider -->
