@@ -38,6 +38,21 @@
 </footer><!-- #colophon -->
 </div><!-- #page -->
 
+<div id="printing-footer" class="print-only">
+	<?php
+	echo _x( sprintf( 'Printed %s', date_i18n( get_option( 'date_format' ) ) ), 'Printing date', 'gruene' )
+	     . '<br><br>'
+	     . get_permalink();
+	?>
+    <style>
+        @media print {
+            #printing-footer::before {
+                content: url('https://chart.googleapis.com/chart?cht=qr&chs=150x150&chl=<?php urlencode(the_permalink()); ?>&choe=UTF-8');
+            }
+        }
+    </style>
+</div>
+
 <?php wp_footer(); ?>
 
 </body>

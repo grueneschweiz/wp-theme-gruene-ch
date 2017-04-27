@@ -330,7 +330,8 @@ if ( ! function_exists( 'gruene_scripts' ) ) :
 	 */
 	function gruene_scripts() {
 		// enqueue style sheet
-		wp_enqueue_style( 'gruene-style', get_stylesheet_uri(), array(), GRUENE_VERSION );
+		wp_enqueue_style( 'gruene-style', get_stylesheet_uri(), array(), GRUENE_VERSION, 'all' );
+		wp_enqueue_style( 'gruene-print-style', get_stylesheet_directory_uri().'/print.css', array('gruene-style'), GRUENE_VERSION, 'print' );
 		
 		// enqueue script
 		$deps = array(
