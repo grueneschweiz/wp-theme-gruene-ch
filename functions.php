@@ -792,6 +792,36 @@ if ( ! function_exists( 'gruene_handle_campaign' ) ) :
 endif;
 add_action( 'pre_get_posts', 'gruene_handle_campaign', 9 );
 
+if ( ! function_exists( 'gruene_remove_tribe_customizer' ) ) :
+	/**
+	 * Since the tribe customizer lets us do very ugly things we disable it
+	 *
+	 * Lets just tell the tribe customizer panel, that the theme needs to
+	 * support the tribe customizer panel ;)
+	 *
+	 * @param WP_Customize_Panel $panel
+	 *
+	 * @return WP_Customize_Panel
+	 */
+	function gruene_remove_tribe_customizer( $panel ) {
+		$panel->theme_supports = 'tribe_customizer';
+		
+		return $panel;
+	}
+endif;
+add_filter( 'tribe_customizer_panel', 'gruene_remove_tribe_customizer', 100 );
+
+if ( ! function_exists( 'gruene_remove_tribe_customizer_styles' ) ) :
+	/**
+	 * Since we don't support the tribe customizer, we also remove its style
+	 *
+	 * @return String
+	 */
+	function gruene_remove_tribe_customizer_styles() {
+		return "";
+	}
+endif;
+add_filter( 'tribe_customizer_css_template', 'gruene_remove_tribe_customizer_styles', 100 );
 
 /**
  * Custom template tags for this theme.

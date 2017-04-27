@@ -81,6 +81,25 @@ aside.tribe-events-list-widget ol.tribe-list-widget li h4.tribe-event-title {
     text-transform: none;
 }
 
+aside.tribe-events-list-widget ol.tribe-list-widget li.tribe-event-featured h4.tribe-event-title {
+    margin-top: 0;
+}
+
+.tribe-events-list-widget .tribe-event-featured .tribe-event-image {
+    display: none;
+}
+
+.tribe-events-list-widget ol li.type-tribe_events.tribe-event-featured {
+    background-color: #e10078;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 10px;
+}
+
+.tribe-events-list-widget ol li.type-tribe_events.tribe-event-featured:before {
+    display: none;
+}
+
 /*--------------------------------------------------------------
 # Overview List
 --------------------------------------------------------------*/
@@ -153,6 +172,12 @@ aside.tribe-events-list-widget ol.tribe-list-widget li h4.tribe-event-title {
 
 .tribe-events-list h2.tribe-events-list-event-title.tribe-events-title_caps_all {
     text-transform: uppercase;
+}
+
+.tribe-events-list .tribe-events-loop .tribe-event-featured {
+    background-color: #e10078;
+    padding: 16px;
+    padding: 1rem;
 }
 
 /*--------------------------------------------------------------
