@@ -4,86 +4,150 @@
  * styled to be consistent with frontend styles
  */
 
-body#tinymce.wp-editor
-	{ font-family: Tahoma,​​Verdana,​​Segoe,​​sans-serif; }
+body#tinymce.wp-editor {
+    font-family: Tahoma, ​​Verdana, ​​Segoe, ​​sans-serif;
+}
 
-body#tinymce.wp-editor
-	{ font-size: 16px; font-size: 1rem; line-height: 1.5em; color: #404040; }
+body#tinymce.wp-editor {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: #404040;
+}
 
-body#tinymce.wp-editor a
-	{ color: #3a7a01; text-decoration: underline; }
+body#tinymce.wp-editor a {
+    color: #3a7a01;
+    text-decoration: underline;
+}
 
-body#tinymce.wp-editor a:hover, body#tinymce.wp-editor a:focus, body#tinymce.wp-editor a:active
-	{ color: #e10078; text-decoration: none; }
+body#tinymce.wp-editor a:hover, body#tinymce.wp-editor a:focus, body#tinymce.wp-editor a:active {
+    color: #e10078;
+    text-decoration: none;
+}
 
-body#tinymce.wp-editor p
-	{ margin-bottom: 1.5em; }
+body#tinymce.wp-editor p {
+    margin-bottom: 1.5em;
+}
 
 body#tinymce.wp-editor h1, body#tinymce.wp-editor h2, body#tinymce.wp-editor h3,
-body#tinymce.wp-editor h1 a, body#tinymce.wp-editor h2 a, body#tinymce.wp-editor h3 a
-	{ line-height: 1.5em; color: #e10078; margin: 0.67em 0; }
+body#tinymce.wp-editor h1 a, body#tinymce.wp-editor h2 a, body#tinymce.wp-editor h3 a {
+    line-height: 1.5em;
+    color: #e10078;
+    margin: 0.67em 0;
+}
 
-body#tinymce.wp-editor h1
-	{ font-size: 1.5em; }
+body#tinymce.wp-editor h1 {
+    font-size: 1.5em;
+}
 
-body#tinymce.wp-editor h2
-	{ font-size: 1.25em; }
+body#tinymce.wp-editor h2 {
+    font-size: 1.25em;
+}
 
-body#tinymce.wp-editor h3
-	{ font-size: 1em; }
+body#tinymce.wp-editor h3 {
+    font-size: 1em;
+}
 
-body#tinymce.wp-editor .gruene-custom-heading
-     { color: #ffffff; text-transform: uppercase; line-height: 1em; 
-       padding: 0.1em 0.3em; display: block; font-weight: bold; margin: 0.1em 0; }
+body#tinymce.wp-editor .gruene-custom-heading {
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 1em;
+    padding: 0.1em 0.3em;
+    display: block;
+    font-weight: bold;
+    margin: 0.1em 0;
+}
 
-body#tinymce.wp-editor .gruene-custom-heading:first-of-type
-     { margin-top: 0.67em; }
+body#tinymce.wp-editor .gruene-custom-heading:first-of-type {
+    margin-top: 0.67em;
+}
 
-body#tinymce.wp-editor .gruene-custom-heading:last-of-type
-     { margin-bottom: 0.67em; }
-     
-body#tinymce.wp-editor .gruene-green-heading
-     { background-color: #84b414; }
-     
-body#tinymce.wp-editor .gruene-magenta-heading
-     { background-color: #e10078; }
+body#tinymce.wp-editor .gruene-custom-heading:last-of-type {
+    margin-bottom: 0.67em;
+}
 
-body#tinymce.wp-editor blockquote
-	{ background-color: #aec504; border-radius: 5px; color: #ffffff; padding: 10px 10px 10px 60px; display: block; 
-	  box-shadow: 0 0 30px #709e2e inset; margin: 1.5em; }
-	
-body#tinymce.wp-editor blockquote p:first-of-type
-	{ margin-top: 0; }
+body#tinymce.wp-editor .gruene-green-heading {
+    background-color: #84b414;
+}
 
-body#tinymce.wp-editor blockquote p:last-of-type
-	{ margin-bottom: 0; }
+body#tinymce.wp-editor .gruene-magenta-heading {
+    background-color: #e10078;
+}
 
-body#tinymce.wp-editor blockquote:after, body#tinymce.wp-editor q:after, 
-body#tinymce.wp-editor blockquote:before, body#tinymce.wp-editor q:before
-	{ color: #e10078; font-size: 2em; width: 26px; height: 24px; display: block; }
+body#tinymce.wp-editor blockquote {
+    background-color: #aec504;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 10px 10px 10px 60px;
+    display: block;
+    box-shadow: 0 0 30px #709e2e inset;
+    margin: 1.5em;
+}
 
-body#tinymce.wp-editor blockquote:before, body#tinymce.wp-editor q:before
-	{ content: ""; background: transparent url( 'img/quoteLeftIcon.svg' ) no-repeat scroll center top; float: left;
-	  background-size: 26px 24px; margin-left: -40px; }
+body#tinymce.wp-editor blockquote p:first-of-type {
+    margin-top: 0;
+}
 
-body#tinymce.wp-editor .alignleft 
-	{ display: inline; float: left; margin-right: 1.5em; }
-	
-body#tinymce.wp-editor .alignright 
-	{ display: inline; float: right; margin-left: 1.5em; }
-	
-body#tinymce.wp-editor .aligncenter 
-	{ clear: both; display: block; margin-left: auto; margin-right: auto; }
+body#tinymce.wp-editor blockquote p:last-of-type {
+    margin-bottom: 0;
+}
 
-body#tinymce.wp-editor .wp-caption
-	{ text-align: left; }
+body#tinymce.wp-editor blockquote:after, body#tinymce.wp-editor q:after,
+body#tinymce.wp-editor blockquote:before, body#tinymce.wp-editor q:before {
+    color: #e10078;
+    font-size: 2em;
+    width: 26px;
+    height: 24px;
+    display: block;
+}
 
-body#tinymce.wp-editor .wp-caption-dt
-	{ line-height: 0.85em; }
+body#tinymce.wp-editor blockquote:before, body#tinymce.wp-editor q:before {
+    content: "";
+    background: transparent url('img/quoteLeftIcon.svg') no-repeat scroll center top;
+    float: left;
+    background-size: 26px 24px;
+    margin-left: -40px;
+}
 
-body#tinymce.wp-editor .wp-caption-dd
-	{ margin: 0; font-size: 0.85em; color: #666666; background-color: #f3f3f3; line-height: 1.375em; padding-bottom: 2px; }
+body#tinymce.wp-editor .alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+}
 
-body#tinymce.wp-editor .wp-caption-dd::before
-	{ content: "›"; display: inline-block; margin: 0 5px 0 2px; }
+body#tinymce.wp-editor .alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+}
+
+body#tinymce.wp-editor .aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body#tinymce.wp-editor .wp-caption {
+    text-align: left;
+}
+
+body#tinymce.wp-editor .wp-caption-dt {
+    line-height: 0.85em;
+}
+
+body#tinymce.wp-editor .wp-caption-dd {
+    margin: 0;
+    font-size: 0.85em;
+    color: #666666;
+    background-color: #f3f3f3;
+    line-height: 1.375em;
+    padding-bottom: 2px;
+}
+
+body#tinymce.wp-editor .wp-caption-dd::before {
+    content: "›";
+    display: inline-block;
+    margin: 0 5px 0 2px;
+}
 

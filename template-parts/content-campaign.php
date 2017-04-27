@@ -13,16 +13,16 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>">
-	<header class="entry-header">
+    <header class="entry-header">
 		
 		<?php gruene_the_featured_image(); ?>
-	</header><!-- .entry-header -->
+    </header><!-- .entry-header -->
 
-	<div class="entry-content">
+    <div class="entry-content">
 		<?php the_content(); ?>
-	</div><!-- .entry-content -->
+    </div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+    <footer class="entry-footer">
 		<?php edit_post_link( esc_html__( 'Edit', 'gruene' ), '<span class="edit-link button">', '</span>' ); ?>
-	</footer><!-- .entry-footer -->
+    </footer><!-- .entry-footer -->
 </article><!-- #post-## -->
