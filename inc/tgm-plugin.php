@@ -92,11 +92,6 @@ if ( ! is_multisite() ) :
 				'slug'     => 'meta-box-text-limiter',
 				'required' => false,
 			),
-			array(
-				'name'     => 'Flow-Flow Social Streams (Free)',
-				'slug'     => 'flow-flow-social-streams',
-				'required' => false,
-			),
 			// RECOMMENDED PLUGINS from Github.
 			array(
 				'name'               => 'Politch',
