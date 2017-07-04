@@ -141,7 +141,7 @@ if ( ! function_exists( 'gruene_service_contract' ) ) :
 				    " So please support this job by agreeing to a service contract." .
 				    " It costs you %d.- CHF a year and ensures further compatibility of the" .
 				    " Gruene-Theme and it's non 3rd party plugins with future updates of the" .
-				    " WordPress core and the supported plugins. Please email me (cyrill.bolliger@gmail.com)" .
+				    " WordPress core and the supported plugins. Please email me (cyrill@bolliger.tech)" .
 				    " to get a service contract and hide this message. Thank you!", 'Users display name', 'gruene' ),
 				$current_user->display_name,
 				$price
