@@ -11,4 +11,5 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @package Gruene Theme
  */
 
-// Moved to plugin 'grueneext' @see 
+// Enable short codes for widgets
+add_filter('widget_text','do_shortcode');
