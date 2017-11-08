@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Version number of theme. Dont forget to change it also in the style.css file
  */
-define( 'GRUENE_VERSION', '2.3.2' );
+define( 'GRUENE_VERSION', '2.4.0' );
 
 /**
  * Header image sizes
