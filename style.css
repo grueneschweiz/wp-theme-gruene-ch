@@ -1996,3 +1996,35 @@ aside.widget_rss ul li span.rss-date {
 .widget_twitter_timeline .widget-title {
     text-transform: none;
 }
+
+/*--------------------------------------------------------------
+# Raise Now
+--------------------------------------------------------------*/
+#lema-container.lema-container .lema-step-header, #lema-container.lema-container .lema-step, #lema-container.lema-container .lema-step-content {
+    background: transparent;
+}
+
+#lema-container.lema-container .lema-button, #lema-container.lema-container .lema-step-number span {
+    background: #e10078;
+}
+
+#lema-container.lema-container .lema-step-header {
+    border-bottom: #e10078 1px solid;
+}
+
+#lema-container.lema-container .lema-step-number span, #lema-container.lema-container .lema-step-header-text, #lema-container.lema-container .lema-button-donate {
+    font-family: 'Tahoma', 'Verdana', 'Segoe', 'sans-serif';
+    font-weight: bold;
+}
+
+#lema-container.lema-container .lema-step-header-text {
+    color: #e10078;
+}
+
+#lema-container.lema-container .lema-amount-box.lema-active {
+    border: #e10078 2px solid
+}
+
+.lema-overlay-bg {
+    display: none !important;
+}
