@@ -54,7 +54,7 @@ if ( post_password_required() ) {
 			wp_list_comments( array(
 				'style'       => 'ol',
 				'short_ping'  => true,
-				'reply_text'  => esc_html_x( sprintf( '%s Reply', '&raquo;' ), 'Right arrow', 'gruene' ),
+				'reply_text'  => esc_html_x( sprintf( '%s ' . __( 'Reply' ), '&raquo;' ), 'Right arrow', 'gruene' ),
 				'avatar_size' => 48,
 			) );
 			?>
