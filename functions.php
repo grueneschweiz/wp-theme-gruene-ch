@@ -107,6 +107,7 @@ if ( ! function_exists( 'gruene_service_contract' ) ) :
 			'a19081bf0c3f7c1b50e3cb8176334499',
 			'78373e56b47e871ea69ffed79a229c9d',
 			'ba106dd5830a5b8bc3dc41adae85f137',
+			'008af8fb5fad83b31dbb922f17f87935',
 		);
 		
 		// get current base url of the network
