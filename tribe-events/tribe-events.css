@@ -196,3 +196,11 @@ div.tribe-events-single .tribe-events-schedule .tribe-events-cost {
     font-size: 1em;
     color: #666666;
 }
+
+.single-tribe_events header.entry-header.politch-entry-header {
+    display: block;
+}
+
+#tribe-events-content .tribe-events-single-event-description .politch-entry-header .attachment-post-thumbnail {
+    margin-right: 10px;
+}
