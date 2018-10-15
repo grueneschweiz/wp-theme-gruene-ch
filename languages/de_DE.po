@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gruene Theme\n"
-"POT-Creation-Date: 2018-01-07 16:03+0100\n"
-"PO-Revision-Date: 2018-01-07 16:08+0100\n"
+"POT-Creation-Date: 2018-10-15 15:37+0200\n"
+"PO-Revision-Date: 2018-10-15 15:38+0200\n"
 "Last-Translator: Cyrill Bolliger <bolliger@gmx.ch>\n"
 "Language-Team: Cyrill Bolliger <bolliger@gmx.ch>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.5\n"
+"X-Generator: Poedit 2.2\n"
 "X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:4c,1,2;_n_noop:1,2;"
 "_nx_noop:4c,1,2;esc_html__;esc_html_e;esc_html_x:1,2c;esc_attr__;esc_attr_e;"
 "esc_attr_x:1,2c;_x:1\n"
@@ -56,13 +56,13 @@ msgstr ""
 "Leider wurde kein Inhalt gefunden. Versuchen Sie es doch mit den Links unten "
 "oder mit einer Suche?"
 
-#: archive.php:43 home.php:40 index.php:36 search.php:35
+#: archive.php:45 home.php:40 index.php:36 search.php:35
 #, php-format
 msgctxt "&laquo;"
 msgid "%s Previous page"
 msgstr "%s&nbsp;Vorherige Seite"
 
-#: archive.php:44 home.php:41 index.php:37 search.php:36
+#: archive.php:46 home.php:41 index.php:37 search.php:36
 #, php-format
 msgctxt "&raquo;"
 msgid "%s Next page"
@@ -88,7 +88,7 @@ msgstr "Antworten"
 msgid "Comments are closed."
 msgstr "Die Kommentarfunktion wurde geschlossen."
 
-#: functions.php:139
+#: functions.php:140
 #, php-format
 msgctxt "Users display name"
 msgid ""
@@ -108,48 +108,48 @@ msgstr ""
 "WordPress und der vom Theme unterstützen Plugins. Bitte kontaktiere mich "
 "(cyrill@bolliger.tech) für einen Servicevertrag. Danke!"
 
-#: functions.php:258
+#: functions.php:259
 msgid "Primary Menu"
 msgstr "Hauptmenü"
 
-#: functions.php:259
+#: functions.php:260
 msgid "Footer Menu"
 msgstr "Footermenü"
 
-#: functions.php:260
+#: functions.php:261
 msgid "Footer Meta Menu"
 msgstr "Footer-Metamenü"
 
-#: functions.php:267
+#: functions.php:268
 msgid "Language Menu"
 msgstr "Sprachmenü"
 
-#: functions.php:268
+#: functions.php:269
 msgid "Meta Menu"
 msgstr "Mentamenü"
 
-#: functions.php:296
+#: functions.php:297
 msgid "Upper Sidebar"
 msgstr "Obere Sidebar"
 
-#: functions.php:298
+#: functions.php:299
 msgid "Put only the \"Search\" or \"Cybo Social Sharing\" widget in here."
 msgstr ""
 "Ziehe das \"Suche\"- oder das \"Cybo Social Sharing\"-Widget hier hinein."
 
-#: functions.php:305
+#: functions.php:306
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: functions.php:307
+#: functions.php:308
 msgid "This is just the regular sidebar."
 msgstr "Das ist die normale Sidebar."
 
-#: functions.php:314
+#: functions.php:315
 msgid "Footer"
 msgstr "Footer"
 
-#: functions.php:316
+#: functions.php:317
 msgid ""
 "This is the footer zone. Example: drop a text widget with your contact "
 "details in here."
@@ -157,43 +157,43 @@ msgstr ""
 "Das ist der Fussbereich der Website. Ziehe hier beispielsweise ein Text "
 "Widget mit deinen Kontaktangaben hinein."
 
-#: functions.php:531
+#: functions.php:532
 msgid "Paragraph"
 msgstr "Absatzformat"
 
-#: functions.php:535
+#: functions.php:536
 msgid "Heading 1"
 msgstr "Überschrift 1"
 
-#: functions.php:539
+#: functions.php:540
 msgid "Heading 2"
 msgstr "Überschrift 2"
 
-#: functions.php:543
+#: functions.php:544
 msgid "Heading 3"
 msgstr "Überschrift 3"
 
-#: functions.php:548
+#: functions.php:549
 msgid "Green Heading 1"
 msgstr "Grüne H1"
 
-#: functions.php:553
+#: functions.php:554
 msgid "Green Heading 2"
 msgstr "Grüne H2"
 
-#: functions.php:558
+#: functions.php:559
 msgid "Green Heading 3"
 msgstr "Grüne H3"
 
-#: functions.php:563
+#: functions.php:564
 msgid "Magenta Heading 1"
 msgstr "Magenta H1"
 
-#: functions.php:568
+#: functions.php:569
 msgid "Magenta Heading 2"
 msgstr "Magenta H2"
 
-#: functions.php:573
+#: functions.php:574
 msgid "Magenta Heading 3"
 msgstr "Magenta H3"
 
@@ -221,11 +221,11 @@ msgstr ""
 "Bitte beachte, dass einige Optionen andere beeinflussen. Bitte lies deshalb "
 "immer den Optionsbeschrieb."
 
-#: inc/customizer.php:95
+#: inc/customizer.php:100
 msgid "Choose the themes purpose"
 msgstr "Wähle den Zweck der Website"
 
-#: inc/customizer.php:96
+#: inc/customizer.php:101
 msgid ""
 "This theme comes with a version optimized to represent a politician and with "
 "a version to represent the party. Several other settings depend on the "
@@ -235,25 +235,25 @@ msgstr ""
 "Version für Parteien. Verschiedene Einstellungen hängen von der gewählten "
 "Option ab. Am besten probierst du es einfach mal aus."
 
-#: inc/customizer.php:99 inc/customizer.php:114
+#: inc/customizer.php:104 inc/customizer.php:119
 msgid "Please save and force reload the page after update."
 msgstr ""
 "Wenn die Option geändert wurde, bitte speichern und die Seite manuell "
 "komplett neu laden."
 
-#: inc/customizer.php:101
+#: inc/customizer.php:106
 msgid "Represent a politician"
 msgstr "Politiker Website"
 
-#: inc/customizer.php:102
+#: inc/customizer.php:107
 msgid "Represent the party"
 msgstr "Parteien Website"
 
-#: inc/customizer.php:110
+#: inc/customizer.php:115
 msgid "Choose a thumbnail size"
 msgstr "Wähle die Grösse des Vorschaubildes"
 
-#: inc/customizer.php:111
+#: inc/customizer.php:116
 msgid ""
 "Small thumbnails will float on the left, large ones will use the full "
 "content width."
@@ -261,7 +261,7 @@ msgstr ""
 "Kleine Vorschaubilder werden links vom Titel angezeigt, grosse über dem "
 "Inhalt."
 
-#: inc/customizer.php:112
+#: inc/customizer.php:117
 msgid ""
 "A switch might require you to manually regenerate the thumbnails.You may use "
 "the \"Regenerate Thumbnails\" plugin to do that."
@@ -270,19 +270,19 @@ msgstr ""
 "generiert werden. Verwende dazu beispielsweise das Plugin \"Regenerate "
 "Thumbnails\"."
 
-#: inc/customizer.php:116
+#: inc/customizer.php:121
 msgid "Small"
 msgstr "Klein"
 
-#: inc/customizer.php:117
+#: inc/customizer.php:122
 msgid "Large"
 msgstr "Gross"
 
-#: inc/customizer.php:125
+#: inc/customizer.php:130
 msgid "Choose your prefered style for the mobile navigation"
 msgstr "Wähle dein bevorzugter Stil für das Mobile-Menü"
 
-#: inc/customizer.php:126
+#: inc/customizer.php:131
 msgid ""
 "The classic style indents subpages and comes in a grayisch style. The "
 "mordern one is magenta based and distinguishes subpages by color."
@@ -290,19 +290,19 @@ msgstr ""
 "Der klassische Stil rückt Unterseiten ein und kommt in schickem Grau daher. "
 "Der Moderne basiert auf Magenta und hebt Unterseiten farblich hervor."
 
-#: inc/customizer.php:128
+#: inc/customizer.php:133
 msgid "Classic"
 msgstr "Klassisch"
 
-#: inc/customizer.php:129
+#: inc/customizer.php:134
 msgid "Modern"
 msgstr "Modern"
 
-#: inc/customizer.php:137
+#: inc/customizer.php:142
 msgid "Choose your prefered font type"
 msgstr "Wähle die Schriftart"
 
-#: inc/customizer.php:138
+#: inc/customizer.php:143
 msgid ""
 "Open Sans is the free alternative to Sanuk. It's therefore the recommended "
 "font."
@@ -310,11 +310,11 @@ msgstr ""
 "Open Sans ist die kostenlose Alternative zu Sanuk. Wir empfehlen deshalb "
 "Open Sans zu verwenden."
 
-#: inc/customizer.php:149
+#: inc/customizer.php:154
 msgid "Choose if you want to capitalize all titles"
 msgstr "Wähle, ob du Titel in Grossbuchstaben willst"
 
-#: inc/customizer.php:150
+#: inc/customizer.php:155
 msgid ""
 "If you set this to \"capitalize\" all titles will appear in capital letters. "
 "Else the titles will show up the way they were written."
@@ -323,19 +323,19 @@ msgstr ""
 "Grossbuchstaben ausgegeben. Sonst erscheinen die Titel so wie sie "
 "geschrieben sind."
 
-#: inc/customizer.php:153
+#: inc/customizer.php:158
 msgid "Don't capitalize titles"
 msgstr "Normale Titel"
 
-#: inc/customizer.php:154
+#: inc/customizer.php:159
 msgid "Capitalize titles"
 msgstr "Titel in Grossbuchstaben"
 
-#: inc/customizer.php:162
+#: inc/customizer.php:167
 msgid "Choose your post title style"
 msgstr "Wähle den Stil der Post-Titel"
 
-#: inc/customizer.php:163
+#: inc/customizer.php:168
 msgid ""
 "This option let's you choose between style consistency and functionality. "
 "With short titles the heading style of posts is same as for pages. With the "
@@ -348,7 +348,7 @@ msgstr ""
 "du so lange Titel setzen wie du willst, aber der Stil ist nicht ganz "
 "konsistent."
 
-#: inc/customizer.php:166
+#: inc/customizer.php:171
 msgid ""
 "Short titles: We highly recommend to use the \"Limit Post Titles\" plugin "
 "and set it to 35 character max."
@@ -356,19 +356,31 @@ msgstr ""
 "Kurze Titel: Wir empfehlen wärmstens das Plugin \"Limit Post Titles\" zu "
 "benutzen und auf maximal 35 Zeichen einzustellen."
 
-#: inc/customizer.php:168
+#: inc/customizer.php:173
 msgid "Short titles = Better styles"
 msgstr "Kurze Titel = Besseres Design"
 
-#: inc/customizer.php:169
+#: inc/customizer.php:174
 msgid "Normal title length = Design loss"
 msgstr "Normale Titellänge = Inkonsistenter Stil"
 
 #: inc/customizer.php:182
+msgid "Display archive description"
+msgstr "Kategorienbeschrieb auf Archivseiten anzeigen"
+
+#: inc/customizer.php:184
+msgid "No"
+msgstr "Nein"
+
+#: inc/customizer.php:185
+msgid "Yes"
+msgstr "Ja"
+
+#: inc/customizer.php:198
 msgid "Additional header image"
 msgstr "Zusätzliches Header-Bild"
 
-#: inc/customizer.php:183
+#: inc/customizer.php:199
 msgid ""
 "You might only use an additional header image, if you don't use the language "
 "switcher menu. Deactivate the language switcher menu, if the image doesn't "
@@ -378,23 +390,23 @@ msgstr ""
 "genutzt wird. Deaktiviere das Sprachmenü, falls das Header-Bild nicht "
 "angezeigt wird."
 
-#: inc/customizer.php:206
+#: inc/customizer.php:222
 msgid "Choose or upload your additional header image."
 msgstr "Wähle dein zusätzliches Headerbild oder lade eines hoch."
 
-#: inc/customizer.php:207
+#: inc/customizer.php:223
 msgid "Its minimal resolution should be 500 x 308 px."
 msgstr "Die minimale Auflösung sollte 500px * 308px betragen."
 
-#: inc/customizer.php:223
+#: inc/customizer.php:239
 msgid "Header text"
 msgstr "Header-Text"
 
-#: inc/customizer.php:224
+#: inc/customizer.php:240
 msgid "Note:"
 msgstr "Beachte:"
 
-#: inc/customizer.php:225
+#: inc/customizer.php:241
 msgid ""
 " This will only show up if you chose the theme mode \"Represent a politician"
 "\". You can change the theme mode in the theme options here in the "
@@ -403,31 +415,31 @@ msgstr ""
 " Dies wird nur angezeigt, wenn du die Option \"Politiker Website\" "
 "ausgewählt hast. Diese Einstellung kannst du hier im Theme Customizer ändern."
 
-#: inc/customizer.php:232 inc/customizer.php:248
+#: inc/customizer.php:248 inc/customizer.php:264
 msgid "Your function"
 msgstr "Deine Funktion"
 
-#: inc/customizer.php:238 inc/customizer.php:258
+#: inc/customizer.php:254 inc/customizer.php:274
 msgid "Your name"
 msgstr "Dein Name"
 
-#: inc/customizer.php:246
+#: inc/customizer.php:262
 msgid "Enter your function, for example \"National Councillor\"."
 msgstr "Gib deine Funktion ein, beispielsweise \"Nationalrat\"."
 
-#: inc/customizer.php:256
+#: inc/customizer.php:272
 msgid "Enter your name, \"firstname lastname\" is best."
 msgstr "Gib deinen Namen ein, am besten \"Vorname Nachname\"."
 
-#: inc/customizer.php:271
+#: inc/customizer.php:287
 msgid "Your last posts with the category"
 msgstr "Die letzten Beiträge der Kategorie"
 
-#: inc/customizer.php:283
+#: inc/customizer.php:299
 msgid "Category for front page"
 msgstr "Kategorie für die Startseite"
 
-#: inc/customizer.php:285
+#: inc/customizer.php:301
 msgid ""
 "If the fist option was choosen, the front page shows posts of the selected "
 "category."
@@ -435,21 +447,21 @@ msgstr ""
 "Wenn die erste Option gewählt wurde, werden auf der Frontseite postes der "
 "gewählten Kategorie angezeigt."
 
-#: inc/customizer.php:297 inc/customizer.php:308
+#: inc/customizer.php:313 inc/customizer.php:324
 msgid "Home"
 msgstr "Startseite"
 
-#: inc/customizer.php:305
+#: inc/customizer.php:321
 msgid "Front page title"
 msgstr "Titel auf der Frontseite"
 
-#: inc/customizer.php:306
+#: inc/customizer.php:322
 msgid "If the fist option was choosen: the title shown on the front page."
 msgstr ""
 "Wenn die erste Option gewählt wurde: Der Titel, welcher auf der Frontseite "
 "angezeigt wird."
 
-#: inc/customizer.php:324
+#: inc/customizer.php:340
 msgid "All categories"
 msgstr "Alle Kategorien"
 

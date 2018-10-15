@@ -88,6 +88,11 @@ function gruene_add_theme_spezific_settings( $wp_customize ) {
 		'default' => 'modern',
 	) );
 	
+	// add setting
+	$wp_customize->add_setting( 'show_archive_description', array(
+		'default' => false,
+	) );
+	
 	// add control
 	$wp_customize->add_control( 'theme_purpose', array(
 		'type'        => 'select',
@@ -167,6 +172,17 @@ function gruene_add_theme_spezific_settings( $wp_customize ) {
 		'choices'     => array(
 			'short'  => __( 'Short titles = Better styles', 'gruene' ),
 			'normal' => __( 'Normal title length = Design loss', 'gruene' ),
+		),
+	) );
+	
+	// add control
+	$wp_customize->add_control( 'show_archive_description', array(
+		'type'    => 'radio',
+		'section' => 'gruene_theme_options',
+		'label'   => __( 'Display archive description', 'gruene' ),
+		'choices' => array(
+			false => __( 'No', 'gruene' ),
+			true  => __( 'Yes', 'gruene' ),
 		),
 	) );
 }

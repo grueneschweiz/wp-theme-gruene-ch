@@ -21,7 +21,9 @@ get_header(); ?>
 				/**
 				 * enable to show the description
 				 */
-				//the_archive_description( '<div class="taxonomy-description">', '</div>' );
+				if (get_theme_mod('show_archive_description', false)){
+					the_archive_description( '<div class="taxonomy-description">', '</div>' );
+                }
 				?>
             </header><!-- .page-header -->
 			
