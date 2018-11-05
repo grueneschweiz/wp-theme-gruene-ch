@@ -333,6 +333,7 @@ if ( ! function_exists( 'gruene_scripts' ) ) :
 		// enqueue style sheet
 		wp_enqueue_style( 'gruene-style', get_stylesheet_uri(), array(), GRUENE_VERSION, 'all' );
 		wp_enqueue_style( 'gruene-print-style', get_template_directory_uri().'/print.css', array('gruene-style'), GRUENE_VERSION, 'print' );
+		wp_enqueue_style( 'gruene-tribe-event-styles', get_template_directory_uri().'/tribe-events/tribe-events.css', array(), GRUENE_VERSION, 'all' );
 		
 		// enqueue script
 		$deps = array(
