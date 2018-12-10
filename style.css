@@ -1992,6 +1992,11 @@ aside.widget_rss ul li span.rss-date {
     padding: 10px 10px 10px 60px;
 }
 
+.contact-form label.grunion-checkbox-multiple-label,
+.contact-form label.grunion-radio-label.radio {
+    font-weight: normal;
+}
+
 /* Jetpack Twitter Timeline */
 .widget_twitter_timeline .widget-title {
     text-transform: none;
