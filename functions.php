@@ -828,6 +828,38 @@ if ( ! function_exists( 'gruene_remove_tribe_customizer_styles' ) ) :
 endif;
 add_filter( 'tribe_customizer_css_template', 'gruene_remove_tribe_customizer_styles', 100 );
 
+if ( ! function_exists( 'gruene_rest_remove_user_endpoint' ) ) :
+	/**
+	 * Remove the rest api endpoint that can be used to discover usernames
+	 *
+	 * @return array
+	 */
+	function gruene_rest_remove_user_endpoint( $endpoints ) {
+		if ( isset( $endpoints[ '/wp/v2/users' ] ) ) {
+			unset( $endpoints[ '/wp/v2/users' ] );
+		}
+		if ( isset( $endpoints[ '/wp/v2/users/(?P<id>[\d]+)' ] ) ) {
+			unset( $endpoints[ '/wp/v2/users/(?P<id>[\d]+)' ] );
+		}
+		return $endpoints;
+	}
+endif;
+add_filter( 'rest_endpoints', 'gruene_rest_remove_user_endpoint' );
+
+if ( ! function_exists( 'gruene_remove_author_page' ) ) :
+	/**
+	 * Redirect to home if the author parameter is set (prevent username discovery)
+	 */
+	function gruene_remove_author_page() {
+		$is_author_set = get_query_var( 'author', '' );
+		if ( $is_author_set != '' && ! is_admin() ) {
+			wp_redirect( home_url(), 301 );
+			exit;
+		}
+	}
+endif;
+add_filter( 'template_redirect', 'gruene_remove_author_page' );
+
 /**
  * Custom template tags for this theme.
  */
