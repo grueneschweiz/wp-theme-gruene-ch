@@ -23,7 +23,11 @@
 		<?php endif; ?>
 		
 		<?php gruene_the_featured_image(); ?>
-
+		<?php if ( 'post' == get_post_type() && ! is_sticky() && 'short' == get_theme_mod( 'title_length', 'normal' )) : ?>
+       		<div class="entry-meta">
+				<?php gruene_posted_on( true); ?>
+       		</div><!-- .entry-meta -->
+		<?php endif; ?>
     </header><!-- .entry-header -->
 
     <div class="entry-content">
