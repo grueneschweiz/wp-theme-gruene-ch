@@ -1577,9 +1577,14 @@ article header.entry-header h1.entry-title a:visited {
     color: #e10078;
 }
 
-article div.entry-meta {
+article div.entry-meta,
+div.entry-meta-title-short {
     font-size: 0.875em;
     color: #666666;
+}
+
+div.entry-meta-title-short {
+    margin-top: -21px;
 }
 
 article div.entry-summary {
