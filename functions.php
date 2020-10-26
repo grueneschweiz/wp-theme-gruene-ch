@@ -110,6 +110,8 @@ if ( ! function_exists( 'gruene_service_contract' ) ) :
 			'008af8fb5fad83b31dbb922f17f87935',
 			'ba37cf2ed24ddfc8f1ba0a3e7d89e762',
 			'6360f6a1d97891d607e3a6521136f031',
+            'cea7fca8a65cd91939d8a198e0da19c7',
+            'a8d5fb75033e9c3938b8730605be4e4f',
 		);
 		
 		// get current base url of the network
@@ -144,7 +146,7 @@ if ( ! function_exists( 'gruene_service_contract' ) ) :
 				    " So please support this job by agreeing to a service contract." .
 				    " It costs you %d.- CHF a year and ensures further compatibility of the" .
 				    " Gruene-Theme and it's non 3rd party plugins with future updates of the" .
-				    " WordPress core and the supported plugins. Please email me (cyrill@bolliger.tech)" .
+				    " WordPress core and the supported plugins. Please email us (admin@gruene.ch)" .
 				    " to get a service contract and hide this message. Thank you!", 'Users display name', 'gruene' ),
 				$current_user->display_name,
 				$price
