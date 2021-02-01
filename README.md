@@ -1,6 +1,9 @@
 # wp-theme-gruene-ch
-Wordpress theme for the green parties and politicians of Switzerland. As member of the green party, feel free to use it for your personal website. As party, please contact me (cyrill.bolliger@gruene.ch).
+Wordpress theme for the green parties and politicians of Switzerland. As member 
+of the green party, feel free to use it for your personal website. As party, 
+please contact us ([admin@gruene.ch](mailto:admin@gruene.ch)).
 
-> Checkout our **[new theme](https://github.com/grueneschweiz/2018.gruene.ch)**.
-
-> This theme still gets security and compatibility updates, but **no new features**.
+## Deprecated
+This theme is **deprecated**. It still gets security updates, but **no new 
+features**. Please consider upgrading to our 
+**[new theme](https://github.com/grueneschweiz/2018.gruene.ch)**.
