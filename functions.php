@@ -81,82 +81,27 @@ endif;
 add_action( 'after_setup_theme', 'gruene_update', 0 );
 
 
-if ( ! function_exists( 'gruene_service_contract' ) ) :
+if ( ! function_exists( 'gruene_theme_eol_notice' ) ) :
 	/**
-	 * Show admin notice, if theme was updated without having a service contract.
+	 * Show admin notice to encourage users to upgrade.
 	 */
-	function gruene_service_contract() {
-		// get initially installed version
-		$ini_version = get_site_option( 'gruene_ini_version', null );
-		
-		// if were still running the initially installed version, stop here
-		if ( GRUENE_VERSION == $ini_version ) {
-			return; // BREAKPOINT
-		}
-		
-		// this array holds the md5 hashes of the url's of the instances with a
-		// service contract. Use the network_site_url.
-		$service_contracts = array(
-			/**
-			 * You think i'm making loads of money? My dev pages are in the list as well :(
-			 */
-			'6abb6b7115b5b0a410e1f4d82cdf8923',
-			'5078d6c827100ed03e2aa1739d900aed',
-			'ac36db01e6358125b9f536d589770915',
-			'b372cf968035ec4d3bd1f2c580c57c97',
-			'a19081bf0c3f7c1b50e3cb8176334499',
-			'78373e56b47e871ea69ffed79a229c9d',
-			'ba106dd5830a5b8bc3dc41adae85f137',
-			'008af8fb5fad83b31dbb922f17f87935',
-			'ba37cf2ed24ddfc8f1ba0a3e7d89e762',
-			'6360f6a1d97891d607e3a6521136f031',
-            'cea7fca8a65cd91939d8a198e0da19c7',
-            'a8d5fb75033e9c3938b8730605be4e4f',
-		);
-		
-		// get current base url of the network
-		$url = network_site_url();
-		
-		// don't show notice on localhosts
-		if ( 1 === preg_match( '/localhost/', $url ) ) {
-			return;
-		}
-		
-		//
-		$clean_url = preg_replace( '/https?:\/\/(www\.|)/', '', $url );
-		
-		// get the md5 hash of the current sites url
-		$clean_url_hash = md5( $clean_url );
-		
-		// return if site has a service contract
-		if ( in_array( $clean_url_hash, $service_contracts ) ) {
-			return; // BREAKPOINT
-			
-		} else {
-			// if user has updated whithout having a service contract
-			// show admin notice
-			$current_user = wp_get_current_user();
-			
-			$price = 'politician' == get_theme_mod( 'theme_purpose', 'politician' ) ? 50 : 300;
-			
-			$class   = 'notice notice-warning is-dismissible';
+	function gruene_theme_eol_notice() {
+		$mid2021 = 1625090400; // 01.06.21
+		if ( current_user_can('switch_themes') && time() > $mid2021 ) {
 			$message = sprintf(
-				_x( "Hey %s, updating is great. Contributing also. It's quite time consuming" .
-				    " to keep your theme and its non 3rd party plugins up to date." .
-				    " So please support this job by agreeing to a service contract." .
-				    " It costs you %d.- CHF a year and ensures further compatibility of the" .
-				    " Gruene-Theme and it's non 3rd party plugins with future updates of the" .
-				    " WordPress core and the supported plugins. Please email us (admin@gruene.ch)" .
-				    " to get a service contract and hide this message. Thank you!", 'Users display name', 'gruene' ),
-				$current_user->display_name,
-				$price
+				__("Your current theme dates back to mid 2015 and has now ".
+				   "reached it's end of live. Please consider upgrading ".
+			       "to the new theme %s. You may continue using this theme, ".
+				   "but we will only provide security updates.", 'gruene'),
+				"<a href='https://github.com/grueneschweiz/2018.gruene.ch' target='_blank'>Les VERT.E.S</a>"
 			);
-			
+
+			$class   = 'notice notice-warning is-dismissible';
 			printf( '<div class="%1$s"><p>%2$s</p></div>', $class, $message );
 		}
 	}
 endif;
-add_action( 'admin_notices', 'gruene_service_contract' );
+add_action( 'admin_notices', 'gruene_theme_eol_notice' );
 
 
 if ( ! function_exists( 'gruene_content_width' ) ) :

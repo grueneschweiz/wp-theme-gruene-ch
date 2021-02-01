@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gruene Theme\n"
-"POT-Creation-Date: 2018-10-15 15:37+0200\n"
-"PO-Revision-Date: 2018-10-15 15:38+0200\n"
+"POT-Creation-Date: 2021-02-01 17:07+0100\n"
+"PO-Revision-Date: 2021-02-01 17:12+0100\n"
 "Last-Translator: Cyrill Bolliger <bolliger@gmx.ch>\n"
 "Language-Team: Cyrill Bolliger <bolliger@gmx.ch>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:4c,1,2;_n_noop:1,2;"
 "_nx_noop:4c,1,2;esc_html__;esc_html_e;esc_html_x:1,2c;esc_attr__;esc_attr_e;"
 "esc_attr_x:1,2c;_x:1\n"
@@ -88,68 +88,60 @@ msgstr "Antworten"
 msgid "Comments are closed."
 msgstr "Die Kommentarfunktion wurde geschlossen."
 
-#: functions.php:140
+#: functions.php:92
 #, php-format
-msgctxt "Users display name"
 msgid ""
-"Hey %s, updating is great. Contributing also. It's quite time consuming to "
-"keep your theme and its non 3rd party plugins up to date. So please support "
-"this job by agreeing to a service contract. It costs you %d.- CHF a year and "
-"ensures further compatibility of the Gruene-Theme and it's non 3rd party "
-"plugins with future updates of the WordPress core and the supported plugins. "
-"Please email me (cyrill@bolliger.tech) to get a service contract and hide "
-"this message. Thank you!"
+"Your current theme dates back to mid 2015 and has now reached it's end of "
+"live. Please consider upgrading to the new theme %s. You may continue using "
+"this theme, but we will only provide security updates."
 msgstr ""
-"Hey %s, updaten ist super. Einen Beitrag zur Entwicklung leisten auch. Es "
-"brauch ziemlich viel Zeit dein Theme und die dazugehörigen eigenen Plugins "
-"aktuell zu halten. Bitte unterstütze diese Arbeit mit einem Servicevertrag. "
-"Dieser kostet %d.- CHF pro Jahr und garantiert die Kompatibilität des Gruene-"
-"Themes und der dazugehörigen eigenen Plugins mit zukünftigen Updates von "
-"WordPress und der vom Theme unterstützen Plugins. Bitte kontaktiere mich "
-"(cyrill@bolliger.tech) für einen Servicevertrag. Danke!"
+"Dein aktuelles Theme stammt aus dem Jahre 2015 und hat nun sein Lebensende "
+"erreicht. Bitte erwäge ein Upgrade aus das neue Theme %s. Du kannst dieses "
+"Theme weiterhin nutzen, aber wir werden nur noch Sicherheitsupdates "
+"bereitstellen."
 
-#: functions.php:259
+#: functions.php:208
 msgid "Primary Menu"
 msgstr "Hauptmenü"
 
-#: functions.php:260
+#: functions.php:209
 msgid "Footer Menu"
 msgstr "Footermenü"
 
-#: functions.php:261
+#: functions.php:210
 msgid "Footer Meta Menu"
 msgstr "Footer-Metamenü"
 
-#: functions.php:268
+#: functions.php:217
 msgid "Language Menu"
 msgstr "Sprachmenü"
 
-#: functions.php:269
+#: functions.php:218
 msgid "Meta Menu"
 msgstr "Mentamenü"
 
-#: functions.php:297
+#: functions.php:246
 msgid "Upper Sidebar"
 msgstr "Obere Sidebar"
 
-#: functions.php:299
+#: functions.php:248
 msgid "Put only the \"Search\" or \"Cybo Social Sharing\" widget in here."
 msgstr ""
 "Ziehe das \"Suche\"- oder das \"Cybo Social Sharing\"-Widget hier hinein."
 
-#: functions.php:306
+#: functions.php:255
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: functions.php:308
+#: functions.php:257
 msgid "This is just the regular sidebar."
 msgstr "Das ist die normale Sidebar."
 
-#: functions.php:315
+#: functions.php:264
 msgid "Footer"
 msgstr "Footer"
 
-#: functions.php:317
+#: functions.php:266
 msgid ""
 "This is the footer zone. Example: drop a text widget with your contact "
 "details in here."
@@ -157,55 +149,55 @@ msgstr ""
 "Das ist der Fussbereich der Website. Ziehe hier beispielsweise ein Text "
 "Widget mit deinen Kontaktangaben hinein."
 
-#: functions.php:532
+#: functions.php:482
 msgid "Paragraph"
 msgstr "Absatzformat"
 
-#: functions.php:536
+#: functions.php:486
 msgid "Heading 1"
 msgstr "Überschrift 1"
 
-#: functions.php:540
+#: functions.php:490
 msgid "Heading 2"
 msgstr "Überschrift 2"
 
-#: functions.php:544
+#: functions.php:494
 msgid "Heading 3"
 msgstr "Überschrift 3"
 
-#: functions.php:549
+#: functions.php:499
 msgid "Green Heading 1"
 msgstr "Grüne H1"
 
-#: functions.php:554
+#: functions.php:504
 msgid "Green Heading 2"
 msgstr "Grüne H2"
 
-#: functions.php:559
+#: functions.php:509
 msgid "Green Heading 3"
 msgstr "Grüne H3"
 
-#: functions.php:564
+#: functions.php:514
 msgid "Magenta Heading 1"
 msgstr "Magenta H1"
 
-#: functions.php:569
+#: functions.php:519
 msgid "Magenta Heading 2"
 msgstr "Magenta H2"
 
-#: functions.php:574
+#: functions.php:524
 msgid "Magenta Heading 3"
 msgstr "Magenta H3"
 
-#: header.php:25
+#: header.php:26
 msgid "Skip to content"
 msgstr "Zum Inhalt springen"
 
-#: header.php:70
+#: header.php:71
 msgid "Navigation"
 msgstr "Menü"
 
-#: header.php:99
+#: header.php:100
 msgid "Menu"
 msgstr "Menü"
 
@@ -686,7 +678,7 @@ msgstr ""
 "Leider können wir den gewünschten Inhalt nicht finden. Möglicherweise hilft "
 "eine Suche weiter."
 
-#: template-parts/content-page.php:19 template-parts/content-single.php:40
+#: template-parts/content-page.php:19 template-parts/content-single.php:39
 msgid "Pages:"
 msgstr "Seiten:"
 
@@ -1098,6 +1090,25 @@ msgstr "Alle Installationen wurden erfolgreich abgeschlossen."
 #, php-format
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr "Plugin %1$s (%2$d/%3$d) wird installiert"
+
+#~ msgctxt "Users display name"
+#~ msgid ""
+#~ "Hey %s, updating is great. Contributing also. It's quite time consuming "
+#~ "to keep your theme and its non 3rd party plugins up to date. So please "
+#~ "support this job by agreeing to a service contract. It costs you %d.- CHF "
+#~ "a year and ensures further compatibility of the Gruene-Theme and it's non "
+#~ "3rd party plugins with future updates of the WordPress core and the "
+#~ "supported plugins. Please email me (cyrill@bolliger.tech) to get a "
+#~ "service contract and hide this message. Thank you!"
+#~ msgstr ""
+#~ "Hey %s, updaten ist super. Einen Beitrag zur Entwicklung leisten auch. Es "
+#~ "brauch ziemlich viel Zeit dein Theme und die dazugehörigen eigenen "
+#~ "Plugins aktuell zu halten. Bitte unterstütze diese Arbeit mit einem "
+#~ "Servicevertrag. Dieser kostet %d.- CHF pro Jahr und garantiert die "
+#~ "Kompatibilität des Gruene-Themes und der dazugehörigen eigenen Plugins "
+#~ "mit zukünftigen Updates von WordPress und der vom Theme unterstützen "
+#~ "Plugins. Bitte kontaktiere mich (cyrill@bolliger.tech) für einen "
+#~ "Servicevertrag. Danke!"
 
 #~ msgid "Ihre letzten Beiträge der Kategorie"
 #~ msgstr "Ihre letzten Beiträge der Kategorie"

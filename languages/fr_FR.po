@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gruene Theme\n"
-"POT-Creation-Date: 2016-04-17 15:15+0100\n"
-"PO-Revision-Date: 2016-04-17 19:20+0100\n"
+"POT-Creation-Date: 2021-02-01 17:11+0100\n"
+"PO-Revision-Date: 2021-02-01 17:12+0100\n"
 "Last-Translator: Cyrill Bolliger <bolliger@gmx.ch>\n"
 "Language-Team: Cyrill Bolliger <bolliger@gmx.ch>\n"
-"Language: FR\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:4c,1,2;_n_noop:1,2;"
 "_nx_noop:4c,1,2;esc_html__;esc_html_e;esc_html_x:1,2c;esc_attr__;esc_attr_e;"
 "esc_attr_x:1,2c\n"
@@ -30,13 +30,13 @@ msgstr ""
 "Votre recherche n'a donné aucun résultat. Utilisez les liens ci-dessous ou "
 "lancez une nouvelle recherche."
 
-#: ../archive.php:43 ../home.php:40 ../index.php:36 ../search.php:35
+#: ../archive.php:45 ../home.php:40 ../index.php:36 ../search.php:35
 #, php-format
 msgctxt "&laquo;"
 msgid "%s Previous page"
 msgstr "%s Page précédente"
 
-#: ../archive.php:44 ../home.php:41 ../index.php:37 ../search.php:36
+#: ../archive.php:46 ../home.php:41 ../index.php:37 ../search.php:36
 #, php-format
 msgctxt "&raquo;"
 msgid "%s Next page"
@@ -54,228 +54,231 @@ msgstr[1] "%1$s commentairs sur &ldquo; %2$s &rdquo;"
 msgid "Comment navigation"
 msgstr "Navigation de commentaires "
 
+#: ../comments.php:57
+msgid "Reply"
+msgstr ""
+
 #: ../comments.php:85
 msgid "Comments are closed."
 msgstr "La section commentaires a été fermée."
 
-#: ../functions.php:131
+#: ../functions.php:92
 #, php-format
-msgctxt "Users display name"
 msgid ""
-"Hey %s, updating is great. Contributing also. It's quite time consuming to "
-"keep your theme and its non 3rd party plugins up to date. So please support "
-"this job by agreeing to a service contract. It costs you 300.- CHF a year "
-"and ensures further compatibility of the Gruene-Theme and it's non 3rd party "
-"plugins with future updates of the WordPress core and the supported plugins. "
-"Please email me (cyrill.bolliger@gmail.com) to get a service contract and "
-"hide this message. Thank you!"
+"Your current theme dates back to mid 2015 and has now reached it's end of "
+"live. Please consider upgrading to the new theme %s. You may continue using "
+"this theme, but we will only provide security updates."
 msgstr ""
+"Votre thème actuel est celui de 2015 et a atteint sa fin de vie. Veuillez "
+"envisager de passer au nouveau thème %s. Vous pouvez toujours utiliser ce "
+"thème, mais nous ne fournirons que des mises à jour de sécurité."
 
-#: ../functions.php:246
+#: ../functions.php:208
 msgid "Primary Menu"
 msgstr "Menu principal"
 
-#: ../functions.php:247
+#: ../functions.php:209
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: ../functions.php:248
+#: ../functions.php:210
 msgid "Footer Meta Menu"
 msgstr "Menu pied de page meta"
 
-#: ../functions.php:255
+#: ../functions.php:217
 msgid "Language Menu"
 msgstr "Menu langues"
 
-#: ../functions.php:256
+#: ../functions.php:218
 msgid "Meta Menu"
 msgstr "Menu meta"
 
-#: ../functions.php:280
+#: ../functions.php:246
 msgid "Upper Sidebar"
 msgstr ""
 
-#: ../functions.php:282
-msgid "Put the \"Search and Share\" widget in here."
+#: ../functions.php:248
+msgid "Put only the \"Search\" or \"Cybo Social Sharing\" widget in here."
 msgstr ""
 
-#: ../functions.php:289
+#: ../functions.php:255
 msgid "Sidebar"
 msgstr "Barre latérale"
 
-#: ../functions.php:291
+#: ../functions.php:257
 msgid "This is just the regular sidebar."
 msgstr ""
 
-#: ../functions.php:298
+#: ../functions.php:264
 msgid "Footer"
 msgstr "Pied de page"
 
-#: ../functions.php:300
+#: ../functions.php:266
 msgid ""
 "This is the footer zone. Example: drop a text widget with your contact "
 "details in here."
 msgstr ""
 
-#: ../functions.php:506
+#: ../functions.php:482
+msgid "Paragraph"
+msgstr ""
+
+#: ../functions.php:486
+msgid "Heading 1"
+msgstr ""
+
+#: ../functions.php:490
+msgid "Heading 2"
+msgstr ""
+
+#: ../functions.php:494
+msgid "Heading 3"
+msgstr ""
+
+#: ../functions.php:499
 msgid "Green Heading 1"
 msgstr ""
 
-#: ../functions.php:511
+#: ../functions.php:504
 msgid "Green Heading 2"
 msgstr ""
 
-#: ../functions.php:516
+#: ../functions.php:509
 msgid "Green Heading 3"
 msgstr ""
 
-#: ../functions.php:521
+#: ../functions.php:514
 msgid "Magenta Heading 1"
 msgstr ""
 
-#: ../functions.php:526
+#: ../functions.php:519
 msgid "Magenta Heading 2"
 msgstr ""
 
-#: ../functions.php:531
+#: ../functions.php:524
 msgid "Magenta Heading 3"
 msgstr ""
 
-#: ../header.php:25
+#: ../header.php:26
 msgid "Skip to content"
 msgstr "Aller au contenu"
 
-#: ../header.php:70
+#: ../header.php:71
 msgid "Navigation"
 msgstr "Navigation"
 
-#: ../header.php:94
+#: ../header.php:100
 msgid "Menu"
 msgstr "Menu"
 
-#: ../search.php:16
-#, php-format
-msgid "Search Results for: %s"
-msgstr "Résultats pour &ldquo; %s &rdquo;"
-
-#: ../searchform.php:3 ../searchform.php:4
-msgctxt "label"
-msgid "Search for:"
-msgstr "Recherche :"
-
-#: ../searchform.php:4
-msgctxt "placeholder"
-msgid "Search …"
-msgstr "Rechercher …"
-
-#: ../inc/customizer.php:52
+#: ../inc/customizer.php:55
 msgid "Theme options"
 msgstr ""
 
-#: ../inc/customizer.php:53
+#: ../inc/customizer.php:56
 msgid ""
 "Please keep in mind, that some options impair the use of others. Please read "
 "the notes to all options."
 msgstr ""
 
-#: ../inc/customizer.php:92
+#: ../inc/customizer.php:100
 msgid "Choose the themes purpose"
 msgstr ""
 
-#: ../inc/customizer.php:93
+#: ../inc/customizer.php:101
 msgid ""
 "This theme comes with a version optimized to represent a politician and with "
 "a version to represent the party. Several other settings depend on the "
 "option chosen. Just give it a try and see what happens."
 msgstr ""
 
-#: ../inc/customizer.php:96 ../inc/customizer.php:111
+#: ../inc/customizer.php:104 ../inc/customizer.php:119
 msgid "Please save and force reload the page after update."
 msgstr ""
 
-#: ../inc/customizer.php:98
+#: ../inc/customizer.php:106
 msgid "Represent a politician"
 msgstr ""
 
-#: ../inc/customizer.php:99
+#: ../inc/customizer.php:107
 msgid "Represent the party"
 msgstr ""
 
-#: ../inc/customizer.php:107
+#: ../inc/customizer.php:115
 msgid "Choose a thumbnail size"
 msgstr ""
 
-#: ../inc/customizer.php:108
+#: ../inc/customizer.php:116
 msgid ""
 "Small thumbnails will float on the left, large ones will use the full "
 "content width."
 msgstr ""
 
-#: ../inc/customizer.php:109
+#: ../inc/customizer.php:117
 msgid ""
 "A switch might require you to manually regenerate the thumbnails.You may use "
 "the \"Regenerate Thumbnails\" plugin to do that."
 msgstr ""
 
-#: ../inc/customizer.php:113
+#: ../inc/customizer.php:121
 msgid "Small"
 msgstr ""
 
-#: ../inc/customizer.php:114
+#: ../inc/customizer.php:122
 msgid "Large"
 msgstr ""
 
-#: ../inc/customizer.php:122
+#: ../inc/customizer.php:130
 msgid "Choose your prefered style for the mobile navigation"
 msgstr ""
 
-#: ../inc/customizer.php:123
+#: ../inc/customizer.php:131
 msgid ""
 "The classic style indents subpages and comes in a grayisch style. The "
 "mordern one is magenta based and distinguishes subpages by color."
 msgstr ""
 
-#: ../inc/customizer.php:125
+#: ../inc/customizer.php:133
 msgid "Classic"
 msgstr ""
 
-#: ../inc/customizer.php:126
+#: ../inc/customizer.php:134
 msgid "Modern"
 msgstr ""
 
-#: ../inc/customizer.php:134
+#: ../inc/customizer.php:142
 msgid "Choose your prefered font type"
 msgstr ""
 
-#: ../inc/customizer.php:135
+#: ../inc/customizer.php:143
 msgid ""
 "Open Sans is the free alternative to Sanuk. It's therefore the recommended "
 "font."
 msgstr ""
 
-#: ../inc/customizer.php:146
+#: ../inc/customizer.php:154
 msgid "Choose if you want to capitalize all titles"
 msgstr ""
 
-#: ../inc/customizer.php:147
+#: ../inc/customizer.php:155
 msgid ""
 "If you set this to \"capitalize\" all titles will appear in capital letters. "
 "Else the titles will show up the way they were written."
 msgstr ""
 
-#: ../inc/customizer.php:150
+#: ../inc/customizer.php:158
 msgid "Don't capitalize titles"
 msgstr ""
 
-#: ../inc/customizer.php:151
+#: ../inc/customizer.php:159
 msgid "Capitalize titles"
 msgstr ""
 
-#: ../inc/customizer.php:159
+#: ../inc/customizer.php:167
 msgid "Choose your post title style"
 msgstr ""
 
-#: ../inc/customizer.php:160
+#: ../inc/customizer.php:168
 msgid ""
 "This option let's you choose between style consistency and functionality. "
 "With short titles the heading style of posts is same as for pages. With the "
@@ -283,79 +286,91 @@ msgid ""
 "design."
 msgstr ""
 
-#: ../inc/customizer.php:163
+#: ../inc/customizer.php:171
 msgid ""
 "Short titles: We highly recommend to use the \"Limit Post Titles\" plugin "
 "and set it to 35 character max."
 msgstr ""
 
-#: ../inc/customizer.php:165
+#: ../inc/customizer.php:173
 msgid "Short titles = Better styles"
 msgstr ""
 
-#: ../inc/customizer.php:166
+#: ../inc/customizer.php:174
 msgid "Normal title length = Design loss"
 msgstr ""
 
-#: ../inc/customizer.php:179
+#: ../inc/customizer.php:182
+msgid "Display archive description"
+msgstr ""
+
+#: ../inc/customizer.php:184
+msgid "No"
+msgstr ""
+
+#: ../inc/customizer.php:185
+msgid "Yes"
+msgstr ""
+
+#: ../inc/customizer.php:198
 msgid "Additional header image"
 msgstr ""
 
-#: ../inc/customizer.php:180
+#: ../inc/customizer.php:199
 msgid ""
 "You might only use an additional header image, if you don't use the language "
 "switcher menu. Deactivate the language switcher menu, if the image doesn't "
 "appear."
 msgstr ""
 
-#: ../inc/customizer.php:203
+#: ../inc/customizer.php:222
 msgid "Choose or upload your additional header image."
 msgstr ""
 
-#: ../inc/customizer.php:204
+#: ../inc/customizer.php:223
 msgid "Its minimal resolution should be 500 x 308 px."
 msgstr ""
 
-#: ../inc/customizer.php:220
+#: ../inc/customizer.php:239
 msgid "Header text"
 msgstr ""
 
-#: ../inc/customizer.php:221
+#: ../inc/customizer.php:240
 msgid "Note:"
 msgstr ""
 
-#: ../inc/customizer.php:222
+#: ../inc/customizer.php:241
 msgid ""
 " This will only show up if you chose the theme mode \"Represent a politician"
 "\". You can change the theme mode in the theme options here in the "
 "customizer."
 msgstr ""
 
-#: ../inc/customizer.php:229 ../inc/customizer.php:245
+#: ../inc/customizer.php:248 ../inc/customizer.php:264
 msgid "Your function"
 msgstr ""
 
-#: ../inc/customizer.php:235 ../inc/customizer.php:255
+#: ../inc/customizer.php:254 ../inc/customizer.php:274
 msgid "Your name"
 msgstr ""
 
-#: ../inc/customizer.php:243
+#: ../inc/customizer.php:262
 msgid "Enter your function, for example \"National Councillor\"."
 msgstr ""
 
-#: ../inc/customizer.php:253
+#: ../inc/customizer.php:272
 msgid "Enter your name, \"firstname lastname\" is best."
 msgstr ""
 
-#: ../inc/customizer.php:268
-msgid "Ihre letzten Beiträge der Kategorie"
-msgstr "Vos dernières contributions dans cette catégorie"
+#: ../inc/customizer.php:287
+msgid "Your last posts with the category"
+msgstr ""
 
-#: ../inc/customizer.php:280
+#: ../inc/customizer.php:299
 msgid "Category for front page"
 msgstr "Catégorie pour la page d'accueil"
 
-#: ../inc/customizer.php:282
+#: ../inc/customizer.php:301
 msgid ""
 "If the fist option was choosen, the front page shows posts of the selected "
 "category."
@@ -363,95 +378,95 @@ msgstr ""
 "Si vous choisissez la première option, la page d'accueil affichera les "
 "commentaires pour la catégorie sélectionnée."
 
-#: ../inc/customizer.php:294 ../inc/customizer.php:305
+#: ../inc/customizer.php:313 ../inc/customizer.php:324
 msgid "Home"
 msgstr "Accueil"
 
-#: ../inc/customizer.php:302
+#: ../inc/customizer.php:321
 msgid "Front page title"
 msgstr "Titre de la page d'accueil"
 
-#: ../inc/customizer.php:303
+#: ../inc/customizer.php:322
 msgid "If the fist option was choosen: the title shown on the front page."
 msgstr ""
 "Si vous choisissez la première option: le titre qui apparaît sur la page "
 "d'accueil."
 
-#: ../inc/customizer.php:321
+#: ../inc/customizer.php:340
 msgid "All categories"
 msgstr "Toutes les catégories"
 
-#: ../inc/template-tags.php:167
+#: ../inc/template-tags.php:171
 #, php-format
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
-#: ../inc/template-tags.php:175
+#: ../inc/template-tags.php:179
 #, php-format
 msgctxt "post author"
 msgid "by %s"
 msgstr "par %s"
 
-#: ../inc/template-tags.php:190
+#: ../inc/template-tags.php:194
 #, php-format
 msgctxt "Read more arrow"
 msgid "%s Read more"
 msgstr "%s&nbsp;En&nbsp;lire&nbsp;plus"
 
-#: ../inc/template-tags.php:220
+#: ../inc/template-tags.php:224
 msgid "Leave a comment"
 msgstr "Commenter"
 
-#: ../inc/template-tags.php:220
+#: ../inc/template-tags.php:224
 msgid "1 Comment"
 msgstr "Un commentaire"
 
-#: ../inc/template-tags.php:220
+#: ../inc/template-tags.php:224
 msgid "% Comments"
 msgstr "% commentaires"
 
-#: ../inc/template-tags.php:224 ../template-parts/content-campaign.php:26
+#: ../inc/template-tags.php:228 ../template-parts/content-campaign.php:26
 #: ../template-parts/content-page.php:26
 msgid "Edit"
 msgstr "Modifier"
 
-#: ../inc/template-tags.php:239
+#: ../inc/template-tags.php:243
 msgid "Back"
 msgstr "Retour"
 
-#: ../inc/tgm-plugin.php:160 ../vendor/class-tgm-plugin-activation.php:333
+#: ../inc/tgm-plugin.php:204 ../vendor/class-tgm-plugin-activation.php:335
 msgid "Install Required Plugins"
 msgstr "Veuillez installer les plugins demandés"
 
-#: ../inc/tgm-plugin.php:161 ../vendor/class-tgm-plugin-activation.php:334
+#: ../inc/tgm-plugin.php:205 ../vendor/class-tgm-plugin-activation.php:336
 msgid "Install Plugins"
 msgstr "Installer les plugins"
 
-#: ../inc/tgm-plugin.php:162 ../vendor/class-tgm-plugin-activation.php:335
+#: ../inc/tgm-plugin.php:206 ../vendor/class-tgm-plugin-activation.php:337
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr "Installer le plugin: %s"
 
-#: ../inc/tgm-plugin.php:163 ../vendor/class-tgm-plugin-activation.php:336
+#: ../inc/tgm-plugin.php:208 ../vendor/class-tgm-plugin-activation.php:338
 msgid "Something went wrong with the plugin API."
 msgstr "Un problème avec l'API a été détecté"
 
-#: ../inc/tgm-plugin.php:164 ../vendor/class-tgm-plugin-activation.php:338
+#: ../inc/tgm-plugin.php:209 ../vendor/class-tgm-plugin-activation.php:340
 #, php-format
 msgid "This theme requires the following plugin: %1$s."
 msgid_plural "This theme requires the following plugins: %1$s."
 msgstr[0] "Pour ce thème, vous devez installer le plugin : %1$s."
 msgstr[1] "Pour ce thème, vous devez installer les plugins: %1$s."
 
-#: ../inc/tgm-plugin.php:165 ../vendor/class-tgm-plugin-activation.php:343
+#: ../inc/tgm-plugin.php:211 ../vendor/class-tgm-plugin-activation.php:345
 #, php-format
 msgid "This theme recommends the following plugin: %1$s."
 msgid_plural "This theme recommends the following plugins: %1$s."
 msgstr[0] "Pour ce thème, le plugin suivant est recommandé : %1$s."
 msgstr[1] "Pour ce thème, les plugins suivant sont recommandé : %1$s."
 
-#: ../inc/tgm-plugin.php:166
+#: ../inc/tgm-plugin.php:213
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to install the %s plugin. "
@@ -468,21 +483,21 @@ msgstr[1] ""
 "Désolé mais vous n'avez pas la permission d'installer les plugins %s."
 "Veuillez contacter l'administrateur du site."
 
-#: ../inc/tgm-plugin.php:167 ../vendor/class-tgm-plugin-activation.php:368
+#: ../inc/tgm-plugin.php:215 ../vendor/class-tgm-plugin-activation.php:370
 #, php-format
 msgid "The following required plugin is currently inactive: %1$s."
 msgid_plural "The following required plugins are currently inactive: %1$s."
 msgstr[0] "Le plugin indispensable suivant est désactivé : %1$s."
 msgstr[1] "Les plugins indispensable suivant sont désactivé : %1$s."
 
-#: ../inc/tgm-plugin.php:168 ../vendor/class-tgm-plugin-activation.php:373
+#: ../inc/tgm-plugin.php:217 ../vendor/class-tgm-plugin-activation.php:375
 #, php-format
 msgid "The following recommended plugin is currently inactive: %1$s."
 msgid_plural "The following recommended plugins are currently inactive: %1$s."
 msgstr[0] "Le plugin recommandé suivant est désactivé : %1$s."
 msgstr[1] "Les plugins recommandé suivant sont désactivé : %1$s."
 
-#: ../inc/tgm-plugin.php:169
+#: ../inc/tgm-plugin.php:219
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to activate the %s "
@@ -499,7 +514,7 @@ msgstr[1] ""
 "Désolé mais vous n'avez pas la permission d'installer le plugin %s. Veuillez "
 "contacter l'administrateur du site."
 
-#: ../inc/tgm-plugin.php:170 ../vendor/class-tgm-plugin-activation.php:353
+#: ../inc/tgm-plugin.php:221 ../vendor/class-tgm-plugin-activation.php:355
 #, php-format
 msgid ""
 "The following plugin needs to be updated to its latest version to ensure "
@@ -514,7 +529,7 @@ msgstr[1] ""
 "Le plugin suivant doit être mis à jour afin d'assurer la compatibilité avec "
 "ce thème: %1$s."
 
-#: ../inc/tgm-plugin.php:171
+#: ../inc/tgm-plugin.php:223
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to update the %s plugin. "
@@ -531,31 +546,49 @@ msgstr[1] ""
 "Désolé mais vous n'avez pas la permission de mettre à jour le plugin %s. "
 "Veuillez contacter l'administrateur du site."
 
-#: ../inc/tgm-plugin.php:172 ../vendor/class-tgm-plugin-activation.php:383
+#: ../inc/tgm-plugin.php:225 ../vendor/class-tgm-plugin-activation.php:385
 msgid "Begin installing plugin"
 msgid_plural "Begin installing plugins"
 msgstr[0] "Lancer l'installation du plugin"
 msgstr[1] "Lancer l'installation des plugins"
 
-#: ../inc/tgm-plugin.php:173 ../vendor/class-tgm-plugin-activation.php:393
+#: ../inc/tgm-plugin.php:226 ../vendor/class-tgm-plugin-activation.php:395
 msgid "Begin activating plugin"
 msgid_plural "Begin activating plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/tgm-plugin.php:174 ../vendor/class-tgm-plugin-activation.php:397
+#: ../inc/tgm-plugin.php:227 ../vendor/class-tgm-plugin-activation.php:399
 msgid "Return to Required Plugins Installer"
 msgstr "Retourner à la liste des plugins à installer"
 
-#: ../inc/tgm-plugin.php:175 ../vendor/class-tgm-plugin-activation.php:399
-#: ../vendor/class-tgm-plugin-activation.php:3029
+#: ../inc/tgm-plugin.php:228 ../vendor/class-tgm-plugin-activation.php:401
+#: ../vendor/class-tgm-plugin-activation.php:3098
 msgid "Plugin activated successfully."
 msgstr "Le plugin a été activé."
 
-#: ../inc/tgm-plugin.php:176
+#: ../inc/tgm-plugin.php:229
 #, php-format
 msgid "All plugins installed and activated successfully. %s"
 msgstr ""
+
+#: ../search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Résultats pour &ldquo; %s &rdquo;"
+
+#: ../searchform.php:3 ../searchform.php:7
+msgctxt "label"
+msgid "Search for:"
+msgstr "Recherche :"
+
+#: ../searchform.php:5
+#, fuzzy
+#| msgctxt "placeholder"
+#| msgid "Search …"
+msgctxt "placeholder"
+msgid "Search ..."
+msgstr "Rechercher …"
 
 #: ../template-parts/content-none.php:13
 msgid "Nothing Found"
@@ -585,15 +618,15 @@ msgstr ""
 "recherche. "
 
 #: ../template-parts/content-page.php:19
-#: ../template-parts/content-single.php:40
+#: ../template-parts/content-single.php:39
 msgid "Pages:"
 msgstr "Pages :"
 
-#: ../tribe-events/list/single-event.php:74
+#: ../tribe-events/list/single-event.php:76
 msgid "Find out more"
 msgstr "En lire plus"
 
-#: ../vendor/class-tgm-plugin-activation.php:348
+#: ../vendor/class-tgm-plugin-activation.php:350
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to install the %1$s "
@@ -606,14 +639,14 @@ msgstr[0] ""
 msgstr[1] ""
 "Désolé mais vous n'avez pas la permission d'installer le plugin %1$s"
 
-#: ../vendor/class-tgm-plugin-activation.php:358
+#: ../vendor/class-tgm-plugin-activation.php:360
 #, php-format
 msgid "There is an update available for: %1$s."
 msgid_plural "There are updates available for the following plugins: %1$s."
 msgstr[0] "Une mise à jour est disponible pour: %1$s."
 msgstr[1] "Une mise à jour est disponible pour: %1$s."
 
-#: ../vendor/class-tgm-plugin-activation.php:363
+#: ../vendor/class-tgm-plugin-activation.php:365
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to update the %1$s plugin."
@@ -625,7 +658,7 @@ msgstr[0] ""
 msgstr[1] ""
 "Désolé mais vous n'avez pas la permission de mettre à jour le plugin %1$s."
 
-#: ../vendor/class-tgm-plugin-activation.php:378
+#: ../vendor/class-tgm-plugin-activation.php:380
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to activate the %1$s "
@@ -636,29 +669,29 @@ msgid_plural ""
 msgstr[0] "Désolé mais vous n'avez pas la permission d'activer le plugin %1$s."
 msgstr[1] "Désolé mais vous n'avez pas la permission d'activer le plugin %1$s."
 
-#: ../vendor/class-tgm-plugin-activation.php:388
+#: ../vendor/class-tgm-plugin-activation.php:390
 msgid "Begin updating plugin"
 msgid_plural "Begin updating plugins"
 msgstr[0] "Lancer la mise à jour du plugin"
 msgstr[1] "Lancer la mise à jour du plugin"
 
-#: ../vendor/class-tgm-plugin-activation.php:398
+#: ../vendor/class-tgm-plugin-activation.php:400
 msgid "Return to the dashboard"
 msgstr "Retourner au tableau de bord"
 
-#: ../vendor/class-tgm-plugin-activation.php:400
-#: ../vendor/class-tgm-plugin-activation.php:2832
+#: ../vendor/class-tgm-plugin-activation.php:402
+#: ../vendor/class-tgm-plugin-activation.php:2895
 msgid "The following plugin was activated successfully:"
 msgid_plural "The following plugins were activated successfully:"
 msgstr[0] "Le plugin suivant a été activé :"
 msgstr[1] ""
 
-#: ../vendor/class-tgm-plugin-activation.php:401
+#: ../vendor/class-tgm-plugin-activation.php:403
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
 msgstr "L'activation a été annulée. Le plugin %1$s est déjà actif."
 
-#: ../vendor/class-tgm-plugin-activation.php:402
+#: ../vendor/class-tgm-plugin-activation.php:404
 #, php-format
 msgid ""
 "Plugin not activated. A higher version of %s is needed for this theme. "
@@ -667,38 +700,38 @@ msgstr ""
 "Le plugin n'a pas pu être activé. Une version plus récente du plugin %s est "
 "nécessaire pour ce thème. Veuillez mettre le plugin à jour."
 
-#: ../vendor/class-tgm-plugin-activation.php:403
+#: ../vendor/class-tgm-plugin-activation.php:405
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr "Tous les plugins ont été installés et activés. %s"
 
-#: ../vendor/class-tgm-plugin-activation.php:404
+#: ../vendor/class-tgm-plugin-activation.php:406
 msgid "Dismiss this notice"
 msgstr ""
 
-#: ../vendor/class-tgm-plugin-activation.php:405
+#: ../vendor/class-tgm-plugin-activation.php:407
 msgid "Please contact the administrator of this site for help."
 msgstr "Veuillez contacter l'administrateur du site."
 
-#: ../vendor/class-tgm-plugin-activation.php:520
+#: ../vendor/class-tgm-plugin-activation.php:534
 msgid "This plugin needs to be updated to be compatible with your theme."
 msgstr ""
 "Ce plugin nécessite une mise à jour afin d'être compatible avec ce thème."
 
-#: ../vendor/class-tgm-plugin-activation.php:521
+#: ../vendor/class-tgm-plugin-activation.php:535
 msgid "Update Required"
 msgstr "Une mise à jour est demandée."
 
-#: ../vendor/class-tgm-plugin-activation.php:635
+#: ../vendor/class-tgm-plugin-activation.php:649
 msgid "Set the parent_slug config variable instead."
 msgstr "Veuillez plutôt sélectionner la variable parent_slug config"
 
-#: ../vendor/class-tgm-plugin-activation.php:828
-#: ../vendor/class-tgm-plugin-activation.php:3438
+#: ../vendor/class-tgm-plugin-activation.php:844
+#: ../vendor/class-tgm-plugin-activation.php:3511
 msgid "Return to the Dashboard"
 msgstr "Retourner au tableau de bord"
 
-#: ../vendor/class-tgm-plugin-activation.php:935
+#: ../vendor/class-tgm-plugin-activation.php:952
 msgid ""
 "The remote plugin package does not contain a folder with the desired slug "
 "and renaming did not work."
@@ -706,8 +739,8 @@ msgstr ""
 "Le paquet de plugins à distance ne contient pas de dossier avec le slug "
 "désiré, la modification n'a pas pu être effectuée. "
 
-#: ../vendor/class-tgm-plugin-activation.php:935
-#: ../vendor/class-tgm-plugin-activation.php:938
+#: ../vendor/class-tgm-plugin-activation.php:952
+#: ../vendor/class-tgm-plugin-activation.php:958
 msgid ""
 "Please contact the plugin provider and ask them to package their plugin "
 "according to the WordPress guidelines."
@@ -715,7 +748,7 @@ msgstr ""
 "Veuillez contacter l'auteur du plugin et lui demander de regrouper son "
 "plugin selon les lignes directrices de WordPress."
 
-#: ../vendor/class-tgm-plugin-activation.php:938
+#: ../vendor/class-tgm-plugin-activation.php:958
 msgid ""
 "The remote plugin package consists of more than one file, but the files are "
 "not packaged in a folder."
@@ -723,69 +756,69 @@ msgstr ""
 "Le paquet de plugins à distance est constitué de plusieurs fichiers, mais "
 "les fichiers ne sont pas regroupés dans un dossier."
 
-#: ../vendor/class-tgm-plugin-activation.php:1116
-#: ../vendor/class-tgm-plugin-activation.php:2828
+#: ../vendor/class-tgm-plugin-activation.php:1140
+#: ../vendor/class-tgm-plugin-activation.php:2891
 msgctxt "plugin A *and* plugin B"
 msgid "and"
 msgstr "et"
 
-#: ../vendor/class-tgm-plugin-activation.php:1881
+#: ../vendor/class-tgm-plugin-activation.php:1928
 #, php-format
 msgctxt "%s = version number"
 msgid "TGMPA v%s"
 msgstr "TGMPA v%s"
 
-#: ../vendor/class-tgm-plugin-activation.php:2167
+#: ../vendor/class-tgm-plugin-activation.php:2220
 msgid "Required"
 msgstr "Requis"
 
-#: ../vendor/class-tgm-plugin-activation.php:2170
+#: ../vendor/class-tgm-plugin-activation.php:2223
 msgid "Recommended"
 msgstr "Recommandé"
 
-#: ../vendor/class-tgm-plugin-activation.php:2186
+#: ../vendor/class-tgm-plugin-activation.php:2240
 msgid "WordPress Repository"
 msgstr "Dépositaire WordPress"
 
-#: ../vendor/class-tgm-plugin-activation.php:2189
+#: ../vendor/class-tgm-plugin-activation.php:2243
 msgid "External Source"
 msgstr "Source externe"
 
-#: ../vendor/class-tgm-plugin-activation.php:2192
+#: ../vendor/class-tgm-plugin-activation.php:2246
 msgid "Pre-Packaged"
 msgstr "Pré-emballé"
 
-#: ../vendor/class-tgm-plugin-activation.php:2209
+#: ../vendor/class-tgm-plugin-activation.php:2264
 msgid "Not Installed"
 msgstr "Pas installé"
 
-#: ../vendor/class-tgm-plugin-activation.php:2213
+#: ../vendor/class-tgm-plugin-activation.php:2268
 msgid "Installed But Not Activated"
 msgstr "Installé, mais inactif"
 
-#: ../vendor/class-tgm-plugin-activation.php:2215
+#: ../vendor/class-tgm-plugin-activation.php:2270
 msgid "Active"
 msgstr "Actif"
 
-#: ../vendor/class-tgm-plugin-activation.php:2221
+#: ../vendor/class-tgm-plugin-activation.php:2276
 msgid "Required Update not Available"
 msgstr "Les mises à jour demandées ne sont pas disponibles"
 
-#: ../vendor/class-tgm-plugin-activation.php:2224
+#: ../vendor/class-tgm-plugin-activation.php:2279
 msgid "Requires Update"
 msgstr "Mise à jour requise"
 
-#: ../vendor/class-tgm-plugin-activation.php:2227
+#: ../vendor/class-tgm-plugin-activation.php:2282
 msgid "Update recommended"
 msgstr "Mise à jour recommandée"
 
-#: ../vendor/class-tgm-plugin-activation.php:2235
+#: ../vendor/class-tgm-plugin-activation.php:2290
 #, php-format
 msgctxt "%1$s = install status, %2$s = update status"
 msgid "%1$s, %2$s"
 msgstr "%1$s, %2$s"
 
-#: ../vendor/class-tgm-plugin-activation.php:2280
+#: ../vendor/class-tgm-plugin-activation.php:2336
 #, php-format
 msgctxt "plugins"
 msgid "All <span class=\"count\">(%s)</span>"
@@ -793,14 +826,14 @@ msgid_plural "All <span class=\"count\">(%s)</span>"
 msgstr[0] "Tous <span class=\"count\">(%s)</span>"
 msgstr[1] "Tous <span class=\"count\">(%s)</span>"
 
-#: ../vendor/class-tgm-plugin-activation.php:2283
+#: ../vendor/class-tgm-plugin-activation.php:2339
 #, php-format
 msgid "To Install <span class=\"count\">(%s)</span>"
 msgid_plural "To Install <span class=\"count\">(%s)</span>"
 msgstr[0] "Pour installer <span class=\"count\">(%s)</span>"
 msgstr[1] "Pour installer <span class=\"count\">(%s)</span>"
 
-#: ../vendor/class-tgm-plugin-activation.php:2286
+#: ../vendor/class-tgm-plugin-activation.php:2342
 #, php-format
 msgid "Update Available <span class=\"count\">(%s)</span>"
 msgid_plural "Update Available <span class=\"count\">(%s)</span>"
@@ -809,31 +842,31 @@ msgstr[0] ""
 msgstr[1] ""
 "Des mises à jour pour <span class=\"count\">(%s)</span> sont disponibles."
 
-#: ../vendor/class-tgm-plugin-activation.php:2289
+#: ../vendor/class-tgm-plugin-activation.php:2345
 #, php-format
 msgid "To Activate <span class=\"count\">(%s)</span>"
 msgid_plural "To Activate <span class=\"count\">(%s)</span>"
 msgstr[0] "Pour activer <span class=\"count\">(%s)</span>"
 msgstr[1] "Pour activer <span class=\"count\">(%s)</span>"
 
-#: ../vendor/class-tgm-plugin-activation.php:2371
+#: ../vendor/class-tgm-plugin-activation.php:2431
 msgctxt "as in: \"version nr unknown\""
 msgid "unknown"
 msgstr "inconnu"
 
-#: ../vendor/class-tgm-plugin-activation.php:2379
+#: ../vendor/class-tgm-plugin-activation.php:2439
 msgid "Installed version:"
 msgstr "Version installée :"
 
-#: ../vendor/class-tgm-plugin-activation.php:2387
+#: ../vendor/class-tgm-plugin-activation.php:2447
 msgid "Minimum required version:"
 msgstr "Version minimum requise:"
 
-#: ../vendor/class-tgm-plugin-activation.php:2399
+#: ../vendor/class-tgm-plugin-activation.php:2459
 msgid "Available version:"
 msgstr "Version disponible:"
 
-#: ../vendor/class-tgm-plugin-activation.php:2422
+#: ../vendor/class-tgm-plugin-activation.php:2482
 #, php-format
 msgid ""
 "No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
@@ -842,106 +875,106 @@ msgstr ""
 "Aucun plugin à installer, à mettre à jour ou à activer. <a href=\"%1$s"
 "\">Retourner au tableau de bord</a>"
 
-#: ../vendor/class-tgm-plugin-activation.php:2436
+#: ../vendor/class-tgm-plugin-activation.php:2496
 msgid "Plugin"
 msgstr "Plugin"
 
-#: ../vendor/class-tgm-plugin-activation.php:2437
+#: ../vendor/class-tgm-plugin-activation.php:2497
 msgid "Source"
 msgstr "Source"
 
-#: ../vendor/class-tgm-plugin-activation.php:2438
+#: ../vendor/class-tgm-plugin-activation.php:2498
 msgid "Type"
 msgstr "Type"
 
-#: ../vendor/class-tgm-plugin-activation.php:2442
+#: ../vendor/class-tgm-plugin-activation.php:2502
 msgid "Version"
 msgstr "Version"
 
-#: ../vendor/class-tgm-plugin-activation.php:2443
+#: ../vendor/class-tgm-plugin-activation.php:2503
 msgid "Status"
 msgstr "Statut"
 
-#: ../vendor/class-tgm-plugin-activation.php:2491
+#: ../vendor/class-tgm-plugin-activation.php:2552
 #, php-format
 msgctxt "%2$s = plugin name in screen reader markup"
 msgid "Install %2$s"
 msgstr "Installer %2$s"
 
-#: ../vendor/class-tgm-plugin-activation.php:2495
+#: ../vendor/class-tgm-plugin-activation.php:2556
 #, php-format
 msgctxt "%2$s = plugin name in screen reader markup"
 msgid "Update %2$s"
 msgstr "Actualiser %2$s"
 
-#: ../vendor/class-tgm-plugin-activation.php:2500
+#: ../vendor/class-tgm-plugin-activation.php:2561
 #, php-format
 msgctxt "%2$s = plugin name in screen reader markup"
 msgid "Activate %2$s"
 msgstr "Activer %2$s"
 
-#: ../vendor/class-tgm-plugin-activation.php:2570
+#: ../vendor/class-tgm-plugin-activation.php:2633
 msgid "Upgrade message from the plugin author:"
 msgstr "Message de mise à jour par l'auteur du plugin:"
 
-#: ../vendor/class-tgm-plugin-activation.php:2603
+#: ../vendor/class-tgm-plugin-activation.php:2666
 msgid "Install"
 msgstr "Installer"
 
-#: ../vendor/class-tgm-plugin-activation.php:2609
+#: ../vendor/class-tgm-plugin-activation.php:2672
 msgid "Update"
 msgstr "Mettre à jour"
 
-#: ../vendor/class-tgm-plugin-activation.php:2612
+#: ../vendor/class-tgm-plugin-activation.php:2675
 msgid "Activate"
 msgstr "Activer"
 
-#: ../vendor/class-tgm-plugin-activation.php:2643
+#: ../vendor/class-tgm-plugin-activation.php:2706
 msgid "No plugins were selected to be installed. No action taken."
 msgstr "Aucun plugin n'a été sélectionné. L'installation a été annulée."
 
-#: ../vendor/class-tgm-plugin-activation.php:2645
+#: ../vendor/class-tgm-plugin-activation.php:2708
 msgid "No plugins were selected to be updated. No action taken."
 msgstr "Aucun plugin n'a été sélectionné. La mise à jour a été annulée."
 
-#: ../vendor/class-tgm-plugin-activation.php:2681
+#: ../vendor/class-tgm-plugin-activation.php:2744
 msgid "No plugins are available to be installed at this time."
 msgstr "Il n'y a aucun plugin à installer pour le moment."
 
-#: ../vendor/class-tgm-plugin-activation.php:2683
+#: ../vendor/class-tgm-plugin-activation.php:2746
 msgid "No plugins are available to be updated at this time."
 msgstr "Il n'y a aucun plugin à mettre à jour pour le moment."
 
-#: ../vendor/class-tgm-plugin-activation.php:2788
+#: ../vendor/class-tgm-plugin-activation.php:2851
 msgid "No plugins were selected to be activated. No action taken."
 msgstr "Aucun plugin à activer n'a été sélectionné. "
 
-#: ../vendor/class-tgm-plugin-activation.php:2814
+#: ../vendor/class-tgm-plugin-activation.php:2877
 msgid "No plugins are available to be activated at this time."
 msgstr "Il n'y a aucun plugin à activer pour le moment."
 
-#: ../vendor/class-tgm-plugin-activation.php:3028
+#: ../vendor/class-tgm-plugin-activation.php:3097
 msgid "Plugin activation failed."
 msgstr "L'activation du plugin a échoué."
 
-#: ../vendor/class-tgm-plugin-activation.php:3362
+#: ../vendor/class-tgm-plugin-activation.php:3435
 #, php-format
 msgid "Updating Plugin %1$s (%2$d/%3$d)"
 msgstr "Mise à jour du plugin %1$s (%2$d/%3$d)"
 
-#: ../vendor/class-tgm-plugin-activation.php:3364
+#: ../vendor/class-tgm-plugin-activation.php:3437
 #, php-format
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
 msgstr ""
 "Une erreur s'est produite durant l'installation de %1$s : <strong>%2$s</"
 "strong>."
 
-#: ../vendor/class-tgm-plugin-activation.php:3365
+#: ../vendor/class-tgm-plugin-activation.php:3438
 #, php-format
 msgid "The installation of %1$s failed."
 msgstr "L'installation de %1$s a échoué."
 
-#: ../vendor/class-tgm-plugin-activation.php:3369
+#: ../vendor/class-tgm-plugin-activation.php:3442
 msgid ""
 "The installation and activation process is starting. This process may take a "
 "while on some hosts, so please be patient."
@@ -949,31 +982,31 @@ msgstr ""
 "Installation et activation en cours. Ceci peut prendre un certain temps. "
 "Merci de votre patience!"
 
-#: ../vendor/class-tgm-plugin-activation.php:3370
+#: ../vendor/class-tgm-plugin-activation.php:3443
 #, php-format
 msgid "%1$s installed and activated successfully."
 msgstr "%1$s a été installé et activé."
 
-#: ../vendor/class-tgm-plugin-activation.php:3370
-#: ../vendor/class-tgm-plugin-activation.php:3376
+#: ../vendor/class-tgm-plugin-activation.php:3443
+#: ../vendor/class-tgm-plugin-activation.php:3449
 msgid "Show Details"
 msgstr "Montrer les détails"
 
-#: ../vendor/class-tgm-plugin-activation.php:3370
-#: ../vendor/class-tgm-plugin-activation.php:3376
+#: ../vendor/class-tgm-plugin-activation.php:3443
+#: ../vendor/class-tgm-plugin-activation.php:3449
 msgid "Hide Details"
 msgstr "Cacher les détails"
 
-#: ../vendor/class-tgm-plugin-activation.php:3371
+#: ../vendor/class-tgm-plugin-activation.php:3444
 msgid "All installations and activations have been completed."
 msgstr "Toutes les installations et activations ont été effectuées."
 
-#: ../vendor/class-tgm-plugin-activation.php:3372
+#: ../vendor/class-tgm-plugin-activation.php:3445
 #, php-format
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
 msgstr "Installation et activation du plugin %1$s (%2$d/%3$d)."
 
-#: ../vendor/class-tgm-plugin-activation.php:3375
+#: ../vendor/class-tgm-plugin-activation.php:3448
 msgid ""
 "The installation process is starting. This process may take a while on some "
 "hosts, so please be patient."
@@ -981,19 +1014,22 @@ msgstr ""
 "Installation et activation en cours. Ceci peut prendre un certain temps. "
 "Merci de votre patience!"
 
-#: ../vendor/class-tgm-plugin-activation.php:3376
+#: ../vendor/class-tgm-plugin-activation.php:3449
 #, php-format
 msgid "%1$s installed successfully."
 msgstr "%1$s a été installé."
 
-#: ../vendor/class-tgm-plugin-activation.php:3377
+#: ../vendor/class-tgm-plugin-activation.php:3450
 msgid "All installations have been completed."
 msgstr "Toutes les installations ont été effectuées."
 
-#: ../vendor/class-tgm-plugin-activation.php:3378
+#: ../vendor/class-tgm-plugin-activation.php:3451
 #, php-format
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr "Installation du plugin %1$s (%2$d/%3$d) en cours."
+
+#~ msgid "Ihre letzten Beiträge der Kategorie"
+#~ msgstr "Vos dernières contributions dans cette catégorie"
 
 #~ msgid "Older Comments"
 #~ msgstr "Commentaires plus anciens"
